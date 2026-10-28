@@ -1,0 +1,410 @@
+<skin>
+	<screen name="InfoBar" flags="wfNoBorder" position="0,0" size="1920,1080" title="InfoBar" backgroundColor="transparent">
+		<!-- backgrounds -->
+		<eLabel position="0,760" size="1920,348" backgroundColor="blackglass" transparent="0" zPosition="-2"/>
+		<ePixmap position="0,724" size="1920,375" pixmap="q-infobars/infobar1.png" alphatest="blend" zPosition="-1"/>
+		<!-- date -->
+		<widget source="global.CurrentTime" render="Label" position="18,995" size="396,42" font="Regular;33" foregroundColor="infobargrey" backgroundColor="blackglass" valign="top" halign="right" transparent="1">
+			<convert type="Slyk18ClockToText">Slyk18DateFormat1</convert>
+		</widget>
+		<!-- arrows -->
+		<ePixmap position="362,831" size="35,21" pixmap="q-infobars/up-arrow.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="362,941" size="35,21" pixmap="q-infobars/down-arrow.png" alphatest="blend" zPosition="1"/>
+		<!-- channel -->
+		<widget source="session.CurrentService" render="Label" position="18,852" size="396,81" font="Regular;33" foregroundColor="white" backgroundColor="blackglass" valign="center" halign="right" transparent="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<panel name="infobar-picons"/>
+		<!-- progress bar -->
+		<widget source="session.Event_Now" render="Progress" position="444,968" size="330,9" foregroundColor="#44c1fb" backgroundColor="progress-bg" borderWidth="1" borderColor="#555555" zPosition="6" transparent="0">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+		<!-- now start time -->
+		<widget source="session.Event_Now" render="Label" position="447,984" size="135,42" font="Bold;33" foregroundColor="white" backgroundColor="blackglass" noWrap="1" valign="top" halign="left" transparent="1" zPosition="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="Slyk18ClockToText">Slyk18Time</convert>
+		</widget>
+		<!-- icons -->
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/4k.png" position="599,987" size="45,30" zPosition="1" alphatest="blend">
+			<convert type="SlykServiceInfo">Is4K</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/hd.png" position="599,987" size="45,30" zPosition="1" alphatest="blend">
+			<convert type="SlykServiceInfo">IsHD</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/sd.png" position="599,987" size="45,30" zPosition="1" alphatest="blend">
+			<convert type="SlykServiceInfo">IsSD</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/widescreen.png" position="651,987" size="32,30" zPosition="1" alphatest="blend">
+			<convert type="SlykServiceInfo">IsWidescreen</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/dolby.png" position="690,987" size="45,30" zPosition="1" alphatest="blend">
+			<convert type="SlykServiceInfo">IsMultichannel</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/subtitles.png" position="743,987" size="32,30" zPosition="1" alphatest="blend">
+			<convert type="SlykServiceInfo">SubtitlesAvailable</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<!-- programme name -->
+		<widget source="session.Event_Now" render="Label" position="806,779" size="600,42" font="Bold;33" foregroundColor="white" backgroundColor="blackglass" noWrap="1" valign="top" transparent="1" zPosition="1">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<!-- programme description -->
+		<widget source="session.Event_Now" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=80,repeat=0,always=0,oneshot=0,startdelay=6000,wrap" position="806,822" size="762,189" font="Regular;33" foregroundColor="white" backgroundColor="blackglass" valign="top" transparent="1" zPosition="1">
+			<convert type="EventName">ExtendedDescription</convert>
+		</widget>
+		<!-- record icon -->
+		<widget render="Pixmap" pixmap="q-icons/record.png" source="session.RecordState" position="1523,782" size="30,30" alphatest="blend" zPosition="1">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<!-- next programme -->
+		<widget source="session.Event_Next" render="Label" position="1590,779" size="312,122" font="Regular;33" foregroundColor="white" backgroundColor="blackglass" valign="top" transparent="1" zPosition="1">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<!-- next start time -->
+		<widget source="session.Event_Next" render="Label" position="1590,984" size="279,42" font="Regular;33" foregroundColor="white" backgroundColor="blackglass" valign="top" noWrap="1" transparent="1" zPosition="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="Slyk18ClockToText">Slyk18Time</convert>
+		</widget>
+	</screen>
+	<screen name="SecondInfoBar" flags="wfNoBorder" position="0,0" size="1920,1080" title="InfoBar" backgroundColor="transparent">
+		<panel name="InfoBar"/>
+		<ePixmap position="0,168" size="1920,30" pixmap="q-infobars/infobar-shadow-top.png" alphatest="blend" zPosition="-1"/>
+		<eLabel position="0,0" size="1920,159" backgroundColor="blackglass" transparent="0" zPosition="-2"/>
+		<ePixmap position="0,0" size="1920,168" pixmap="q-infobars/infobar-top-small.png" alphatest="blend" zPosition="-1"/>
+		<widget source="session.CurrentService" render="Label" font="Regular;30" position="45,42" size="630,78" halign="left" foregroundColor="white" backgroundColor="blackglass" noWrap="1" transparent="1" zPosition="1">
+			<convert type="PliExtraInfo">TransponderInfo2line</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="1245,42" size="630,78" font="Regular;30" foregroundColor="white" backgroundColor="blackglass" transparent="1" halign="right">
+			<convert type="CryptoInfo">VerboseInfo</convert>
+		</widget>
+		<eLabel text="SNR:" position="735,42" size="66,42" font="Regular;30" foregroundColor="white" backgroundColor="blackglass" valign="center" halign="left" transparent="1"/>
+		<widget source="session.FrontendStatus" render="Label" position="810,42" size="105,42" font="Regular;30" foregroundColor="white" backgroundColor="blackglass" transparent="1" noWrap="1" valign="center" halign="left">
+			<convert type="FrontendInfo">SNR</convert>
+		</widget>
+		<eLabel text="AGC:" position="735,81" size="66,42" font="Regular;30" foregroundColor="white" backgroundColor="blackglass" valign="center" halign="left" transparent="1"/>
+		<widget source="session.FrontendStatus" render="Label" position="810,81" size="105,42" font="Regular;30" foregroundColor="white" backgroundColor="blackglass" transparent="1" noWrap="1" valign="center" halign="left">
+			<convert type="FrontendInfo">AGC</convert>
+		</widget>
+		<eLabel text="Res:" position="930,42" size="66,42" font="Regular;30" foregroundColor="white" backgroundColor="blackglass" valign="center" halign="left" transparent="1"/>
+		<widget source="session.CurrentService" render="Label" position="1020,42" size="195,42" font="Regular;30" foregroundColor="white" backgroundColor="blackglass" transparent="1" halign="left" valign="center">
+			<convert type="PliExtraInfo">ResolutionString</convert>
+		</widget>
+		<eLabel text="Tuner:" position="930,81" size="105,42" font="Regular;30" foregroundColor="white" backgroundColor="blackglass" transparent="0" zPosition="1"/>
+		<!-- tuner 1 -->
+		<widget source="session.TunerInfo" render="Pixmap" position="1020,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_a.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">1</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="1020,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">0,0</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<!-- tuner 2 -->
+		<widget source="session.TunerInfo" render="Pixmap" position="1048,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_b.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">2</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="1048,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">1,1</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<!-- tuner 3 -->
+		<widget source="session.TunerInfo" render="Pixmap" position="1076,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_c.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">4</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="1076,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">2,2</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<!-- tuner 4 -->
+		<widget source="session.TunerInfo" render="Pixmap" position="1104,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_d.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">8</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="1104,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">3,3</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<!-- tuner 5 -->
+		<widget source="session.TunerInfo" render="Pixmap" position="1132,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_e.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">16</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="1132,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">4,4</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<!-- tuner 6 -->
+		<widget source="session.TunerInfo" render="Pixmap" position="1160,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_f.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">32</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="1160,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">5,5</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<!-- tuner 7 -->
+		<widget source="session.TunerInfo" render="Pixmap" position="1188,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_g.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">64</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="1188,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">6,6</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<!-- tuner 8 -->
+		<widget source="session.TunerInfo" render="Pixmap" position="1216,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_h.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">128</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="1216,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">7,7</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<!-- tuner 9 -->
+		<widget source="session.TunerInfo" render="Pixmap" position="1244,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_i.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">256</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="1244,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">8,8</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<!-- tuner 10 -->
+		<widget source="session.TunerInfo" render="Pixmap" position="1272,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_j.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">512</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="1272,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">9,9</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<!-- tuner 11 -->
+		<widget source="session.TunerInfo" render="Pixmap" position="1020,116" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_k.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">1024</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="1020,116" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">10,10</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<!-- tuner 12 -->
+		<widget source="session.TunerInfo" render="Pixmap" position="1048,116" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_l.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">2048</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="1048,116" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">11,11</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<!-- tuner 13 -->
+		<widget source="session.TunerInfo" render="Pixmap" position="1076,116" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_m.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">4096</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="1076,116" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">12,12</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<!-- tuner 14 -->
+		<widget source="session.TunerInfo" render="Pixmap" position="1104,116" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_n.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">8192</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="1104,116" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">13,13</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<!-- tuner 15 -->
+		<widget source="session.TunerInfo" render="Pixmap" position="1132,116" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_o.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">16384</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="1132,116" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">14,14</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<!-- tuner 16 -->
+		<widget source="session.TunerInfo" render="Pixmap" position="1160,116" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_p.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">32768</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="1160,116" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">15,15</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<!-- tuner 17 -->
+		<widget source="session.TunerInfo" render="Pixmap" position="1188,116" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_q.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">65536</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="1188,116" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">16,16</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<!-- tuner 18 -->
+		<widget source="session.TunerInfo" render="Pixmap" position="1216,116" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_r.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">131072</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="1216,116" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">17,17</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<!-- tuner 19 -->
+		<widget source="session.TunerInfo" render="Pixmap" position="1244,116" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_s.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">262144</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="1244,116" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">18,18</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<!-- tuner 20 -->
+		<widget source="session.TunerInfo" render="Pixmap" position="1272,116" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_t.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">524288</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="1272,116" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">19,19</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+	</screen>
+	<screen name="SecondInfoBarECM" flags="wfNoBorder" position="0,0" size="1920,1080" title="InfoBar" backgroundColor="transparent">
+		<panel name="SecondInfoBar"/>
+	</screen>
+	<screen name="QuickEPG" flags="wfNoBorder" position="0,0" size="1920,1080" title="InfoBar" backgroundColor="transparent">
+		<!-- backgrounds -->
+		<eLabel position="0,760" size="1920,348" backgroundColor="blackglass" transparent="0" zPosition="-2"/>
+		<ePixmap position="0,724" size="1920,375" pixmap="q-infobars/infobar1.png" alphatest="blend" zPosition="-1"/>
+		<eLabel position="0,0" size="1920,264" backgroundColor="blackglass" transparent="0" zPosition="-2"/>
+		<ePixmap position="0,0" size="1920,273" pixmap="q-infobars/infobar-top.png" alphatest="blend" zPosition="-1"/>
+		<ePixmap position="0,273" size="1920,30" pixmap="q-infobars/infobar-shadow-top.png" alphatest="blend" zPosition="-1"/>
+		<!-- date -->
+		<widget source="global.CurrentTime" render="Label" position="18,995" size="396,42" font="Regular;33" foregroundColor="infobargrey" backgroundColor="blackglass" valign="top" halign="right" transparent="1">
+			<convert type="Slyk18ClockToText">Slyk18DateFormat1</convert>
+		</widget>
+		<!-- arrows -->
+		<ePixmap position="362,831" size="35,21" pixmap="q-infobars/up-arrow.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="362,941" size="35,21" pixmap="q-infobars/down-arrow.png" alphatest="blend" zPosition="1"/>
+		<!-- channel -->
+		<widget source="Service" render="Label" position="18,852" size="396,89" font="Regular;33" foregroundColor="white" backgroundColor="blackglass" valign="center" halign="right" transparent="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget name="list" textOffset="15,0" position="447,783" size="1106,225" EventFontInfobar="Regular;33" foregroundColor="white" backgroundColor="blackglass" transparent="1"/>
+		<!-- event name -->
+		<widget source="Event" render="Label" position="518,38" size="909,48" halign="left" valign="top" foregroundColor="white" backgroundColor="topleft" noWrap="1" font="Bold;42" transparent="1">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<!-- description -->
+		<widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=80,repeat=0,always=0,oneshot=0,startdelay=6000,wrap" position="518,102" size="909,153" halign="left" valign="top" foregroundColor="white" backgroundColor="topmid" font="Regular;33" transparent="1">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+		<!-- dividers -->
+		<ePixmap pixmap="q-backgrounds/v-divider.png" position="1454,38" size="2,211" alphatest="blend"/>
+		<!-- current picon -->
+		<widget source="Service" render="Slyk18Picon" position="1475,38" size="150,90" alphatest="blend">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+		<!-- service channel-->
+		<widget source="Service" render="Label" position="1475,140" size="400,39" halign="left" valign="top" foregroundColor="white" backgroundColor="topright" font="Regular;33" transparent="1">
+			<convert type="ServiceName"/>
+		</widget>
+		<!-- event Duration -->
+		<widget source="Event" render="Label" position="1475,177" size="336,39" halign="left" valign="top" foregroundColor="white" backgroundColor="topright" font="Regular;33" transparent="1">
+			<convert type="EventTime">Duration</convert>
+			<convert type="Slyk18ClockToText">Slyk18AsLength</convert>
+		</widget>
+		<!-- event start time -->
+		<widget source="Event" render="Label" position="1475,214" size="336,39" halign="left" valign="top" foregroundColor="white" backgroundColor="topright" font="Regular;33" transparent="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="Slyk18ClockToText">Slyk18StartedAt</convert>
+		</widget>
+		<!-- recording icon -->
+		<widget position="1821,183" size="30,30" source="session.RecordState" render="Pixmap" pixmap="q-icons/record.png" alphatest="blend" zPosition="4">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<!-- icons -->
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/4k.png" position="1635,183" size="45,30" zPosition="1" alphatest="blend">
+			<convert type="SlykServiceInfo">Is4K</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/hd.png" position="1635,183" size="45,30" zPosition="1" alphatest="blend">
+			<convert type="SlykServiceInfo">IsHD</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/sd.png" position="1635,183" size="45,30" zPosition="1" alphatest="blend">
+			<convert type="SlykServiceInfo">IsSD</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/widescreen.png" position="1687,183" size="32,30" alphatest="blend">
+			<convert type="SlykServiceInfo">IsWidescreen</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/dolby.png" position="1726,183" size="45,30" alphatest="blend">
+			<convert type="SlykServiceInfo">IsMultichannel</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/subtitles.png" position="1779,183" size="32,30" alphatest="blend">
+			<convert type="SlykServiceInfo">SubtitlesAvailable</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="Title" render="Label" position="1590,779" size="312,122" font="Regular;33" foregroundColor="white" backgroundColor="blackglass" valign="top" transparent="1" zPosition="1"/>
+		<ePixmap pixmap="buttons/key_red.png" position="428,1037" size="38,38" alphatest="blend" zPosition="3"/>
+		<ePixmap pixmap="buttons/key_green.png" position="711,1037" size="38,38" alphatest="blend" zPosition="3"/>
+		<ePixmap pixmap="buttons/key_yellow.png" position="995,1037" size="38,38" alphatest="blend" zPosition="3"/>
+		<ePixmap name="blue" pixmap="buttons/key_blue.png" position="1278,1037" size="38,38" alphatest="blend" zPosition="3"/>
+		<widget name="key_red" position="473,1037" size="255,38" font="Regular;33" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="white" backgroundColor="button-bg" zPosition="3"/>
+		<widget name="key_green" position="756,1037" size="255,38" font="Regular;33" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="white" backgroundColor="button-bg" zPosition="3"/>
+		<widget name="key_yellow" position="1040,1037" size="255,38" font="Regular;33" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="white" backgroundColor="button-bg" zPosition="3"/>
+		<widget name="key_blue" position="1323,1037" size="255,38" font="Regular;33" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="white" backgroundColor="button-bg" zPosition="3"/>
+		<ePixmap pixmap="buttons/key_menu.png" position="1793,1037" size="38,38" alphatest="blend" zPosition="3"/>
+		<applet type="onLayoutFinish">self["list"].instance.setItemHeight(45)</applet>
+	</screen>
+</skin>

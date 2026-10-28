@@ -1,0 +1,66 @@
+<skin>
+	<!-- ## Autotimer ## -->
+	<screen name="AutoTimerOverview" position="0,0" size="1920,1080" title="AutoTimer Overview" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1"/>
+		<widget name="entries" position="540,385" size="1002,525" EventNameFont="Regular; 30" DayNameFont="Regular;24" ServiceNameFont="Regular; 24" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/setup-1002-105.png" itemHeight="105" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2" rowSplit1="38" rowSplit2="76" rowHeight="38" iconMargin="15"/>
+		<ePixmap position="540,384" size="1002,3" pixmap="div-h.png" alphatest="blend" transparent="1"/>
+		<ePixmap position="540,489" size="1002,3" pixmap="div-h.png" alphatest="blend" transparent="1"/>
+		<ePixmap position="540,594" size="1002,3" pixmap="div-h.png" alphatest="blend" transparent="1"/>
+		<ePixmap position="540,699" size="1002,3" pixmap="div-h.png" alphatest="blend" transparent="1"/>
+		<ePixmap position="540,804" size="1002,3" pixmap="div-h.png" alphatest="blend" transparent="1"/>
+		<ePixmap position="540,909" size="1002,3" pixmap="div-h.png" alphatest="blend" transparent="1"/>
+		<panel name="New-Buttons"/>
+		<panel name="MenuButton-pos2"/>
+		<panel name="OKButton"/>
+	</screen>
+	<screen name="AutoTimerImporter" position="0,0" size="1920,1080" title="Import AutoTimer" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="540,384" size="1002,623" zPosition="1"/>
+		<widget name="list" textOffset="15,3" position="540,385" size="1002,624" font="Regular;33" secondfont="Regular;33" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2"/>
+		<panel name="New-Buttons"/>
+	</screen>
+	<screen name="AutoTimerEditor" position="0,0" size="1920,1080" title="Edit AutoTimer" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="Setup-Default"/>
+		<widget source="help" render="Label" position="540,140" size="1002,195" font="Regular;33" foregroundColor="white" backgroundColor="topmid" transparent="1"/>
+	</screen>
+	<screen name="AutoTimerFilterEditor" position="0,0" size="1920,1080" title="Edit AutoTimer Filters" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="Setup-Default"/>
+		<widget source="help" render="Label" position="540,140" size="1002,195" font="Regular;33" foregroundColor="white" backgroundColor="topmid" transparent="1"/>
+	</screen>
+	<screen name="AutoTimerServiceEditor" title="Edit AutoTimer Services" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="Setup-Default"/>
+	</screen>
+	<screen name="AutoTimerSettings" position="0,0" size="1920,1080" title="AutoTimer Settings" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="Setup-Default"/>
+		<widget source="help" position="540,140" size="1002,195" font="Regular;33" foregroundColor="white" backgroundColor="topmid" transparent="1"/>
+		<panel name="HelpWindow"/>
+		<panel name="VKeyIcon"/>
+	</screen>
+	<screen name="AutoTimerFAQ" position="0,0" size="1920,1080" title="AutoTimer FAQ" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1"/>
+		<widget name="detailtext" position="540,385" size="1002,624" font="Regular;33" foregroundColor="white" backgroundColor="mid" transparent="1"/>
+		<panel name="New-Buttons"/>
+	</screen>
+	<screen name="AutoTimerHelp" position="0,0" size="1920,1080" title="AutoTimer Help" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1"/>
+		<widget name="detailtext" position="540,385" size="1002,624" font="Regular;33" foregroundColor="white" backgroundColor="mid" transparent="1"/>
+		<panel name="New-Buttons"/>
+	</screen>
+	<screen name="AutoTimerWizard" position="fill" title="Welcome..." flags="wfNoBorder" backgroundColor="mid">
+		<panel name="WizardTemplate"/>
+	</screen>
+	<screen name="AutoTimerPreview" position="0,0" size="1920,1080" title="Preview AutoTimer" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1"/>
+		<widget source="timerlist" render="Listbox" position="540,385" size="1002,624" font="Regular;33" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="2">
+			<convert type="TemplatedMultiContent">{"template": [
+			MultiContentEntryText(pos=(15,0), size=(486,36), text = 0, font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER), #Event
+			MultiContentEntryText(pos=(501, 0), size=(486,36), text = 3, font = 0, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER), #Service
+			MultiContentEntryText(pos=(15,36), size=(486,36), text = 4, font = 1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER), #Date
+			],
+			"fonts": [gFont("Regular", 30),gFont("Regular", 24)],
+			"itemHeight": 78
+			}</convert>
+		</widget>
+		<panel name="New-Buttons"/>
+	</screen>
+</skin>
