@@ -1,0 +1,1411 @@
+<skin>
+	<!-- audioSelection.py -->
+	<!-- audio button -->
+	<!-- checked -->
+	<!-- openatv only - name="key_left" name="key_right" name="switchdescription" -->
+	<screen name="AudioSelection" position="center,center" size="1002,678">
+		<ePixmap pixmap="div-h.png" position="0,77" size="1002,3" alphaTest="blend"/>
+		<ePixmap pixmap="div-h.png" position="0,155" size="1002,3" alphaTest="blend"/>
+		<ePixmap pixmap="div-h.png" position="0,233" size="1002,3" alphaTest="blend"/>
+		<ePixmap pixmap="div-h.png" position="0,311" size="1002,3" alphaTest="blend"/>
+		<ePixmap pixmap="div-h.png" position="0,404" size="1002,3" alphaTest="blend"/>
+		<ePixmap pixmap="div-h.png" position="0,482" size="1002,3" alphaTest="blend"/>
+		<ePixmap pixmap="div-h.png" position="0,560" size="1002,3" alphaTest="blend"/>
+		<widget name="config" position="68,0" size="934,312" font="Regular;33" valueFont="Regular;33" foregroundColor="white" backgroundColor="messageboxbg" foregroundColorSelected="white" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" scrollbarMode="showOnDemand" transparent="1" zPosition="1"/>
+		<widget source="key_red" render="Pixmap" pixmap="buttons/key_red.png" position="15,20" size="38,38" alphaTest="blend" zPosition="2">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="key_green" render="Pixmap" pixmap="buttons/key_green.png" position="15,97" size="38,38" alphaTest="blend" zPosition="2">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="key_yellow" render="Pixmap" pixmap="buttons/key_yellow.png" position="15,176" size="38,38" alphaTest="blend" zPosition="2">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="key_blue" render="Pixmap" pixmap="buttons/key_blue.png" position="15,254" size="38,38" alphaTest="blend" zPosition="2">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="streams" render="Listbox" position="0,328" size="1002,312" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" font="Regular;33" transparent="1" scrollbarMode="showNever" zPosition="2">
+			<convert type="TemplatedMultiContent">{"templates":
+			{"default": (78, [
+			MultiContentEntryText(pos = (30, 0), size = (39, 78), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2), # number,
+			MultiContentEntryText(pos = (68, 0), size = (207, 78), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 3), # description,
+			MultiContentEntryText(pos = (290, 0), size = (681, 78), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 4), # language,
+			MultiContentEntryText(pos = (934, 0), size = (39, 78), font = 1, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text = 5), # selection,
+			], True, "showNever"),
+			"notselected": (78, [
+			MultiContentEntryText(pos = (30, 0), size = (39, 78), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2), # number,
+			MultiContentEntryText(pos = (68, 0), size = (207, 78), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 3), # description,
+			MultiContentEntryText(pos = (290, 0), size = (681, 78), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 4), # language,
+			MultiContentEntryText(pos = (934, 0), size = (39, 78), font = 1, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text = 5), # selection,
+			], False, "showNever")
+			},
+			"fonts": [gFont("Regular", 33), gFont("Regular", 33)],
+			"itemHeight": 78
+			}</convert>
+		</widget>
+		<widget conditional="key_left" name="key_left" pixmap="buttons/key_left.png" position="0,640" size="38,38" alphaTest="blend" zPosition="2"/>
+		<widget conditional="key_right" name="key_right" pixmap="buttons/key_right.png" position="50,640" size="38,38" alphaTest="blend" zPosition="2"/>
+		<widget conditional="switchdescription" name="switchdescription" position="100,640" size="802,38" font="Regular;33" foregroundColor="white" backgroundColor="mid" transparent="1" verticalAlignment="center" zPosition="2"/>
+	</screen>
+	<!-- subtitles button - red button -->
+	<!-- checked -->
+	<screen name="QuickSubtitlesConfigMenu" position="center,center" size="1002,450" title="Subtitles Settings">
+		<widget name="config" padding="15,0" position="0,0" size="1002,450" font="Regular;33" valueFont="Regular;33" foregroundColor="white" backgroundColor="messageboxbg" foregroundColorSelected="white" backgroundColorSelected="select-darkblue-bg" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" zPosition="1"/>
+	</screen>
+	<!-- AutoDiseqc.py -->
+	<!-- BoxPortal.py -->
+	<!-- ButtonSetup -->
+	<!-- hotkey buttons / button setup -->
+	<!-- checked -->
+	<screen name="ButtonSetup" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="540,384" size="1002,472" zPosition="1"/>
+		<panel name="description"/>
+		<widget name="list" position="540,385" size="1002,468" font="Regular;33" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2"/>
+		<widget name="choosen" position="540,853" size="1002,156" offset="53,0" font="Regular;33" foregroundColor="bluetext" backgroundColor="botmid" backgroundColorSelected="select-darkblue-bg" foregroundColorSelected="bluetext" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" scrollbarMode="showNever" enableWrapAround="1" transparent="1"/>
+		<panel name="ExitButton"/>
+	</screen>
+	<!-- ButtonSetup.py -->
+	<!-- checked -->
+	<screen name="ButtonSetupSelect" position="0,0" size="1920,1080" title="Button Setup" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="ButtonSetup"/>
+		<panel name="New-Buttons"/>
+	</screen>
+	<!-- CCcamInfo.py -->
+	<!-- setup - decryption - softcam settings - select cccam - info -->
+	<!-- checked -->
+	<screen name="CCcamInfoMain" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
+		<panel name="template1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="540,384" size="1002,623" zPosition="1"/>
+		<widget name="menu" padding="0,20" position="540,385" size="1002,624" foregroundColor="white" backgroundColor="mid" font="Regular;33" selectionPixmap="q-selectbars/q-menu-2.png" backgroundColorSelected="select-darkblue-bg" itemHeight="78" verticalAlignment="top" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1"/>
+		<panel name="button-bg"/>
+		<panel name="OKButton"/>
+		<applet type="onLayoutFinish">from enigma import eListboxPythonMultiContent, gFont
+self["menu"].l.setFont(0, gFont("Regular", 33))
+self["menu"].l.setFont(1, gFont("Regular", 33))
+self["menu"].l.setItemHeight(78)
+</applet>
+	</screen>
+	<screen name="CCcamInfoEcmInfoSelection" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
+		<panel name="template1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="540,384" size="1002,623" zPosition="1"/>
+		<widget name="list" padding="15,20" position="540,385" size="1002,624" foregroundColor="white" backgroundColor="mid" font="Regular;33" selectionPixmap="q-selectbars/q-menu-2.png" backgroundColorSelected="select-darkblue-bg" itemHeight="78" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1"/>
+		<panel name="button-bg"/>
+		<panel name="OKButton"/>
+	</screen>
+	<!-- general -->
+	<!-- menu button on main screen -->
+	<screen name="CCcamInfoInfoScreen" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
+		<panel name="template1"/>
+		<ePixmap pixmap="q-backgrounds/flare-panel-large.png" alphaTest="blend" position="539,371" size="1006,614" zPosition="-1"/>
+		<widget name="text" position="555,400" size="972,547" font="Console;24" foregroundColor="white" backgroundColor="mid" transparent="1"/>
+		<panel name="button-bg"/>
+		<panel name="New-Buttons"/>
+		<panel name="OKButton"/>
+	</screen>
+	<screen name="CCcamShareViewMenu" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
+		<panel name="template1"/>
+		<ePixmap pixmap="q-backgrounds/flare-panel-large.png" alphaTest="blend" position="539,371" size="1006,614" zPosition="-1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="540,139" size="1002,238" zPosition="1"/>
+		<widget name="list" position="540,140" size="1002,238" font="Regular;33" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="2"/>
+		<widget name="title" position="570,400" size="960,45" font="Regular;30" foregroundColor="white" backgroundColor="mid" verticalAlignment="top" transparent="1"/>
+		<widget name="uphops" position="570,445" size="960,45" font="Regular;30" foregroundColor="white" backgroundColor="mid" verticalAlignment="top" transparent="1"/>
+		<widget name="cards" position="570,490" size="960,45" font="Regular;30" foregroundColor="white" backgroundColor="mid" verticalAlignment="top" transparent="1"/>
+		<widget name="providers" position="570,535" size="960,45" font="Regular;30" foregroundColor="white" backgroundColor="mid" verticalAlignment="top" transparent="1"/>
+		<widget name="reshare" position="570,580" size="960,45" font="Regular;30" foregroundColor="white" backgroundColor="mid" verticalAlignment="top" transparent="1"/>
+		<panel name="button-bg"/>
+		<panel name="New-Buttons"/>
+		<panel name="OKButton"/>
+	</screen>
+	<!-- clients / active clients -->
+	<screen name="CCcamInfoSubMenu" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
+		<panel name="template1"/>
+		<ePixmap pixmap="q-backgrounds/flare-panel-large.png" alphaTest="blend" position="539,371" size="1006,614" zPosition="-1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="540,139" size="1002,238" zPosition="1"/>
+		<widget name="list" padding="15,20" position="540,140" size="1002,238" font="Console;24" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="2"/>
+		<widget name="info" position="570,400" size="942,547" font="Console;24" foregroundColor="white" backgroundColor="mid" transparent="1"/>
+		<panel name="button-bg"/>
+		<panel name="New-Buttons"/>
+		<panel name="OKButton"/>
+	</screen>
+	<!-- servers -->
+	<screen name="CCcamInfoServerMenu" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
+		<panel name="template1"/>
+		<ePixmap pixmap="q-backgrounds/flare-panel-large.png" alphaTest="blend" position="539,371" size="1006,614" zPosition="-1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="540,139" size="1002,238" zPosition="1"/>
+		<widget name="list" padding="15,20" position="540,140" size="1002,238" font="Regular;33" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="2"/>
+		<widget name="info" position="570,400" size="942,547" font="Console;24" foregroundColor="white" backgroundColor="mid" transparent="1"/>
+		<panel name="button-bg"/>
+		<panel name="New-Buttons"/>
+		<panel name="OKButton"/>
+	</screen>
+	<screen name="CCcamInfoRemoteBoxMenu" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
+		<panel name="template1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="540,384" size="1002,623" zPosition="1"/>
+		<widget name="list" padding="15,20" position="540,385" size="1002,624" foregroundColor="white" backgroundColor="mid" font="Regular;33" selectionPixmap="q-selectbars/q-menu-2.png" backgroundColorSelected="select-darkblue-bg" itemHeight="78" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1"/>
+		<panel name="button-bg"/>
+		<panel name="New-Buttons"/>
+		<panel name="OKButton"/>
+	</screen>
+	<screen name="CCcamInfoShareInfo" position="center,center" size="1200,675">
+		<widget name="list" position="0,0" size="1200,525" font="Regular;30" foregroundColor="white" backgroundColor="messageboxbg" foregroundColorSelected="white" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/setup-900-105.png" itemHeight="105" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="1"/>
+		<panel position="0,e-45" size="0,38">
+			<panel name="Red-New-Button"/>
+		</panel>
+		<panel position="325,e-45" size="0,38">
+			<panel name="Green-New-Button"/>
+		</panel>
+		<panel position="650,e-45" size="0,38">
+			<panel name="Yellow-New-Button"/>
+		</panel>
+		<panel position="975,e-45" size="0,38">
+			<panel name="Blue-New-Button"/>
+		</panel>
+		<applet type="onLayoutFinish">from enigma import eListboxPythonMultiContent, gFont
+self["list"].l.setFont(0, gFont("Regular", 33))
+self["list"].l.setFont(1, gFont("Regular", 33))
+</applet>
+	</screen>
+	<screen name="CCcamInfoConfigSwitcher" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
+		<panel name="template1"/>
+		<ePixmap pixmap="q-backgrounds/choicelist-bg.png" alphaTest="blend" position="540,384" size="1002,228" zPosition="-1"/>
+		<widget name="list" padding="15,3" position="540,385" size="1002,225" font="Regular;30" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-choicelist.png" itemHeight="45" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="2"/>
+		<panel name="button-bg"/>
+		<panel name="New-Buttons"/>
+		<panel name="OKButton"/>
+	</screen>
+	<screen name="CCcamInfoMenuConfig" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
+		<panel name="template1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="540,384" size="1002,623" zPosition="1"/>
+		<widget name="list" padding="15,20" position="540,385" size="1002,624" foregroundColor="white" backgroundColor="mid" font="Regular;33" selectionPixmap="q-selectbars/q-menu-2.png" backgroundColorSelected="select-darkblue-bg" itemHeight="78" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1"/>
+		<panel name="New-Buttons"/>
+		<panel name="OKButton"/>
+	</screen>
+	<!-- openvix screen -->
+	<screen name="CCcamInfoConfigMenu" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
+		<panel name="template1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="540,384" size="1002,623" zPosition="1"/>
+		<widget name="config" padding="15,0" position="540,385" size="1002,624" font="Regular;33" valueFont="Regular;33" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="2"/>
+		<panel name="button-bg"/>
+		<panel name="OKButton"/>
+	</screen>
+	<!-- Ci.py -->
+	<screen name="MMIDialog" position="center,center" size="900,570" title="Common interface">
+		<widget name="title" position="20,10" size="860,35" font="Regular;33"/>
+		<widget name="subtitle" position="20,65" size="860,30" font="Regular;30"/>
+		<eLabel position="20,125" size="860,2" backgroundColor="#000000"/>
+		<eLabel position="20,520" size="860,2" backgroundColor="#000000"/>
+		<widget name="entries" position="20,140" size="860,360" enableWrapAround="1" scrollbarMode="showOnDemand"/>
+		<widget name="bottom" position="20,530" size="860,35" horizontalAlignment="center" font="Regular;21"/>
+	</screen>
+	<screen name="CiSelection" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="template1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="540,384" size="1002,623" zPosition="1"/>
+		<widget name="text" position="10,10" size="580,25" font="Regular;23"/>
+		<widget name="text" position="540,140" size="1002,195" font="Regular;33" foregroundColor="white" backgroundColor="topmid" transparent="1"/>
+		<widget name="entries" padding="15,0" position="540,385" size="1002,624" font="Regular;33" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="2"/>
+	</screen>
+	<!-- CIHelper -->
+	<screen name="CIHelperSetup" position="0,0" size="1920,1080" title="OpenWebif Configuration" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="Setup-Default"/>
+	</screen>
+	<!-- Console.py -->
+	<screen name="Console" position="0,0" size="1920,1080" title="Console" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1"/>
+		<eLabel position="491,0" size="1430,1080" backgroundColor="black" transparent="0" zPosition="-1"/>
+		<widget name="text" position="540,42" size="1335,1025" font="Console;24" foregroundColor="white" backgroundColor="black" scrollbarMode="showOnDemand" transparent="1"/>
+	</screen>
+	<!-- CronTimer.py -->
+	<screen name="CronTimers" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="518,384" size="978,623" zPosition="1"/>
+		<ePixmap pixmap="q-backgrounds/side-2-4-box.png" alphaTest="blend" position="1515,384" size="324,316" zPosition="1"/>
+		<widget name="lab1" position="1530,385" size="300,78" font="Regular;33" foregroundColor="white" backgroundColor="midright" verticalAlignment="center" transparent="1"/>
+		<widget name="labdisabled" position="1530,424" size="300,78" font="Regular;33" foregroundColor="white" backgroundColor="midright" verticalAlignment="center" transparent="1" zPosition="2"/>
+		<widget name="labactive" position="1530,424" size="300,78" font="Regular;33" foregroundColor="white" backgroundColor="midright" verticalAlignment="center" transparent="1" zPosition="2"/>
+		<widget name="lab2" position="1530,541" size="300,78" font="Regular;33" foregroundColor="white" backgroundColor="midright" verticalAlignment="center" transparent="1"/>
+		<widget name="labstop" position="1530,580" size="300,78" font="Regular;33" backgroundColor="midright" verticalAlignment="center" transparent="1" zPosition="1"/>
+		<widget name="labrun" position="1530,580" size="300,78" font="Regular;33" backgroundColor="midright" verticalAlignment="center" transparent="1" zPosition="2"/>
+		<widget source="list" render="Listbox" position="518,385" size="978,624" font="Regular;33" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2-978.png" itemHeight="78" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="2">
+			<convert type="TemplatedMultiContent">{"template": [
+			 MultiContentEntryText(pos = (15, 0), size = (948, 78),  flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0, color = 0x00ffffff, color_sel = 0x00ffffff, backcolor_sel = 0x0000437c)
+			],
+			"fonts": [gFont("Regular",33)],
+			"itemHeight": 78
+			}</convert>
+		</widget>
+		<panel name="New-Buttons"/>
+	</screen>
+	<!-- CronTimersConfig - Setup -->
+	<!-- DVD.py -->
+	<!-- Dish.py -->
+	<!-- EPGSelection.py - q-epg.xml -->
+	<!-- EventView.py -->
+	<screen name="EventViewContextMenu" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder" zPosition="1">
+		<panel name="template1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="540,384" size="1002,701" zPosition="1"/>
+		<widget name="menu" padding="15,20" position="540,385" size="1002,697" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" font="Regular;33" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="2"/>
+		<panel name="nav-gradient-2"/>
+	</screen>
+	<screen name="EventViewSimple" flags="wfNoBorder" position="0,0" size="1920,1080" backgroundColor="transparent">
+		<!-- backgrounds -->
+		<eLabel position="0,760" size="1920,339" backgroundColor="blackglass" transparent="0" zPosition="-2"/>
+		<ePixmap position="0,724" size="1920,375" pixmap="q-infobars/infobar-blank.png" alphaTest="blend" zPosition="-1"/>
+		<!-- date -->
+		<widget source="global.CurrentTime" render="Label" position="18,995" size="396,42" font="Regular;33" foregroundColor="infobargrey" backgroundColor="blackglass" verticalAlignment="top" horizontalAlignment="right" transparent="1">
+			<convert type="Slyk18ClockToText">Slyk18DateFormat1</convert>
+		</widget>
+		<!-- arrows -->
+		<ePixmap position="362,831" size="35,21" pixmap="q-infobars/up-arrow.png" alphaTest="blend" zPosition="1"/>
+		<ePixmap position="362,941" size="35,21" pixmap="q-infobars/down-arrow.png" alphaTest="blend" zPosition="1"/>
+		<!-- channel -->
+		<widget source="Service" render="Label" position="18,852" size="396,81" font="Regular;33" foregroundColor="white" backgroundColor="blackglass" verticalAlignment="center" horizontalAlignment="right" transparent="1">
+			<convert type="MovieInfo">RecordServiceName</convert>
+		</widget>
+		<!-- picons / xpicons - see picons.xml -->
+		<panel name="movie-eventview-picons"/>
+		<!-- progress bar -->
+		<widget source="Event" render="Progress" position="444,968" size="330,9" foregroundColor="#44c1fb" backgroundColor="progress-bg" borderWidth="1" borderColor="#555555" zPosition="6" transparent="0">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+		<!-- icons -->
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/4k.png" position="599,987" size="45,30" zPosition="1" alphaTest="blend">
+			<convert type="SlykServiceInfo">Is4K</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/hd.png" position="599,987" size="45,30" zPosition="1" alphaTest="blend">
+			<convert type="SlykServiceInfo">IsHD</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/sd.png" position="599,987" size="45,30" zPosition="1" alphaTest="blend">
+			<convert type="SlykServiceInfo">IsSD</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/widescreen.png" position="651,987" size="32,30" zPosition="1" alphaTest="blend">
+			<convert type="SlykServiceInfo">IsWidescreen</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/dolby.png" position="690,987" size="45,30" zPosition="1" alphaTest="blend">
+			<convert type="SlykServiceInfo">IsMultichannel</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/subtitles.png" position="743,987" size="32,30" zPosition="1" alphaTest="blend">
+			<convert type="SlykServiceInfo">SubtitlesAvailable</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<!-- programme name -->
+		<widget source="Title" render="Label" position="806,779" size="600,42" font="Bold;33" foregroundColor="white" backgroundColor="blackglass" wrap="noWrap" verticalAlignment="top" transparent="1" zPosition="1"/>
+		<!-- programme description -->
+		<widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=80,repeat=0,always=0,oneshot=0,startdelay=6000,wrap" position="806,822" size="762,189" font="Regular;33" foregroundColor="white" backgroundColor="blackglass" verticalAlignment="top" transparent="1" zPosition="1">
+			<convert type="EventName">ExtendedDescription</convert>
+		</widget>
+		<!-- record icon -->
+		<widget render="Pixmap" pixmap="q-icons/record.png" source="session.RecordState" position="1523,782" size="30,30" alphaTest="blend" zPosition="1">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<!-- now start time -->
+		<widget source="Event" render="Label" position="447,984" size="135,42" font="Bold;33" foregroundColor="white" backgroundColor="blackglass" wrap="noWrap" verticalAlignment="top" horizontalAlignment="left" transparent="1" zPosition="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="Slyk18ClockToText">Slyk18Time</convert>
+		</widget>
+		<!-- end time -->
+		<widget source="Event" render="Label" position="1590,984" size="279,42" font="Regular;33" foregroundColor="white" backgroundColor="blackglass" verticalAlignment="top" wrap="noWrap" transparent="1" zPosition="1">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="Slyk18ClockToText">Slyk18Time</convert>
+		</widget>
+	</screen>
+	<screen name="EventView" flags="wfNoBorder" position="0,0" size="1920,1080" backgroundColor="transparent">
+		<!-- backgrounds -->
+		<eLabel position="0,760" size="1920,339" backgroundColor="blackglass" transparent="0" zPosition="-2"/>
+		<ePixmap position="0,724" size="1920,375" pixmap="q-infobars/infobar-blank.png" alphaTest="blend" zPosition="-1"/>
+		<!-- date -->
+		<widget source="global.CurrentTime" render="Label" position="18,995" size="396,42" font="Regular;33" foregroundColor="infobargrey" backgroundColor="blackglass" verticalAlignment="top" horizontalAlignment="right" transparent="1">
+			<convert type="Slyk18ClockToText">Slyk18DateFormat1</convert>
+		</widget>
+		<!-- arrows -->
+		<ePixmap position="362,831" size="35,21" pixmap="q-infobars/up-arrow.png" alphaTest="blend" zPosition="1"/>
+		<ePixmap position="362,941" size="35,21" pixmap="q-infobars/down-arrow.png" alphaTest="blend" zPosition="1"/>
+		<!-- channel -->
+		<widget name="channel" position="18,852" size="396,81" font="Regular;33" foregroundColor="white" backgroundColor="blackglass" verticalAlignment="center" horizontalAlignment="right" transparent="1"/>
+		<!-- picons / xpicons - see picons.xml -->
+		<panel name="eventview-picons"/>
+		<widget source="Event" render="Progress" position="444,968" size="330,9" foregroundColor="#44c1fb" backgroundColor="progress-bg" borderWidth="1" borderColor="#555555" zPosition="6" transparent="0">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+		<!-- now start time -->
+		<widget source="Event" render="Label" position="447,984" size="135,42" font="Bold;33" foregroundColor="white" backgroundColor="blackglass" wrap="noWrap" verticalAlignment="top" horizontalAlignment="left" transparent="1" zPosition="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="Slyk18ClockToText">Slyk18Time</convert>
+		</widget>
+		<!-- icons -->
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/4k.png" position="599,987" size="45,30" zPosition="1" alphaTest="blend">
+			<convert type="SlykServiceInfo">Is4K</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/hd.png" position="599,987" size="45,30" zPosition="1" alphaTest="blend">
+			<convert type="SlykServiceInfo">IsHD</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/sd.png" position="599,987" size="45,30" zPosition="1" alphaTest="blend">
+			<convert type="SlykServiceInfo">IsSD</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/widescreen.png" position="651,987" size="32,30" zPosition="1" alphaTest="blend">
+			<convert type="SlykServiceInfo">IsWidescreen</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/dolby.png" position="690,987" size="45,30" zPosition="1" alphaTest="blend">
+			<convert type="SlykServiceInfo">IsMultichannel</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/subtitles.png" position="743,987" size="32,30" zPosition="1" alphaTest="blend">
+			<convert type="SlykServiceInfo">SubtitlesAvailable</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<!-- programme name -->
+		<widget source="Title" render="Label" position="806,779" size="600,42" font="Bold;33" foregroundColor="white" backgroundColor="blackglass" wrap="noWrap" verticalAlignment="top" transparent="1" zPosition="1"/>
+		<!-- programme description -->
+		<widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=80,repeat=0,always=0,oneshot=0,startdelay=6000,wrap" position="806,822" size="762,189" font="Regular;33" foregroundColor="white" backgroundColor="blackglass" verticalAlignment="top" transparent="1" zPosition="1">
+			<convert type="EventName">ExtendedDescription</convert>
+		</widget>
+		<!-- record icon -->
+		<widget render="Pixmap" pixmap="q-icons/record.png" source="session.RecordState" position="1523,782" size="30,30" alphaTest="blend" zPosition="1">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<!-- next start time -->
+		<widget source="Event" render="Label" position="1590,984" size="279,42" font="Regular;33" foregroundColor="white" backgroundColor="blackglass" verticalAlignment="top" wrap="noWrap" transparent="1" zPosition="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="Slyk18ClockToText">Slyk18Time</convert>
+		</widget>
+		<panel position="428,1037" size="0,38">
+			<panel name="Red-New-Button"/>
+		</panel>
+		<panel position="711,1037" size="0,38">
+			<panel name="Green-New-Button"/>
+		</panel>
+		<panel position="995,1037" size="0,38">
+			<panel name="Yellow-New-Button"/>
+		</panel>
+		<panel position="1278,1037" size="0,38">
+			<panel name="Blue-New-Button"/>
+		</panel>
+	</screen>
+	<!-- FlashManager.py - FlashManager / FlashOnline -->
+	<screen name="FlashOnline" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder" title="Flash On the Fly">
+		<panel name="template1"/>
+		<panel name="description"/>
+		<widget name="list" padding="15,18" position="540,385" size="1002,624" font="Regular;33" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2"/>
+		<panel name="New-Buttons"/>
+	</screen>
+	<!-- HarddiskSetup.py -->
+	<screen name="HarddiskSetup" title="Harddisk Setup" position="center,center" size="840,225" backgroundColor="messageboxbg">
+		<widget name="model" position="0,0" size="570,42" font="Regular;35" foregroundColor="white" backgroundColor="messageboxbg" transparent="1"/>
+		<widget name="capacity" position="0,45" size="570,42" font="Regular;35" foregroundColor="white" backgroundColor="messageboxbg" transparent="1"/>
+		<widget name="bus" position="0,90" size="570,42" font="Regular;35" foregroundColor="white" backgroundColor="messageboxbg" transparent="1"/>
+		<panel position="0,180" size="0,41">
+			<panel name="Red-New-Button"/>
+		</panel>
+		<panel position="319,180" size="0,41">
+			<panel name="Green-New-Button"/>
+		</panel>
+	</screen>
+	<screen name="HarddiskSelection" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1"/>
+		<widget name="hddlist" padding="15,20" position="540,385" size="1002,624" font="Regular;33" valueFont="Regular;33" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2"/>
+		<panel name="button-bg"/>
+		<panel name="OKButton"/>
+	</screen>
+	<!-- HelpMenu.py -->
+	<screen name="HelpMenu" position="fill" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="HelpMenuVIX" conditional="long_key"/>
+		<panel name="HelpMenuATV" conditional="buttonlist"/>
+	</screen>
+	<!-- this screen from openatv is an absolutely an awful mess -->
+	<screen name="HelpMenuATV" position="fill" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1"/>
+		<widget name="buttonlist" position="540,335" size="1002,50" font="Regular;33" horizontalAlignment="center" zPosition="2" foregroundColor="white" backgroundColor="black" transparent="0"/>
+		<widget source="list" render="Listbox" position="540,385" size="1002,633" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" font="Regular;33" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="2">
+			<convert type="TemplatedMultiContent">
+				{
+					"templates": {
+						# no headings 
+						"default": (78,[
+							MultiContentEntryText(pos=(30, 0), size=(942, 78), font=1, flags=RT_WRAP | RT_VALIGN_CENTER, text=1), 
+							]
+						),
+						# help with headings
+						"default+headings": (78,[
+							MultiContentEntryText(pos=(0, 0), size=(1002, 78), font=0, flags=RT_WRAP | RT_VALIGN_CENTER, text=1), 
+							MultiContentEntryText(pos=(30, 0), size=(942, 78), font=1, flags=RT_WRAP | RT_VALIGN_CENTER, text=2),
+							]
+						),
+						
+						# Extended help with no headings
+						# data[1:] = [helpText, extendedHelpText]
+						"extended": (78,[
+							MultiContentEntryText(pos=(30, 0), size=(942, 78), font=1, flags=RT_WRAP | RT_VALIGN_CENTER, text=1),
+							# MultiContentEntryText(pos=(0, 0), size=(0, 0), font=3, flags=RT_WRAP | RT_VALIGN_TOP, text=2), # pointless description placed in the lists  - dont show it - height the list item with heading size only
+							],
+						),
+						# Extended help with headings
+						# data[1:] = [heading, None, None]  # For heading entries
+						# data[1:] = [None, helpText, extendedHelpText]  # For help entries
+						"extended+headings": (78,[
+							MultiContentEntryText(pos=(0, 0), size=(1002, 78), font=0, flags=RT_WRAP | RT_VALIGN_CENTER, text=1), 
+							MultiContentEntryText(pos=(30, 0), size=(942, 78), font=1, flags=RT_WRAP | RT_VALIGN_CENTER, text=2),
+							# MultiContentEntryText(pos=(0, 0), size=(0, 0), font=1, flags=RT_WRAP | RT_VALIGN_TOP, text=3), # pointless description placed in the lists  - dont show it - height the list item with heading size only
+							],
+						),
+					},
+					"fonts": [gFont("Regular", 33), gFont("Regular", 30)],
+					"itemHeight": 78
+				}
+			</convert>
+		</widget>
+		<panel name="wizard_rc_templateNew"/>
+	</screen>
+	<!-- infobar.py infobar - q-infobar.xml -->
+	<!-- infobar.py movieplayer - q-movies.xml -->
+	<!-- infobarGenerics.py SecondInfoBar - q-infobar.xml -->
+	<!-- infobarGenerics.py SecondInfoBarECM - q-infobar.xml -->
+	<screen name="BufferIndicator" title="Channel" position="c-240,68" size="480,53" backgroundColor="transparent" flags="wfNoBorder">
+		<widget name="status" position="0,0" size="480,53" backgroundColor="transparent" transparent="1" font="Bold;39" borderColor="black" borderWidth="3" verticalAlignment="center" horizontalAlignment="center" zPosition="100"/>
+	</screen>
+	<screen name="NumberZap" position="54,783" size="540,270" flags="wfNoBorder">
+		<eLabel position="0,0" size="540,270" backgroundColor="blackglass" transparent="0" zPosition="-1"/>
+		<ePixmap pixmap="q-backgrounds/numberzap.png" position="0,0" size="540,270" alphaTest="blend" zPosition="-1"/>
+		<widget name="number" position="374,95" size="110,45" foregroundColor="white" backgroundColor="blackglass" transparent="1" font="Regular;39" borderWidth="0" verticalAlignment="top" horizontalAlignment="right" zPosition="1"/>
+		<widget name="servicename" position="57,87" size="317,150" foregroundColor="white" backgroundColor="blackglass" transparent="1" font="Regular;45" borderWidth="0" verticalAlignment="top" horizontalAlignment="right" zPosition="1"/>
+	</screen>
+	<screen name="NumberZapPicon" position="54,783" size="540,270" flags="wfNoBorder">
+		<eLabel position="0,0" size="540,270" backgroundColor="blackglass" transparent="0" zPosition="-1"/>
+		<ePixmap pixmap="q-backgrounds/numberzap.png" position="0,0" size="540,270" alphaTest="blend" zPosition="-1"/>
+		<widget name="number" position="374,95" size="110,45" foregroundColor="white" backgroundColor="blackglass" transparent="1" font="Regular;39" borderWidth="0" verticalAlignment="top" horizontalAlignment="right" zPosition="1"/>
+		<widget name="servicename" position="57,87" size="317,150" foregroundColor="white" backgroundColor="blackglass" transparent="1" font="Regular;45" borderWidth="0" verticalAlignment="top" horizontalAlignment="right" zPosition="1"/>
+	</screen>
+	<!-- NumberZapWithName -->
+	<!-- InfoBarEPG - q-epg. xml -->
+	<screen name="Seekbar" position="center,54" size="840,113" flags="wfNoBorder" backgroundColor="transparent">
+		<eLabel position="83,0" size="675,113" backgroundColor="blackglass" transparent="0" zPosition="-2"/>
+		<ePixmap pixmap="q-backgrounds/seekbar-bg.png" position="0,0" size="840,113" alphaTest="blend" zPosition="-1"/>
+		<!-- cursor starts at 145px from the left. and 15 pixels down. Progress bar must be 270 pixels long. Cannot be overwritten. Resize outer box and graphics accordingly. -->
+		<widget name="cursor" position="0,23" size="9,54" pixmap="q-icons/position-pointer.png" alphaTest="blend" zPosition="2"/>
+		<widget name="time" position="90,0" size="113,113" font="Regular;36" verticalAlignment="center" horizontalAlignment="right" foregroundColor="white" backgroundColor="blackglass" transparent="1" zPosition="2"/>
+		<widget source="session.CurrentService" render="Progress" position="218,50" size="405,12" foregroundColor="#44c1fb" backgroundColor="progress-bg" borderWidth="1" borderColor="#555555" zPosition="3" transparent="0">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<widget source="session.CurrentService" render="PositionGauge" position="218,50" size="405,12" transparent="1" zPosition="3">
+			<convert type="ServicePosition">Gauge</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="e-203,0" size="113,113" font="Regular;36" verticalAlignment="center" horizontalAlignment="left" foregroundColor="white" backgroundColor="blackglass" transparent="1" zPosition="2">
+			<convert type="ServicePosition">Length</convert>
+		</widget>
+	</screen>
+	<!-- VideoMode -->
+	<!-- Information.py -->
+	<screen name="information_common">
+		<panel name="template1"/>
+		<widget name="information" conditional="information" divideChar="|" wrap="noWrap" leftColAlign="left" rightColAlign="left" split="1" position="540,141" size="1332,840" foregroundColor="white" backgroundColor="mid" font="Console;24" transparent="1" zPosition="1"/>
+		<panel name="New-Buttons"/>
+		<panel name="InfoButton"/>
+		<eLabel text="Slyk Q by Kidda C (2019). linuxsat-support.com. Beer kitty. paypal.me/kiddac" font="Regular;33" position="540,80" size="1332,40" foregroundColor="white" backgroundColor="midright" horizontalAlignment="left" transparent="1" zPosition="2"/>
+	</screen>
+	<screen name="information_common2">
+		<panel name="template1"/>
+		<widget name="information" conditional="information" position="540,141" size="1332,840" foregroundColor="white" backgroundColor="mid" font="Console;24" transparent="1" zPosition="1"/>
+		<panel name="New-Buttons"/>
+		<panel name="InfoButton"/>
+		<eLabel text="Slyk Q by Kidda C (2019). linuxsat-support.com. Beer kitty. paypal.me/kiddac" font="Regular;33" position="540,80" size="1332,40" foregroundColor="white" backgroundColor="midright" horizontalAlignment="left" transparent="1" zPosition="2"/>
+	</screen>
+	<screen name="Information" position="0,0" size="1920,1080" title="Information" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="information_common"/>
+	</screen>
+	<screen name="SystemInformation" position="0,0" size="1920,1080" title="Information" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="information_common2"/>
+	</screen>
+	<screen name="CommitInformation" position="0,0" size="1920,1080" title="Information" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="information_common2"/>
+	</screen>
+	<screen name="DebugInformation" position="0,0" size="1920,1080" title="Information" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="information_common2"/>
+	</screen>
+	<screen name="PictureInformation" position="0,0" size="1920,1080" title="Picture Information" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1"/>
+		<widget name="name" conditional="name" position="540,141" size="1332,840" foregroundColor="white" backgroundColor="mid" font="Console;24" transparent="1" zPosition="1"/>
+		<widget name="picture" position="880,270" size="650,650" alphaTest="blend" scale="centerScaled" transparent="1"/>
+		<panel name="New-Buttons"/>
+		<eLabel text="Slyk Q by Kidda C (2019). linuxsat-support.com. Beer kitty. paypal.me/kiddac" font="Regular;33" position="540,80" size="1332,40" foregroundColor="white" backgroundColor="midright" horizontalAlignment="left" transparent="1" zPosition="2"/>
+	</screen>
+	<!-- InbutBox.py -->
+	<!-- quick record - set duration -->
+	<screen name="InputBox" position="center,center" size=" 840, 105" backgroundColor="messageboxbg">
+		<widget name="text" position="15,15" size="810,45" font="Regular;33" foregroundColor="white" backgroundColor="messageboxbg" verticalAlignment="center" horizontalAlignment="center"/>
+		<widget name="input" position="15,60" size="810,45" font="Regular;33" foregroundColor="white" backgroundColor="messageboxbg" verticalAlignment="center" horizontalAlignment="center"/>
+	</screen>
+	<screen name="PinInput" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1"/>
+		<ePixmap pixmap="q-backgrounds/pin-entry.png" position="525,453" size="330,107" alphaTest="blend" zPosition="-1"/>
+		<widget name="text" position="525,405" size="960,45" font="Regular;33" foregroundColor="white" backgroundColor="mid" verticalAlignment="top" horizontalAlignment="left" transparent="1"/>
+		<widget name="input" position="525,480" size="330,53" font="Regular;72" foregroundColor="white" verticalAlignment="center" backgroundColor="select-darkblue-bg" horizontalAlignment="center" transparent="1"/>
+		<widget name="tries" position="885,465" size="225,83" font="Regular;33" foregroundColor="white" backgroundColor="mid" verticalAlignment="center" horizontalAlignment="left" transparent="1"/>
+		<eLabel text="PIN entry is required to access this area\n\nUse these settings to protect younger viewers\nfrom watching inappropriate programmes and\nfrom making unauthorised purchases." position="525,578" size="960,225" font="Regular;35" foregroundColor="white" backgroundColor="mid" verticalAlignment="top" horizontalAlignment="left" transparent="1"/>
+	</screen>
+	<screen name="PinInputPopup" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+		<ePixmap pixmap="q-backgrounds/pin-protected.png" position="0,0" size="1920,1080" alphaTest="blend" zPosition="-1"/>
+		<widget name="service" position="center,56" size="1920,48" font="Bold;39" foregroundColor="white" backgroundColor="#00005e9f" verticalAlignment="top" horizontalAlignment="center" transparent="1"/>
+		<widget name="text" position="center,95" size="1920,48" font="Regular;39" foregroundColor="white" backgroundColor="#00005e9f" verticalAlignment="top" horizontalAlignment="center" transparent="1"/>
+		<eLabel text="Please enter your PIN" position="0,842" size="1920,48" font="Regular;39" foregroundColor="white" backgroundColor="mid" verticalAlignment="top" horizontalAlignment="center" transparent="1"/>
+		<widget name="input" position="center,921" size="330,53" font="Regular;72" foregroundColor="white" verticalAlignment="center" backgroundColor="select-darkblue-bg" horizontalAlignment="center" transparent="1"/>
+		<widget name="tries" position="center,1007" size="1920,48" font="Regular;39" foregroundColor="white" backgroundColor="#00002d5d" verticalAlignment="center" horizontalAlignment="center" transparent="1"/>
+	</screen>
+	<!-- InputDeviceSetup.py -->
+	<!-- setup / usage & gui / extended gui /  input devices -->
+	<screen name="InputDeviceSelection" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="540,384" size="1002,701" zPosition="1"/>
+		<widget source="list" render="Listbox" position="540,385" size="1002,697" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" font="Regular;33" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="2">
+			<convert type="TemplatedMultiContent">{"template": [
+		MultiContentEntryPixmapAlphaBlend(pos = (15, 15), size = (72, 72), png = 2), # index 2 is the interface pixmap
+		MultiContentEntryText(pos = (102, 0), size = (885, 78), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER|RT_WRAP, text = 1), # index 1 is the interfacename
+		],
+		"fonts": [gFont("Regular", 33),gFont("Regular", 33)],
+		"itemHeight": 78
+		}</convert>
+		</widget>
+		<panel name="introduction"/>
+		<panel name="New-Buttons"/>
+	</screen>
+	<screen name="InputDeviceSetup" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="Setup-Default"/>
+		<panel name="OKButton"/>
+		<panel name="introduction"/>
+	</screen>
+	<!-- LocaleSelection.py -->
+	<screen name="LocaleSelection" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
+		<panel name="template1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="540,384" size="1002,623" zPosition="1"/>
+		<widget source="locales" render="Listbox" position="540,385" size="1332,624" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="2">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryPixmapAlphaBlend(pos = (12, 16), size = (90, 45), flags = BT_SCALE, png = 0),  # Flag.
+					MultiContentEntryText(pos = (120, 0), size = (540, 78), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),  # Language name (Native).
+					MultiContentEntryText(pos = (570, 0), size = (450, 78), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2),  # Language name (English).
+					MultiContentEntryText(pos = (1020, 0), size = (120, 78), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 4),  # Package name.
+					MultiContentEntryPixmapAlphaBlend(pos = (1194, 25), size = (74, 28), flags = BT_SCALE, png = 5)  # Status icon.
+					],
+				"fonts": [parseFont("MultiLingual;32")],
+				"itemHeight": 78
+				}
+			</convert>
+		</widget>
+		<widget source="description" render="Label" position="540,140" size="1002,195" font="Regular;33" foregroundColor="white" backgroundColor="topmid" transparent="1"/>
+		<ePixmap pixmap="buttons/key_help.png" position="1793,1030" size="38,38" alphaTest="blend"/>
+		<panel name="MenuButton"/>
+		<widget name="icons" position="0,0" size="45,40" pixmaps="skin_default/icons/menu_download.png,skin_default/icons/menu_off.png,skin_default/icons/menu_on.png" alphaTest="blend" scale="1"/>
+		<panel name="New-Buttons"/>
+	</screen>
+	<!-- LocationBox.py -->
+	<screen name="LocationBox" position="0,0" size="1920,1080" title="Location Box" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1"/>
+		<widget name="text" position="518,140" size="978,195" font="Regular;33" foregroundColor="white" backgroundColor="topmid" transparent="1"/>
+		<widget name="target" position="518,315" size="696,78" font="Regular;33" foregroundColor="white" backgroundColor="mid" wrap="noWrap" verticalAlignment="center" transparent="1"/>
+		<widget name="targetfreespace" position="1221,315" size="282,78" font="Regular;33" backgroundColor="mid" foregroundColor="white" wrap="noWrap" verticalAlignment="center" horizontalAlignment="right" transparent="1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="518,384" size="978,472" zPosition="1"/>
+		<widget name="filelist" position="518,385" size="978,468" font="Regular;33" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2-978.png" itemHeight="78" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2"/>
+		<widget name="booklist" conditional="booklist" padding="15,20" position="518,853" size="978,156" offset="53,0" font="Regular;33" foregroundColor="bluetext" backgroundColor="botmid" backgroundColorSelected="select-darkblue-bg" foregroundColorSelected="bluetext" selectionPixmap="q-selectbars/q-menu-2-978.png" itemHeight="78" scrollbarMode="showNever" enableWrapAround="1" transparent="1"/>
+		<widget name="bookmarklist" conditional="bookmarklist" padding="15,20" position="518,853" size="978,156" offset="53,0" font="Regular;33" foregroundColor="bluetext" backgroundColor="botmid" backgroundColorSelected="select-darkblue-bg" foregroundColorSelected="bluetext" selectionPixmap="q-selectbars/q-menu-2-978.png" itemHeight="78" scrollbarMode="showNever" enableWrapAround="1" transparent="1"/>
+		<ePixmap pixmap="q-backgrounds/side-1-box.png" alphaTest="blend" position="1515,384" size="324,160" zPosition="1"/>
+		<eLabel text="Use CH+/- or &lt; &gt; to toggle between the lists.\n\nMenu for more options." position="1530,399" size="300,330" font="Regular;27" foregroundColor="white" backgroundColor="midright" transparent="1"/>
+		<panel name="New-Buttons"/>
+		<panel name="MenuButton"/>
+		<widget name="quickselect" conditional="quickselect" position="0,0" size="0,0"/>
+		<!-- override openatv mandatory fields -->
+		<widget name="fileheading" conditional="fileheading" position="0,0" size="0,0"/>
+		<!-- override openatv mandatory fields -->
+	</screen>
+	<!-- LogManager.py -->
+	<!-- show in extensions -->
+	<screen name="LogManager" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid" title="Log Manager">
+		<panel name="template1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="540,384" size="1002,623" zPosition="1"/>
+		<widget name="list" position="540,385" size="1002,624" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" font="Regular;33" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="2"/>
+		<panel name="New-Buttons"/>
+		<panel name="OKButton"/>
+		<applet type="onLayoutFinish">self["list"].instance.setItemHeight(78)</applet>
+	</screen>
+	<screen name="LogManagerViewLog" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid" title="Log Manager">
+		<panel name="template1"/>
+		<eLabel position="490,0" size="1430,1080" backgroundColor="black" transparent="0" zPosition="-1"/>
+		<widget name="list" position="540,62" size="1335,956" font="Console;18" foregroundColor="white" backgroundColor="black" scrollbarMode="showOnDemand" transparent="1" zPosition="3"/>
+		<panel name="New-Buttons"/>
+	</screen>
+	<!-- MessageBox.py -->
+	<screen name="MessageBox" position="center,center" size="1200,600">
+		<widget name="ErrorPixmap" conditional="ErrorPixmap" pixmap="icons/input_error.png" position="15,0" size="53,53" alphaTest="blend"/>
+		<widget name="QuestionPixmap" conditional="QuestionPixmap" pixmap="icons/input_question.png" position="15,0" size="53,53" alphaTest="blend"/>
+		<widget name="InfoPixmap" conditional="InfoPixmap" pixmap="icons/input_info.png" position="15,0" size="53,53" alphaTest="blend"/>
+		<widget name="icon" conditional="icon" position="15,0" size="53,53" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_info.png,icons/input_error.png,icons/input_info.png" alphaTest="blend" scale="1"/>
+		<widget name="text" position="98,0" size="1800,0" font="Regular;33" transparent="1"/>
+		<widget name="list" position="0,0" size="1800,0" conditional="list" enableWrapAround="1" font="Regular;33" padding="15,21" backgroundColor="messageboxbg" transparent="1" itemHeight="78" scrollbarMode="showOnDemand"/>
+		<applet type="onLayoutFinish">
+from __future__ import division
+from enigma import eSize, ePoint, getDesktop
+
+# Offsets and minimums
+offset_listposx = 15
+offset_listwidth = 15
+offset_listheight = 78
+offset_textwidth = 98
+offset_textheight = 45
+min_width = 960
+min_height = 75
+offset = 45
+
+# Desktop size
+deskwidth = getDesktop(0).size().width()
+deskheight = getDesktop(0).size().height()
+
+# Text widget size
+
+textsize = self["text"].getSize()
+textwidth = textsize[0] + offset_textwidth
+textheight = textsize[1] + offset_textheight
+
+textwidth = max(textwidth, min_width)
+textheight = max(textheight, min_height)
+
+# List widget size
+listwidth = 0
+listheight = 0
+if self.list:
+    try:
+        longest_item = max(len(i[0]) for i in self.list)
+        listwidth = longest_item * offset_listwidth
+        listheight = len(self.list) * offset_listheight
+    except Exception as e:
+        print("*** list size error ***", e)
+
+# Constrain list height
+maxheight = int(deskheight * 0.75) - textheight - (offset_textheight * 2)
+if listheight &gt; maxheight:
+    listheight = maxheight
+
+# Window width
+if textwidth &gt; listwidth:
+    wsizex = textwidth + (offset_listposx * 2)
+else:
+    textwidth = listwidth
+    wsizex = listwidth + (offset_listposx * 2)
+
+# Window height
+wsizey = textheight + listheight
+
+# Ensure not wider than screen
+if wsizex &gt; deskwidth:
+    textwidth = 1800
+    listwidth = 1800
+
+# Apply window size
+wsize = (wsizex, wsizey)
+self.instance.resize(eSize(*wsize))
+
+# Resize text widget
+self["text"].instance.resize(eSize(textwidth, textheight))
+
+# Move and resize list widget
+if self.list:
+    text_pos = self["text"].getPosition()
+    text_size = self["text"].getSize()
+    new_y = text_pos[1] + text_size[1] + offset
+    listsize = (wsizex - (offset_listposx * 2), listheight)
+    self["list"].instance.move(ePoint(offset_listposx, new_y))
+    self["list"].instance.resize(eSize(*listsize))
+
+# Center window
+newwidth = wsize[0]
+newheight = wsize[1]
+self.instance.move(ePoint(int((deskwidth - newwidth) // 2), int((deskheight - newheight) // 2)
+))
+
+</applet>
+	</screen>
+	<screen name="MessageBoxSimple" position="center,center" size="1002,15" title="Message" backgroundColor="messageboxbg">
+		<panel name="MessageBox"/>
+	</screen>
+	<!-- MinuteInput.py - as found on movies long ff press -->
+	<screen name="MinuteInput" position="center,center" size="300,90" title="Jump to...">
+		<widget name="minutes" position="0,23" size="300,45" verticalAlignment="center" horizontalAlignment="center" font="Regular;35" transparent="1"/>
+	</screen>
+	<!-- MountManager -->
+	<screen name="HddMount" position="0,0" size="1920,1080" title="Mount Manager" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1"/>
+		<ePixmap pixmap="q-backgrounds/setup-2row-bg.png" alphaTest="blend" position="540,384" size="1002,626" zPosition="1"/>
+		<widget source="list" render="Listbox" position="540,385" size="1002,660" foregroundColor="white" backgroundColor="mid" foregroundColorSelected="white" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/1002-156.png" verticalAlignment="center" itemHeight="156" scrollbarMode="showNever" transparent="1" zPosition="2">
+			<convert type="TemplatedMultiContent">{"template": [
+			 MultiContentEntryText(pos = (150, 18), size = (960, 660), font=0, text = 0),
+			 MultiContentEntryText(pos = (150, 69), size = (960, 660), font=1, flags = RT_VALIGN_TOP, text = 1),
+			 MultiContentEntryPixmapAlphaBlend(pos = (15, 23), size = (120, 120), png = 2),
+			],
+			"fonts": [gFont("Bold",33),gFont("Regular",30)],
+			"itemHeight": 156
+			}</convert>
+		</widget>
+		<widget name="lab1" zPosition="2" position="525,314" size="960,165" font="Regular;34" backgroundColor="mid" foregroundColor="white" verticalAlignment="center" horizontalAlignment="center" transparent="1"/>
+		<panel name="New-Buttons"/>
+	</screen>
+	<!-- hhdmounts - setup mounts -->
+	<screen name="DevicePanelConf" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder" zPosition="4" title="UserManager">
+		<panel name="Setup-Default"/>
+		<widget name="Linconn" position="540,140" size="1002,195" font="Regular;33" foregroundColor="white" backgroundColor="topmid" transparent="1"/>
+	</screen>
+	<!-- MovieSelection.py -->
+	<!-- MovieSelection - q-movies.xml -->
+	<!-- MultiBooManager.py -->
+	<!-- Multiboot Manager openatv -->
+	<screen name="MultiBootManager" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="template1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="540,384" size="1002,623" zPosition="1"/>
+		<widget name="slotlist" position="540,385" size="1002,624" font="Regular;33" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2"/>
+		<panel name="New-Buttons"/>
+		<widget name="description" position="540,140" size="1002,195" font="Regular;33" foregroundColor="white" backgroundColor="topmid" transparent="1"/>
+		<ePixmap pixmap="buttons/key_help.png" position="1845,1030" size="38,38" alphaTest="blend"/>
+	</screen>
+	<!-- Mute.py -->
+	<screen name="Mute" position="54,54" zPosition="10" size="113,113" backgroundColor="transparent" flags="wfNoBorder">
+		<eLabel position="0,0" size="113,113" backgroundColor="blackglass" transparent="0" zPosition="-1"/>
+		<ePixmap position="0,0" size="113,113" pixmap="q-icons/mute.png" transparent="1" alphaTest="blend"/>
+	</screen>
+	<!-- networkSetup.py - q-network.xml -->
+	<!-- NumericalTextInputHelpDialog.py -->
+	<screen name="NumericalTextInputHelpDialog" position="0,0" zPosition="10" size="1920,38" backgroundColor="transparent" flags="wfNoBorder">
+		<ePixmap pixmap="q-backgrounds/helper-text.png" position="0,0" size="1920,38" zPosition="9" alphaTest="blend"/>
+		<ePixmap pixmap="buttons/key_1.png" position="45,0" size="38,38" zPosition="10" alphaTest="blend"/>
+		<ePixmap pixmap="buttons/key_2.png" position="195,0" size="38,38" zPosition="10" alphaTest="blend"/>
+		<ePixmap pixmap="buttons/key_3.png" position="345,0" size="38,38" zPosition="10" alphaTest="blend"/>
+		<ePixmap pixmap="buttons/key_4.png" position="495,0" size="38,38" zPosition="10" alphaTest="blend"/>
+		<ePixmap pixmap="buttons/key_5.png" position="645,0" size="38,38" zPosition="10" alphaTest="blend"/>
+		<ePixmap pixmap="buttons/key_6.png" position="795,0" size="38,38" zPosition="10" alphaTest="blend"/>
+		<ePixmap pixmap="buttons/key_7.png" position="945,0" size="38,38" zPosition="10" alphaTest="blend"/>
+		<ePixmap pixmap="buttons/key_8.png" position="1095,0" size="38,38" zPosition="10" alphaTest="blend"/>
+		<ePixmap pixmap="buttons/key_9.png" position="1245,0" size="38,38" zPosition="10" alphaTest="blend"/>
+		<ePixmap pixmap="buttons/key_0.png" position="1395,0" size="38,38" zPosition="10" alphaTest="blend"/>
+		<ePixmap pixmap="buttons/key_text.png" position="1685,0" size="38,38" zPosition="10" alphaTest="blend"/>
+		<widget name="key1" position="83,0" size="105,38" font="Regular;20" backgroundColor="blackglass" foregroundColor="white" horizontalAlignment="left" verticalAlignment="center" transparent="1" zPosition="12"/>
+		<widget name="key2" position="233,0" size="105,38" font="Regular;20" backgroundColor="blackglass" foregroundColor="white" horizontalAlignment="left" verticalAlignment="center" transparent="1" zPosition="12"/>
+		<widget name="key3" position="383,0" size="105,38" font="Regular;20" backgroundColor="blackglass" foregroundColor="white" horizontalAlignment="left" verticalAlignment="center" transparent="1" zPosition="12"/>
+		<widget name="key4" position="533,0" size="105,38" font="Regular;20" backgroundColor="blackglass" foregroundColor="white" horizontalAlignment="left" verticalAlignment="center" transparent="1" zPosition="12"/>
+		<widget name="key5" position="683,0" size="105,38" font="Regular;20" backgroundColor="blackglass" foregroundColor="white" horizontalAlignment="left" verticalAlignment="center" transparent="1" zPosition="12"/>
+		<widget name="key6" position="833,0" size="105,38" font="Regular;20" backgroundColor="blackglass" foregroundColor="white" horizontalAlignment="left" verticalAlignment="center" transparent="1" zPosition="12"/>
+		<widget name="key7" position="983,0" size="105,38" font="Regular;20" backgroundColor="blackglass" foregroundColor="white" horizontalAlignment="left" verticalAlignment="center" transparent="1" zPosition="12"/>
+		<widget name="key8" position="1133,0" size="105,38" font="Regular;20" backgroundColor="blackglass" foregroundColor="white" horizontalAlignment="left" verticalAlignment="center" transparent="1" zPosition="12"/>
+		<widget name="key9" position="1283,0" size="105,38" font="Regular;20" backgroundColor="blackglass" foregroundColor="white" horizontalAlignment="left" verticalAlignment="center" transparent="1" zPosition="12"/>
+		<widget name="help1" position="0,1080" size="0,0" font="Regular;20" backgroundColor="blackglass" foregroundColor="white" horizontalAlignment="left" verticalAlignment="center" transparent="1" zPosition="12"/>
+		<widget name="key0" position="1433,0" size="180,38" font="Regular;20" backgroundColor="blackglass" foregroundColor="white" horizontalAlignment="left" verticalAlignment="center" transparent="1" zPosition="12"/>
+		<widget name="help2" position="0,1080" size="0,0" font="Regular;20" backgroundColor="blackglass" foregroundColor="white" horizontalAlignment="left" verticalAlignment="center" transparent="1" zPosition="12"/>
+	</screen>
+	<!-- OScamInfo.py -->
+	<screen name="OscamInfoMenu" position="0,0" size="1920,1080" title="OscamInfo Menu" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="540,384" size="1002,623" zPosition="1"/>
+		<widget name="mainmenu" position="540,385" size="1002,624" foregroundColor="white" backgroundColor="mid" font="Regular;33" selectionPixmap="q-selectbars/q-menu-2.png" backgroundColorSelected="select-darkblue-bg" itemHeight="78" enableWrapAround="1" scrollbarMode="showNever" transparent="1"/>
+		<panel name="button-bg"/>
+		<eLabel text="ECM Info" position="557,1030" size="255,38" font="Regular;33" horizontalAlignment="left" verticalAlignment="center" transparent="1" wrap="noWrap" foregroundColor="white" backgroundColor="button-bg"/>
+		<eLabel text="Clients" position="872,1030" size="255,38" font="Regular;33" horizontalAlignment="left" verticalAlignment="center" transparent="1" wrap="noWrap" foregroundColor="white" backgroundColor="button-bg"/>
+		<eLabel text="Readers/Proxies" position="1187,1030" size="255,38" font="Regular;33" horizontalAlignment="left" verticalAlignment="center" transparent="1" wrap="noWrap" foregroundColor="white" backgroundColor="button-bg"/>
+		<eLabel text="Show Log" position="1502,1030" size="255,38" font="Regular;33" horizontalAlignment="left" verticalAlignment="center" transparent="1" wrap="noWrap" foregroundColor="white" backgroundColor="button-bg"/>
+		<ePixmap name="red" pixmap="buttons/key_red.png" position="512,1030" size="38,38" alphaTest="blend"/>
+		<ePixmap name="green" pixmap="buttons/key_green.png" position="827,1030" size="38,38" alphaTest="blend"/>
+		<ePixmap name="yellow" pixmap="buttons/key_yellow.png" position="1142,1030" size="38,38" alphaTest="blend"/>
+		<ePixmap name="blue" pixmap="buttons/key_blue.png" position="1457,1030" size="38,38" alphaTest="blend"/>
+		<panel name="OKButton"/>
+	</screen>
+	<screen name="oscECMInfo" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder" title="Oscam ECM Info">
+		<panel name="template1"/>
+		<ePixmap pixmap="q-backgrounds/flare-panel-large.png" alphaTest="blend" position="539,371" size="1006,614" zPosition="-1"/>
+		<widget name="output" padding="15,15" position="555,400" size="972,547" font="Console;24" foregroundColor="white" backgroundColor="mid" scrollbarMode="showOnDemand" transparent="1"/>
+		<panel name="button-bg"/>
+		<panel name="New-Buttons"/>
+		<panel name="OKButton"/>
+	</screen>
+	<screen name="oscInfo" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder" title="Oscam Info">
+		<panel name="console-template"/>
+		<widget name="output" position="160,291" size="1600,646" font="Console;27" zPosition="3" transparent="1" backgroundColor="black" foregroundColor="white"/>
+		<panel name="Full-Buttons-T1"/>
+		<applet type="onLayoutFinish">from enigma import eListboxPythonMultiContent, gFont
+self["output"].l.setFont(1, gFont("Regular", 27))</applet>
+	</screen>
+	<screen name="OscamInfoConfigScreen" position="0,0" size="1920,1080" title="OscamInfo Menu" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="Setup-Default"/>
+		<widget source="status" render="Label" position="540,140" size="1002,195" font="Regular;33" foregroundColor="white" backgroundColor="topmid" transparent="1"/>
+	</screen>
+	<screen name="oscEntitlements" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder" title="Oscam Reader Stats">
+		<panel name="console-template"/>
+		<widget source="output" render="Listbox" position="160,291" size="1600,646" zPosition="3" transparent="1" backgroundColor="black" foregroundColor="white">
+			<convert type="TemplatedMultiContent">{"template":[
+			MultiContentEntryText(pos = (0, 1), size = (80, 33), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is caid
+			MultiContentEntryText(pos = (90, 1), size = (150, 33), font=0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is csystem
+			MultiContentEntryText(pos = (250, 1), size = (40, 33), font=0, flags = RT_HALIGN_LEFT, text = 2), # index 2 is hop 1
+			MultiContentEntryText(pos = (290, 1), size = (40, 33), font=0, flags = RT_HALIGN_LEFT, text = 3), # index 3 is hop 2
+			MultiContentEntryText(pos = (330, 1), size = (40, 33), font=0, flags = RT_HALIGN_LEFT, text = 4), # index 4 is hop 3
+			MultiContentEntryText(pos = (370, 1), size = (40, 33), font=0, flags = RT_HALIGN_LEFT, text = 5), # index 5 is hop 4
+			MultiContentEntryText(pos = (410, 1), size = (40, 33), font=0, flags = RT_HALIGN_LEFT, text = 6), # index 6 is hop 5
+			MultiContentEntryText(pos = (480, 1), size = (70, 33), font=0, flags = RT_HALIGN_LEFT, text = 7), # index 7 is sum of cards for caid
+			MultiContentEntryText(pos = (550, 1), size = (80, 33), font=0, flags = RT_HALIGN_LEFT, text = 8), # index 8 is reshare
+			MultiContentEntryText(pos = (630, 1), size = (1024, 50), font=1, flags = RT_HALIGN_LEFT, text = 9), # index 9 is providers
+			],
+			"fonts": [gFont("Regular",27)],
+			"itemHeight": 54
+			}</convert>
+		</widget>
+	</screen>
+	<screen name="oscReaderStats" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder" title="Oscam Reader Stats">
+		<panel name="console-template"/>
+		<widget source="output" render="Listbox" position="160,291" size="1600,646" zPosition="3" transparent="1" backgroundColor="black" foregroundColor="white">
+			<convert type="TemplatedMultiContent">{"template":[
+			MultiContentEntryText(pos = (0, 1), size = (250, 33), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is caid
+			MultiContentEntryText(pos = (250, 1), size = (125, 33), font=0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is csystem
+			MultiContentEntryText(pos = (375, 1), size = (375, 33), font=0, flags = RT_HALIGN_LEFT, text = 2), # index 2 is hop 1
+			MultiContentEntryText(pos = (750, 1), size = (150, 33), font=0, flags = RT_HALIGN_LEFT, text = 3), # index 3 is hop 2
+			MultiContentEntryText(pos = (900, 1), size = (150, 33), font=0, flags = RT_HALIGN_LEFT, text = 4), # index 4 is hop 3
+			MultiContentEntryText(pos = (1050, 1), size = (200, 33), font=0, flags = RT_HALIGN_LEFT, text = 5), # index 5 is hop 4
+			MultiContentEntryText(pos = (1275, 1), size = (200, 33), font=0, flags = RT_HALIGN_LEFT, text = 6), # index 6 is hop 5
+			MultiContentEntryText(pos = (1475, 1), size = (200, 33), font=0, flags = RT_HALIGN_LEFT, text = 7), # index 7 is sum of cards for caid
+			],
+			"fonts": [gFont("Regular",27)],
+			"itemHeight": 54
+			}</convert>
+		</widget>
+	</screen>
+	<!-- Opkg.py not skinned -->
+	<!-- PVRState.py -->
+	<!-- not used -->
+	<screen name="PVRState" position="0,0" size="0,0" backgroundColor="transparent" flags="wfNoBorder"/>
+	<!-- timeshift PVR screens -->
+	<screen name="TimeshiftState" position="0,0" size="1920,1080" backgroundColor="transparent" title="InfoBar" flags="wfNoBorder">
+		<eLabel position="0,760" size="1920,339" backgroundColor="blackglass" transparent="0" zPosition="-2"/>
+		<ePixmap position="0,724" size="1920,375" pixmap="q-infobars/infobar-blank.png" alphaTest="blend" zPosition="-1"/>
+		<widget source="global.CurrentTime" render="Label" position="18,995" size="396,42" font="Regular;33" foregroundColor="infobargrey" backgroundColor="blackglass" verticalAlignment="top" horizontalAlignment="right" transparent="1" zPosition="1">
+			<convert type="Slyk18ClockToText">Slyk18DateFormat1</convert>
+		</widget>
+		<widget name="eventname" position="center,777" size="1920,45" font="Regular;33" foregroundColor="white" backgroundColor="blackglass" verticalAlignment="top" horizontalAlignment="center" wrap="noWrap" transparent="1"/>
+		<widget name="statusicon" position="center,878" size="81,81" alphaTest="blend" zPosition="6" pixmaps="q-infobars/play.png,q-infobars/pause.png,q-infobars/stop.png,q-infobars/forward.png,q-infobars/backward.png,q-infobars/slow.png,q-infobars/blank.png"/>
+		<widget name="speed" position="center,839" size="126,32" font="Regular;33" foregroundColor="white" backgroundColor="blackglass" verticalAlignment="top" horizontalAlignment="center" transparent="1" zPosition="4"/>
+		<widget source="session.CurrentService" render="Progress" position="308,914" size="1305,9" foregroundColor="#44c1fb" backgroundColor="progress-bg" borderWidth="1" borderColor="#555555" zPosition="3" transparent="0">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<!-- timeshift start time -->
+		<widget source="session.CurrentService" render="Label" position="71,896" size="195,45" font="Regular;33" foregroundColor="white" backgroundColor="blackglass" verticalAlignment="top" horizontalAlignment="right" transparent="1">
+			<convert type="Slyk18ServicePosition">TimeshiftStart</convert>
+		</widget>
+		<!-- timeshift end time (now) -->
+		<widget source="global.CurrentTime" render="Label" position="1658,896" size="200,45" font="Regular;33" foregroundColor="white" backgroundColor="blackglass" transparent="1" horizontalAlignment="left">
+			<convert type="Slyk18ClockToText">Slyk18Time</convert>
+		</widget>
+		<!-- timeshift position -->
+		<widget source="session.CurrentService" render="Label" position="center,960" size="186,39" font="Bold;33" foregroundColor="bluetext" backgroundColor="blackglass" verticalAlignment="top" horizontalAlignment="center" transparent="1">
+			<convert type="Slyk18ServicePosition">TimeshiftPosition</convert>
+		</widget>
+		<panel name="InfoButton"/>
+	</screen>
+	<!-- ParentalControlSetup.py -->
+	<screen name="ParentalControlSetup" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="Setup-Default"/>
+	</screen>
+	<screen name="ParentalControlChangePin" position="center,center" size="750,120">
+		<widget name="config" padding="15,0" position="15,15" size="720,90" font="Regular;33" valueFont="Regular;33" itemHeight="45" foregroundColor="white" backgroundColor="messageboxbg" foregroundColorSelected="white" backgroundColorSelected="select-darkblue-bg" transparent="0"/>
+	</screen>
+	<!-- PiPSetup.py -->
+	<screen name="PiPSetup" position="center,center" size="1200,300" flags="wfNoBorder" backgroundColor="transparent" zPosition="-1" title="PiPSetup">
+		<widget name="text" position="0,0" size="1200,300" backgroundColor="transparent" transparent="1" font="Regular;33" verticalAlignment="center" horizontalAlignment="center"/>
+	</screen>
+	<!-- PictureInPicture.py - not skinned -->
+	<!-- PluginBrowser.py -->
+	<screen name="PluginBrowser" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder" title="Plugin browser">
+		<panel name="template1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="540,384" size="1002,623" zPosition="1"/>
+		<widget name="list" position="540,385" size="1002,624" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" font="Regular;33" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="2"/>
+		<panel name="New-Buttons"/>
+		<panel name="MenuButton-pos2"/>
+		<panel name="OKButton"/>
+	</screen>
+	<screen name="PluginDownloadBrowser" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder" title="Downloadable plugins">
+		<panel name="template1"/>
+		<widget name="text" position="540,140" size="1002,195" font="Regular;33" foregroundColor="white" backgroundColor="topmid" transparent="1">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget name="list" position="540,385" size="1002,624" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" font="Regular;33" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="2"/>
+		<panel name="button-bg"/>
+		<panel name="OKButton"/>
+	</screen>
+	<screen name="PluginBrowserList" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder" title="Plugin browser">
+		<panel name="template1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="540,384" size="1002,623" zPosition="1"/>
+		<panel name="description"/>
+		<widget source="pluginList" render="Listbox" position="540,385" size="1002,624" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" font="Regular;33" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="2" listOrientation="vertical">
+			<convert type="TemplatedMultiContent">
+				{
+					"template": [
+						MultiContentEntryPixmapAlphaBlend(pos=(15, 9), size=(150, 60), png=3, flags=BT_SCALE),
+						MultiContentEntryText(pos = (180, 12), size = (798, 45), font=0, flags = RT_HALIGN_LEFT, text = 1),
+						MultiContentEntryText(pos = (180, 45), size = (798, 30), font=1, flags = RT_HALIGN_LEFT, text = 2)
+
+					],
+					"fonts": [gFont("Regular", 30),gFont("Regular", 20)],
+					"itemHeight": 78
+				}
+			</convert>
+		</widget>
+		<panel name="New-Buttons"/>
+		<panel name="MenuButton-pos2"/>
+		<panel name="OKButton"/>
+	</screen>
+	<screen name="PluginBrowserGrid" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder" title="Plugin browser">
+		<panel name="template1"/>
+		<panel name="description"/>
+		<widget source="pluginGrid" render="Listbox" position="540,385" size="1332,624" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" conditional="pluginGrid" listOrientation="grid" scrollbarMode="showNever" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos=(0, 0), size=(261, 120), font=0),
+					MultiContentEntryText(pos=(6, 6), size=(249, 108), font=0, backcolor = None),
+					MultiContentEntryPixmapAlphaBlend(pos=(55, 6), size=(150, 60), png=3, flags=BT_SCALE),
+					MultiContentEntryText(pos=(15,72), size=(230, 48), font=0, flags=RT_VALIGN_TOP | RT_HALIGN_CENTER | RT_WRAP, text=1)
+					],
+				"fonts": [parseFont("Regular;18")],
+				"itemWidth": 261,
+				"itemHeight": 120
+				}
+			</convert>
+		</widget>
+		<panel name="New-Buttons"/>
+		<panel name="MenuButton-pos2"/>
+		<panel name="OKButton"/>
+	</screen>
+	<screen name="PluginAction" title="Plugin Browser Action" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
+		<panel name="template1"/>
+		<panel name="description"/>
+		<widget source="plugins" render="Listbox" position="540,385" size="1332,624" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" foregroundColorSelected="white" itemHeight="78" font="Regular;33" transparent="1" enableWrapAround="1" scrollbarMode="showNever">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryPixmapAlphaBlend(pos=(15, 0), size=(78, 78), png=6, flags=BT_SCALE),
+					MultiContentEntryText(pos=(120, 0), size=(1212, 78), font=0, flags=RT_VALIGN_CENTER, text=2, color=0xffffff),
+					MultiContentEntryText(pos=(120, 6), size=(858, 30), font=1, flags=RT_VALIGN_CENTER, text=3, color=0xffffff),
+					MultiContentEntryText(pos=(978, 6), size=(210, 30), font=1, flags=RT_VALIGN_CENTER, text=5, color=0xffffff),
+					MultiContentEntryText(pos=(120, 36), size=(1140, 30), font=2, flags=RT_VALIGN_CENTER, text=4, color=0xffffff),
+					MultiContentEntryPixmapAlphaBlend(pos=(1260, 3), size=(72, 72), png=7, flags=BT_SCALE)
+					],
+				"fonts": [parseFont("Regular;30"), parseFont("Regular;24"), parseFont("Regular;21")],
+				"itemHeight": 78
+				}
+			</convert>
+		</widget>
+		<panel name="OKButton"/>
+		<panel name="New-Buttons"/>
+	</screen>
+	<!-- RdsDisplay.py - RdsInfoDisplay RassInteractive - not skinned -->
+	<!-- RestartNetwork.py -->
+	<screen name="RestartNetwork" position="center,center" size="900,150" title="Restart Network Adapter">
+		<widget name="label" position="15,45" size="750,75" horizontalAlignment="center" font="Regular;33" transparent="1" foregroundColor="white" backgroundColor="messageboxbg"/>
+	</screen>
+	<!-- SDswap.py - not skinned -->
+	<!-- Satconfig.py -->
+	<!-- tuner config - ok menu -->
+	<screen name="NimSetup" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="Setup-Default"/>
+		<panel name="description"/>
+	</screen>
+	<!-- tuner configuration -->
+	<screen name="NimSelection" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
+		<panel name="template1"/>
+		<widget source="nimlist" render="Listbox" position="540,385" size="1002,525" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/setup-1002-105.png" itemHeight="105" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="2">
+			<convert type="TemplatedMultiContent">{"template": [
+			MultiContentEntryText(pos = (15,5), size = (972,38), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the nim name,
+			MultiContentEntryText(pos = (15,41), size = (972,90), font = 1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is a description of the nim settings,
+			],
+			"fonts": [gFont("Regular",33), gFont("Regular",24)],
+			"itemHeight": 105
+			}</convert>
+		</widget>
+		<ePixmap position="540,384" size="1002,3" pixmap="div-h.png" alphaTest="blend" transparent="1"/>
+		<ePixmap position="540,489" size="1002,3" pixmap="div-h.png" alphaTest="blend" transparent="1"/>
+		<ePixmap position="540,594" size="1002,3" pixmap="div-h.png" alphaTest="blend" transparent="1"/>
+		<ePixmap position="540,699" size="1002,3" pixmap="div-h.png" alphaTest="blend" transparent="1"/>
+		<ePixmap position="540,804" size="1002,3" pixmap="div-h.png" alphaTest="blend" transparent="1"/>
+		<ePixmap position="540,909" size="1002,3" pixmap="div-h.png" alphaTest="blend" transparent="1"/>
+		<panel name="New-Buttons"/>
+	</screen>
+	<!-- tuner configuration - Mode - Positioner (selecting satelittes) -->
+	<screen name="SelectSatsEntryScreen" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1"/>
+		<widget name="hint" position="540,140" size="1002,195" font="Regular;33" foregroundColor="white" backgroundColor="topmid" transparent="1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="540,384" size="1002,623" zPosition="1"/>
+		<widget name="list" position="540,385" size="1002,624" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" font="Regular;33" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="2"/>
+		<panel name="New-Buttons"/>
+		<applet type="onLayoutFinish">self["list"].instance.setItemHeight(78)</applet>
+	</screen>
+	<!-- ScanSeup.py -->
+	<screen name="ScanSetup" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder" zPosition="-1" title="Manual Scan">
+		<panel name="Setup-Default"/>
+		<panel name="introduction"/>
+	</screen>
+	<!-- automatic scan -->
+	<screen name="ScanSimple" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder" zPosition="-1">
+		<panel name="Setup-Default"/>
+		<widget name="footer" position="540,140" size="1002,195" font="Regular;33" foregroundColor="white" backgroundColor="topmid" transparent="1"/>
+	</screen>
+	<!-- ScreenSaver.py -->
+	<screen name="Screensaver" position="fill" flags="wfNoBorder">
+		<eLabel position="fill" backgroundColor="#54111112" zPosition="0"/>
+		<widget name="picture" pixmap="q-backgrounds/screensaver.png" position="0,0" size="450,248" alphaTest="blend" zPosition="1"/>
+	</screen>
+	<!-- ScriptRunner.py -->
+	<!-- ScriptRunner / JobManager -->
+	<screen name="ScriptRunner" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="540,384" size="1002,623" zPosition="1"/>
+		<widget name="lab1" position="540,140" size="1002,195" font="Regular;33" foregroundColor="white" backgroundColor="topmid" transparent="1"/>
+		<widget name="list" padding="15,18" position="540,385" size="1002,624" selectionPixmap="q-selectbars/q-menu-2.png" font="Regular;33" foregroundColor="white" backgroundColor="mid" foregroundColorSelected="white" backgroundColorSelected="select-darkblue-bg" itemHeight="78" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2"/>
+		<panel name="New-Buttons"/>
+		<applet type="onLayoutFinish">self["list"].instance.setItemHeight(78)</applet>
+	</screen>
+	<!-- ServiceInfo.py -->
+	<screen name="ServiceInfoSimple" position="0,0" size="1920,1080" title="Service Information" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1"/>
+		<widget name="infolist" position="540,141" size="1332,840" foregroundColor="white" backgroundColor="mid" font="Console;33" scrollbarMode="showOnDemand" selection="0" transparent="1" itemHeight="45" zPosition="1"/>
+		<panel name="New-Buttons"/>
+	</screen>
+	<!-- legacy -->
+	<screen name="ServiceInfo" position="0,0" size="1920,1080" title="Service Information" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="ServiceInfoSimple"/>
+	</screen>
+	<!-- ServiceScan.py -->
+	<screen name="ServiceScan" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
+		<panel name="template1"/>
+		<panel name="flare-panel-2"/>
+		<widget source="FrontendInfo" render="Pixmap" pixmap="icons/scan-s.png" position="560,165" size="96,96" alphaTest="blend">
+			<convert type="FrontendInfo">TYPE</convert>
+			<convert type="ValueRange">0,0</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="FrontendInfo" render="Pixmap" pixmap="icons/scan-c.png" position="560,165" size="96,96" alphaTest="blend">
+			<convert type="FrontendInfo">TYPE</convert>
+			<convert type="ValueRange">1,1</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="FrontendInfo" render="Pixmap" pixmap="icons/scan-t.png" position="560,165" size="96,96" alphaTest="blend">
+			<convert type="FrontendInfo">TYPE</convert>
+			<convert type="ValueRange">2,2</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget name="network" position="676,165" size="833,48" font="Bold;33" foregroundColor="white" backgroundColor="topmid" transparent="1" verticalAlignment="center"/>
+		<widget name="transponder" position="676,213" size="833,48" font="Regular;33" foregroundColor="white" backgroundColor="topmid" transparent="1" verticalAlignment="center"/>
+		<widget name="scan_state" position="540,306" size="1002,42" font="Regular;33" foregroundColor="white" backgroundColor="mid" transparent="1"/>
+		<widget name="pass" position="540,348" size="1002,42" font="Regular;33" foregroundColor="white" backgroundColor="mid" transparent="1"/>
+		<widget name="scan_progress" position="540,399" size="1002,9" foregroundColor="#44c1fb" backgroundColor="progress-bg" borderWidth="1" borderColor="#555555" zPosition="3" transparent="0"/>
+		<widget name="servicelist" padding="15,0" font="Regular;33" position="540,427" size="1002,588" itemHeight="42" selection="0" foregroundColor="white" backgroundColor="mid" transparent="1"/>
+		<panel name="New-Buttons"/>
+	</screen>
+	<!-- Setup.py - q-menus.xml-->
+	<!-- ShowSoftcamPackages.py -->
+	<!-- info panel SoftcamPanel Install-->
+	<screen name="ShowSoftcamPackages" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid" title="Install Softcams">
+		<panel name="template1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="540,384" size="1002,623" zPosition="1"/>
+		<widget source="list" render="Listbox" position="540,385" size="1002,624" selectionPixmap="q-selectbars/q-menu-2.png" foregroundColor="white" backgroundColor="mid" foregroundColorSelected="white" backgroundColorSelected="select-lightblue-bg" itemHeight="83" font="Regular;35" transparent="1" enableWrapAround="1" zPosition="2" scrollbarMode="showNever">
+			<convert type="TemplatedMultiContent">{"template": [
+			MultiContentEntryPixmapAlphaBlend(pos = (15, 8), size = (72, 72), png = 4), # index 4 is the status pixmap
+			MultiContentEntryText(pos = (90, 6), size = (897, 45), font=0, flags = RT_HALIGN_LEFT, text = 0,  color = 0x00ffffff, color_sel = 0x00ffffff), # index 0 is the name
+			MultiContentEntryText(pos = (90, 39), size = (897, 30), font=1, flags = RT_HALIGN_LEFT, text = 2, color = 0x00ffffff, color_sel = 0x00ffffff), # index 2 is the description
+			MultiContentEntryPixmapAlphaBlend(pos = (0, 78), size = (1002, 0), png = 5), # index 5 is the div pixmap
+			],
+			"fonts": [gFont("Regular",30),gFont("Regular",24)],
+			"itemHeight": 78,
+			"scrollbarMode": "showNever"
+			}</convert>
+		</widget>
+		<panel name="New-Buttons"/>
+	</screen>
+	<!-- SkinSelector.py -->
+	<screen name="SkinSelector" position="0,0" size="1920,1080" title="Skin Selector" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="518,384" size="978,623" zPosition="1"/>
+		<widget name="SkinList" padding="15,18" position="518,385" size="978,624" font="Regular;33" valueFont="Regular;33" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2-978.png" itemHeight="78" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2"/>
+		<widget name="Preview" position="1516,384" size="320,240" alphaTest="blend" transparent="1"/>
+		<panel name="introduction"/>
+		<panel name="New-Buttons"/>
+		<panel name="OKButton"/>
+	</screen>
+	<screen name="SkinSelection" position="0,0" size="1920,1080" title="Skin Selection" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="Setup"/>
+		<widget name="Image" position="0,0" size="0,0" alphaTest="blend" conditional="Image" transparent="1" zPosition="2"/>
+		<widget name="preview" position="1560,384" size="324,243" alphaTest="blend" conditional="preview" transparent="1" zPosition="3"/>
+	</screen>
+	<!-- SleepTimer.py -->
+	<!-- SleepTimerEdit via standby menu -->
+	<screen name="SleepTimerEdit" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder" zPosition="4">
+		<panel name="Setup-Default"/>
+	</screen>
+	<!-- SoftcamSetup.py -->
+	<screen name="SoftcamSetup" position="0,0" size="1920,1080" title="Softcam Setup" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="518,384" size="978,623" zPosition="1"/>
+		<widget name="config" padding="15,0" position="518,385" size="978,624" font="Regular;33" valueFont="Regular;33" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2-978.png" itemHeight="78" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2"/>
+		<panel name="New-Buttons"/>
+		<widget name="info" position="1514,384" size="360,645" font="Regular;24" foregroundColor="white" backgroundColor="mid" transparent="1"/>
+	</screen>
+	<!-- SoftwareUpdate.py -->
+	<!-- SoftwareUpdate - not skinned -->
+	<!-- RunSoftwareUpdate - not skinned -->
+	<!-- Standby.py -->
+	<screen name="Standby" flags="wfNoBorder" position="fill" title="Standby" backgroundColor="black"/>
+	<!-- shutdown screen -->
+	<screen name="QuitMainloopScreen" flags="wfNoBorder" position="fill">
+		<ePixmap pixmap="q-backgrounds/reboot.png" position="0,0" size="1920,1080" alphaTest="blend" zPosition="10"/>
+		<widget name="text" position="center,780" size="1080,150" font="Regular;36" foregroundColor="bluetext" transparent="1" horizontalAlignment="center" zPosition="11"/>
+	</screen>
+	<!-- StreamingClientsInfo.py -->
+	<screen name="StreamingClientsInfo" title="Image Information" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1"/>
+		<panel name="h-separator-tr"/>
+		<panel name="title2"/>
+		<widget name="ScrollLabel" position="546,113" size="918,120" foregroundColor="white" backgroundColor="mid" font="Regular;30" transparent="1" zPosition="1"/>
+		<widget name="ScrollLabel2" position="546,350" size="918,539" foregroundColor="white" backgroundColor="mid" font="Regular;30" transparent="1" zPosition="1"/>
+		<panel name="New-Buttons"/>
+	</screen>
+	<!-- SubservicesQuickzap.py - not skinned -->
+	<!-- SubtitleDisplay.py -->
+	<screen name="SubtitleDisplay" position="0,0" size="1920,1080" zPosition="-1" flags="wfNoBorder" backgroundColor="transparent"/>
+	<!-- SwapManager.py -->
+	<screen name="Swap" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="540,384" size="1002,315" zPosition="1"/>
+		<widget name="lab1" position="540,385" size="480,78" font="Regular;33" foregroundColor="white" backgroundColor="topmid" verticalAlignment="center" transparent="1" zPosition="2"/>
+		<widget name="autostart_off" position="1503,405" size="48,48" pixmap="icons/lock_off.png" alphaTest="blend" transparent="1" zPosition="2"/>
+		<widget name="autostart_on" position="1503,405" size="48,48" pixmap="icons/lock_on.png" alphaTest="blend" transparent="1" zPosition="2"/>
+		<widget name="lab4" position="540,463" size="480,78" font="Regular;33" foregroundColor="white" backgroundColor="mid" verticalAlignment="center" transparent="1" zPosition="2"/>
+		<widget name="inactive" position="942,463" size="600,78" font="Regular;33" backgroundColor="mid" verticalAlignment="center" horizontalAlignment="right" transparent="1" zPosition="2"/>
+		<widget name="active" position="942,463" size="600,78" font="Regular;33" backgroundColor="mid" verticalAlignment="center" horizontalAlignment="right" transparent="1" zPosition="2"/>
+		<widget name="lab2" position="540,541" size="480,78" font="Regular;33" verticalAlignment="center" backgroundColor="mid" transparent="1"/>
+		<widget name="labplace" position="942,541" size="600,78" font="Regular;33" verticalAlignment="center" horizontalAlignment="right" backgroundColor="mid" transparent="1"/>
+		<widget name="lab3" position="540,619" size="480,78" font="Regular;33" verticalAlignment="center" backgroundColor="mid" transparent="1"/>
+		<widget name="labsize" position="942,619" size="600,78" font="Regular;33" verticalAlignment="center" horizontalAlignment="right" backgroundColor="mid" transparent="1"/>
+		<panel name="New-Buttons"/>
+	</screen>
+	<!-- TagEditor.py - not skinned -->
+	<!-- TaskList.py - not skinned -->
+	<!-- TaskView.py -->
+	<!-- initialise storage device -->
+	<screen name="JobView" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<eLabel position="0,760" size="1920,339" backgroundColor="blackglass" transparent="0" zPosition="-2"/>
+		<ePixmap position="0,724" size="1920,375" pixmap="q-infobars/infobar-blank.png" alphaTest="blend" zPosition="-1"/>
+		<widget source="job_name" render="Label" position="center,777" size="1920,45" font="Bold;33" foregroundColor="white" backgroundColor="blackglass" verticalAlignment="top" horizontalAlignment="center" wrap="noWrap" transparent="1"/>
+		<widget source="job_task" render="Label" position="center,828" size="1920,45" font="Regular;33" foregroundColor="white" backgroundColor="blackglass" verticalAlignment="top" horizontalAlignment="center" wrap="noWrap" transparent="1"/>
+		<widget source="job_progress" render="Progress" position="308,914" size="1305,9" foregroundColor="#44c1fb" backgroundColor="progress-bg" borderWidth="1" borderColor="#555555" zPosition="3" transparent="0"/>
+		<widget source="job_status" render="Label" position="309,930" size="653,42" font="Regular;33" foregroundColor="white" backgroundColor="blackglass" verticalAlignment="top" horizontalAlignment="left" wrap="noWrap" transparent="1"/>
+		<widget source="job_progress" render="Label" position="962,930" size="653,42" font="Regular;33" foregroundColor="white" backgroundColor="blackglass" verticalAlignment="top" horizontalAlignment="right" wrap="noWrap" transparent="1">
+			<convert type="ProgressToText"/>
+		</widget>
+		<widget name="config" padding="15,0" position="center,930" size="720,45" foregroundColor="white" backgroundColor="blackglass" transparent="1"/>
+		<widget source="cancelable" render="Pixmap" pixmap="buttons/key_red.png" position="428,1037" size="38,38" alphaTest="blend" zPosition="3">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="cancelable" render="FixedLabel" text="Cancel" position="473,1037" size="255,38" font="Regular;33" horizontalAlignment="left" verticalAlignment="center" transparent="1" wrap="noWrap" foregroundColor="white" backgroundColor="button-bg" zPosition="3">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="finished" render="Pixmap" pixmap="buttons/key_green.png" position="711,1037" size="38,38" alphaTest="blend" zPosition="3">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="finished" render="FixedLabel" text="OK" position="756,1037" size="255,38" font="Regular;33" horizontalAlignment="left" verticalAlignment="center" transparent="1" wrap="noWrap" foregroundColor="white" backgroundColor="button-bg" zPosition="3">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="backgroundable" render="Pixmap" pixmap="buttons/key_blue.png" position="1278,1037" size="38,38" alphaTest="blend" zPosition="3">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="backgroundable" render="FixedLabel" text="Continue in background" position="1323,1037" size="500,38" font="Regular;33" horizontalAlignment="left" verticalAlignment="center" transparent="1" wrap="noWrap" foregroundColor="white" backgroundColor="button-bg" zPosition="3">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+	</screen>
+	<!-- TextBox.py - not skinned -->
+	<!-- TimeDateInput.py -->
+	<screen name="TimeDateInput" position="center,center" size="978,210">
+		<widget name="config" padding="15,0" position="0,0" size="978,156" font="Regular;33" valueFont="Regular;33" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2-978.png" itemHeight="78" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2"/>
+		<widget pixmap="buttons/key_red.png" position="15,175" size="38,38" alphaTest="blend" objectTypes="key_red,StaticText" transparent="1"/>
+		<widget pixmap="buttons/key_red.png" position="15,175" size="38,38" alphaTest="blend" objectTypes="key_red,Label" transparent="1"/>
+		<widget name="key_red" condtional="key_red" position="60,170" zPosition="1" size="173,45" font="Regular;33" horizontalAlignment="left" verticalAlignment="center" transparent="1" foregroundColor="white" backgroundColor="messageboxbg"/>
+		<widget pixmap="buttons/key_green.png" position="390,175" size="38,38" alphaTest="blend" objectTypes="key_greeb,StaticText" transparent="1"/>
+		<widget pixmap="buttons/key_green.png" position="390,175" size="38,38" alphaTest="blend" objectTypes="key_red,Label" transparent="1"/>
+		<widget name="key_green" condtional="key_green" position="435,170" zPosition="1" size="173,45" font="Regular;33" horizontalAlignment="left" verticalAlignment="center" transparent="1" foregroundColor="white" backgroundColor="messageboxbg"/>
+	</screen>
+	<!-- TimerEdit.py -->
+	<screen name="TimerSanityConflict" title="Timer sanity error" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1"/>
+		<widget name="timer1" position="540,385" size="1002,78" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" itemHeight="78" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2" setFont="Regular;24" setEventNameFont="Regular; 30" setServiceNameFont="Regular;30" rowSplit="38" satPosLeft="300" iconMargin="15"/>
+		<widget name="list" padding="15,6" position="540,541" size="1002,45" foregroundColor="white" backgroundColor="skydarkblue" backgroundColorSelected="skydarkblue" foregroundColorSelected="white" itemHeight="45" font="Regular;33" scrollbarMode="showNever" transparent="1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" position="540,585" size="1002,316" alphaTest="blend" zPosition="1"/>
+		<widget name="timer2" position="540,586" size="1002,312" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" itemHeight="78" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2" setFont="Regular;24" setEventNameFont="Regular; 30" setServiceNameFont="Regular;30" rowSplit="38" satPosLeft="300" iconMargin="15"/>
+		<panel name="New-Buttons"/>
+	</screen>
+	<!-- TimerEntry.py -->
+	<screen name="TimerEntry" title="Timer entry" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="Setup-Default"/>
+		<panel name="description"/>
+		<panel name="HelpWindow"/>
+		<panel name="VKeyIcon"/>
+	</screen>
+	<!-- Timer log / timer info button-->
+	<screen name="TimerLog" title="Timer log" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1"/>
+		<widget name="logentry" position="540,140" size="1002,195" font="Regular;33" foregroundColor="white" backgroundColor="topmid" transparent="1"/>
+		<widget name="loglist" conditional="loglist" padding="15,18" position="540,385" size="1002,624" font="Regular;33" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" enableWrapAround="1" scrollbarMode="showOnDemand" itemHeight="78" transparent="1" zPosition="2"/>
+		<widget name="log" conditional="log" padding="15,0" position="540,385" size="1002,624" font="Regular;33" foregroundColor="white" backgroundColor="mid" scrollbarMode="showOnDemand" transparent="1"/>
+		<panel name="New-Buttons"/>
+	</screen>
+	<!-- Timers.py -->
+	<screen name="TimerEditList" title="Timer editor" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1"/>
+		<panel name="description"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="540,384" size="1002,623" zPosition="1"/>
+		<widget name="timerlist" position="540,385" size="1002,624" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" itemHeight="78" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2" setFont="Regular;24" rowSplit="38" satPosLeft="300" setEventNameFont="Regular; 30" setServiceNameFont="Regular; 30" iconMargin="15"/>
+		<panel name="New-Buttons"/>
+		<panel name="InfoButton-pos2"/>
+		<panel name="OKButton"/>
+	</screen>
+	<screen name="TimerSelection" title="Timer selection" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="540,384" size="1002,623" zPosition="1"/>
+		<widget name="timerlist" position="540,385" size="1002,624" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" itemHeight="78" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2" setFont="Regular;24" rowSplit="38" satPosLeft="300" setEventNameFont="Regular; 30" setServiceNameFont="Regular; 30" iconMargin="15"/>
+		<panel name="New-Buttons"/>
+		<panel name="OKButton"/>
+	</screen>
+	<!-- UnhandledKey.py -->
+	<screen name="UnhandledKey" position="e-167,54" zPosition="10" size="113,113" backgroundColor="transparent" flags="wfNoBorder">
+		<eLabel position="0,0" size="113,113" backgroundColor="blackglass" transparent="0" zPosition="-1"/>
+		<widget name="UnhandledKeyPixmap" pixmap="q-icons/unhandled.png" position="0,0" size="113,113" alphaTest="blend" transparent="1" zPosition="11"/>
+	</screen>
+	<!-- UserInterfacePositioner.py -->
+	<screen name="OSDCalibration" title="OSD Calibration" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="#000000">
+		<widget source="text" render="Label" position="300,165" zPosition="1" size="1320,180" verticalAlignment="center" font="Regular;33" horizontalAlignment="center" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1"/>
+		<widget name="config" position="225,375" zPosition="1" size="1470,315" itemHeight="45" font="Regular;33" valueFont="Regular;33" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColorSelected="#006fce" foregroundColorSelected="#ffffff" backgroundColor="#000000" foregroundColor="#ffffff" transparent="1"/>
+		<widget name="description" position="300,713" zPosition="1" size="1320,120" font="Regular;30" horizontalAlignment="center" verticalAlignment="center" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" conditional="description"/>
+		<widget source="status" render="Label" position="300,713" zPosition="1" size="1320,120" font="Regular;30" horizontalAlignment="center" verticalAlignment="center" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" conditional="status"/>
+		<eLabel backgroundColor="red" position="0,0" size="1920,1" zPosition="0"/>
+		<eLabel backgroundColor="red" position="0,1079" size="1920,1" zPosition="0"/>
+		<eLabel backgroundColor="red" position="0,0" size="1,1080" zPosition="0"/>
+		<eLabel backgroundColor="red" position="1919,0" size="1,1080" zPosition="0"/>
+		<eLabel backgroundColor="green" position="38,38" size="1845,1" zPosition="0"/>
+		<eLabel backgroundColor="green" position="38,1041" size="1845,1" zPosition="0"/>
+		<eLabel backgroundColor="green" position="38,38" size="1,1005" zPosition="0"/>
+		<eLabel backgroundColor="green" position="1881,38" size="1,1005" zPosition="0"/>
+		<eLabel backgroundColor="yellow" position="75,75" size="1770,1" zPosition="0"/>
+		<eLabel backgroundColor="yellow" position="75,1004" size="1770,1" zPosition="0"/>
+		<eLabel backgroundColor="yellow" position="75,75" size="1,930" zPosition="0"/>
+		<eLabel backgroundColor="yellow" position="1844,75" size="1,930" zPosition="0"/>
+		<eLabel backgroundColor="blue" position="113,113" size="1695,1" zPosition="0"/>
+		<eLabel backgroundColor="blue" position="113,966" size="1695,1" zPosition="0"/>
+		<eLabel backgroundColor="blue" position="113,113" size="1,855" zPosition="0"/>
+		<eLabel backgroundColor="blue" position="1806,113" size="1,855" zPosition="0"/>
+		<ePixmap pixmap="buttons/key_red.png" position="500,870" size="38,38" alphaTest="blend"/>
+		<ePixmap pixmap="buttons/key_green.png" position="774,870" size="38,38" alphaTest="blend"/>
+		<ePixmap pixmap="buttons/key_yellow.png" position="1049,870" size="38,38" alphaTest="blend"/>
+		<widget source="key_red" render="Label" position="553,870" size="255,38" wrap="noWrap" zPosition="1" verticalAlignment="center" font="Regular;30" horizontalAlignment="left" backgroundColor="#000000" foregroundColor="#ffffff" transparent="1"/>
+		<widget source="key_green" render="Label" position="827,870" size="255,38" wrap="noWrap" zPosition="1" verticalAlignment="center" font="Regular;30" horizontalAlignment="left" backgroundColor="#000000" foregroundColor="#ffffff" transparent="1"/>
+		<widget source="key_yellow" render="Label" position="1101,870" size="255,38" wrap="noWrap" zPosition="1" verticalAlignment="center" font="Regular;30" horizontalAlignment="left" backgroundColor="#000000" foregroundColor="#ffffff" transparent="1"/>
+		<widget name="footnote" position="0,0" size="0,0" conditional="footnote"/>
+	</screen>
+	<!-- VideoMode.py -->
+	<!-- VideoSetup - q-menus.xml -->
+	<!-- AutoVideoModeLabel - not skinned -->
+	<!-- VideoWizard.py - q-wizards.xml -->
+	<!-- VirtualKeyBoard.py -->
+	<screen name="VirtualKeyBoard" title="Virtual Keyboard" position="center,center" size="999,504" zPosition="99">
+		<widget name="header" conditional="header" position="32,10" size="948,33" font="Regular;21" foregroundColor="white" backgroundColor="messageboxbg" transparent="1" wrap="noWrap"/>
+		<widget name="prompt" conditional="prompt" position="32,10" size="948,33" font="Regular;21" foregroundColor="white" backgroundColor="messageboxbg" transparent="1" wrap="noWrap"/>
+		<ePixmap pixmap="buttons/vkey_text.png" position="30,50" size="934,68" alphaTest="blend" zPosition="-4"/>
+		<widget name="text" position="30,69" size="904,36" font="Regular;24" horizontalAlignment="right" wrap="noWrap" transparent="1" backgroundColor="black" zPosition="3"/>
+		<widget name="list" position="30,120" size="938,340" selection="0" backgroundColor="#283138"/>
+		<widget name="locale" conditional="locale" position="32,468" size="800,33" font="Regular;21" foregroundColor="white" backgroundColor="messageboxbg" transparent="1" wrap="noWrap"/>
+		<widget name="mode" conditional="mode" position="892,468" size="60,33" font="Regular;21" foregroundColor="white" backgroundColor="messageboxbg" horizontalAlignment="right" verticalAlignment="center" transparent="1" wrap="noWrap"/>
+		<widget name="language" conditional="language" position="0,0" size="0,0" font="Regular;21" transparent="1 "/>
+	</screen>
+	<!-- Volume.py -->
+	<screen name="Volume" position="center,54" size="675,113" title="Volume" flags="wfNoBorder" backgroundColor="transparent" zPosition="10">
+		<eLabel position="0,0" size="675,113" backgroundColor="blackglass" transparent="0" zPosition="11"/>
+		<ePixmap pixmap="q-backgrounds/volume-bg.png" position="0,0" size="675,113" alphaTest="blend" zPosition="12"/>
+		<ePixmap pixmap="q-icons/volume.png" position="0,0" size="113,113" alphaTest="blend" zPosition="13"/>
+		<widget name="Volume" position="center,center" size="390,12" foregroundColor="#44c1fb" backgroundColor="progress-bg" borderWidth="1" borderColor="#555555" zPosition="14"/>
+		<widget render="VolumeText" source="global.CurrentTime" position="e-113,0" size="113,113" font="Bold;39" foregroundColor="white" backgroundColor="blackglass" horizontalAlignment="center" verticalAlignment="center" zPosition="13" transparent="1"/>
+	</screen>
+	<!-- VolumeAdjust.py -->
+	<screen name="mySmallChannelSelection" position="0,0" size="1920,1080" backgroundColor="mid" transparent="0" flags="wfNoBorder">
+		<panel name="template1"/>
+		<panel name="ListTemplate"/>
+		<panel name="New-Buttons"/>
+	</screen>
+	<!-- legacy openatv -->
+	<screen name="TranslationInfo" position="center,center" size="675,525" title="Translation Information">
+		<widget source="TranslatorName" render="Label" text="Slyk Q" position="15,45" size="570,45" font="Bold;33" foregroundColor="white" backgroundColor="messageboxbg" transparent="1" zPosition="3"/>
+		<widget source="TranslationInfo" render="Label" text="KiddaC\nSupport for this skin can be found on\nhttps://linuxsat-support.com/board/1462-kiddac-skins/" position="15,105" size="570,375" font="Regular;30" foregroundColor="white" backgroundColor="messageboxbg" transparent="1" zPosition="3"/>
+	</screen>
+	<screen name="ImageBackup" position="0,0" size="1920,1080" title="Image Backup" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="ATVImageBackup" conditional="config"/>
+		<panel name="VIXImageBackup" conditional="list"/>
+	</screen>
+	<!-- Backup Image-->
+	<screen name="ATVImageBackup" position="0,0" size="1920,1080" title="Image Backup" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="Setup-Default"/>
+		<widget source="description" render="Label" position="540,140" size="1002,195" font="Regular;33" foregroundColor="white" backgroundColor="topmid" transparent="1"/>
+	</screen>
+	<screen name="ChoiceBox" position="center,center" size="900,720" zPosition="5">
+		<panel name="ATVChoiceBox" conditional="cancelAction"/>
+		<panel name="VIXChoiceBox" conditional="description"/>
+	</screen>
+	<!-- ChoiceBox.py -->
+	<screen name="ATVChoiceBox" position="center,center" size="780,195">
+		<widget name="text" position="0,0" size="780,78" font="Regular;33"/>
+		<widget name="list" position="150,150" size="780,0" font="Regular;33" foregroundColor="white" backgroundColor="messageboxbg" foregroundColorSelected="white" backgroundColorSelected="select-darkblue-bg" enableWrapAround="1" transparent="1" scrollbarMode="showOnDemand" itemHeight="78"/>
+		<applet type="onLayoutFinish">from enigma import getDesktop, eSize, ePoint
+desktop_w = getDesktop(0).size().width()
+desktop_h = getDesktop(0).size().height()
+listcount = 0
+itemheight = 78
+maxwidth = desktop_w - 120
+minwidth = desktop_w  // 2
+
+listwidth = self["list"].instance.size().width() + 120  # 120 for button width and padding
+if listwidth &gt; maxwidth:
+	listwidth = maxwidth
+	
+if listwidth &lt; minwidth:
+	listwidth = minwidth
+
+if self["list"] and self.list is not None:
+	listcount = len(self.list)
+	
+	if listcount &gt; 10:
+		listcount = 10
+
+if not self["text"].text:
+	textsize = (listwidth, 0)
+else:
+	textsizeoriginal = self["text"].getSize()
+	textsize = (listwidth, textsizeoriginal[1])
+
+listsize = (listwidth, itemheight*listcount)
+
+self["text"].instance.resize(eSize(*textsize))
+self["list"].instance.resize(eSize(*listsize))
+self["text"].instance.move(ePoint(0, 0))
+self["list"].instance.move(ePoint(0, textsize[1] + 30))
+
+wsizex = listwidth
+wsizey = textsize[1] + listsize[1] + 60
+wsize = (wsizex, wsizey)
+self.instance.resize(eSize(*wsize))
+self.instance.move(ePoint((desktop_w-wsizex)//2, (desktop_h-wsizey)//2))</applet>
+	</screen>
+</skin>

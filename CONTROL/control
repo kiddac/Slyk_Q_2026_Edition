@@ -1,9 +1,9 @@
-Package: enigma2-plugin-skins-slyk-q-1080
-Version: 1.56.20260928
+Package: enigma2-plugin-skins-slyk-q-2026-edition
+Version: 1.00.20261101
 Section: misc
 Priority: optional
 Architecture: all
 Maintainer: kiddac
-Description: Slyk Q 1080
+Description: Slyk Q 2026 Edition
 Depends: enigma2-plugin-skincomponents-kiddac-shared-skin
-Source: https://www.linuxsat-support.com
+Source: https://www.linuxsat-support.alphaTest
