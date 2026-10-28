@@ -1,9 +1,9 @@
 Package: enigma2-plugin-skins-slyk-q-2026-edition
-Version: 1.00.20261101
+Version: 1.01.20261101
 Section: misc
 Priority: optional
 Architecture: all
 Maintainer: kiddac
-Description: Slyk Q 2026 Edition
+Description: Slyk Q 2026 Edition with FHD/WQHD, theme and receiver-image selector
 Depends: enigma2-plugin-skincomponents-kiddac-shared-skin
 Source: https://www.linuxsat-support.alphaTest

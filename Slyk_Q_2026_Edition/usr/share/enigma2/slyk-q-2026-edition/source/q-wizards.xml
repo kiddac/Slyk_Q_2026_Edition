@@ -1,0 +1,100 @@
+<skin>
+	<screen name="RemoteControlTemplate">
+		<widget name="rc" pixmaps="skin_default/rc.png,skin_default/rcold.png" position="1660,335" size="231,750" zPosition="10" alphaTest="blend"/>
+		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-150,-225" zPosition="11" size="56,105" alphaTest="blend"/>
+		<widget name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-150,-225" zPosition="11" size="56,105" alphaTest="blend"/>
+		<widget name="arrowup" pixmap="skin_default/arrowup.png" position="-150,-225" zPosition="11" size="56,105" alphaTest="blend"/>
+		<widget name="arrowup2" pixmap="skin_default/arrowup.png" position="-150,-225" zPosition="11" size="56,105" alphaTest="blend"/>
+	</screen>
+	<screen name="WizardTemplate">
+		<panel name="template1"/>
+		<widget name="text" position="540,110" size="1002,264" font="Regular;33" foregroundColor="white" backgroundColor="topmid" transparent="1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="540,384" size="1002,623" zPosition="1"/>
+		<widget name="config" padding="15,0" position="540,385" size="1002,624" font="Regular;33" valueFont="Regular;33" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2"/>
+		<widget source="list" render="Listbox" position="540,385" size="1002,624" font="Regular;33" valueFont="Regular;33" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2">
+			<convert type="TemplatedMultiContent">{"template": [
+			MultiContentEntryText(pos = (15, 20), size = (1002, 45), flags = RT_HALIGN_LEFT, text = 0) ],
+			"fonts": [gFont("Regular", 33)],
+			"itemHeight": 78
+			}</convert>
+		</widget>
+		<panel name="New-Buttons"/>
+		<panel name="RemoteControlTemplate"/>
+	</screen>
+	<screen name="wizard_rc_templateNew" position="fill" flags="wfNoBorder">
+		<widget name="rc" pixmaps="rc.png,rcold.png" position="1660,335" zPosition="10" size="154,500" alphaTest="blend" transparent="0"/>
+		<widget alphaTest="blend" name="indicatorU0" pixmap="icons/remotehighlight.png" position="1660,335" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphaTest="blend" name="indicatorU1" pixmap="icons/remotehighlight.png" position="1660,335" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphaTest="blend" name="indicatorU2" pixmap="icons/remotehighlight.png" position="1660,335" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphaTest="blend" name="indicatorU3" pixmap="icons/remotehighlight.png" position="1660,335" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphaTest="blend" name="indicatorU4" pixmap="icons/remotehighlight.png" position="1660,335" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphaTest="blend" name="indicatorU5" pixmap="icons/remotehighlight.png" position="1660,335" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphaTest="blend" name="indicatorU6" pixmap="icons/remotehighlight.png" position="1660,335" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphaTest="blend" name="indicatorU7" pixmap="icons/remotehighlight.png" position="1660,335" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphaTest="blend" name="indicatorU8" pixmap="icons/remotehighlight.png" position="1660,335" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphaTest="blend" name="indicatorU9" pixmap="icons/remotehighlight.png" position="1660,335" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphaTest="blend" name="indicatorU10" pixmap="icons/remotehighlight.png" position="1660,335" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphaTest="blend" name="indicatorU11" pixmap="icons/remotehighlight.png" position="1660,335" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphaTest="blend" name="indicatorU12" pixmap="icons/remotehighlight.png" position="1660,335" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphaTest="blend" name="indicatorU13" pixmap="icons/remotehighlight.png" position="1660,335" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphaTest="blend" name="indicatorU14" pixmap="icons/remotehighlight.png" position="1660,335" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphaTest="blend" name="indicatorU15" pixmap="icons/remotehighlight.png" position="1660,335" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphaTest="blend" name="indicatorL0" pixmap="icons/remotehighlight.png" position="1660,335" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphaTest="blend" name="indicatorL1" pixmap="icons/remotehighlight.png" position="1660,335" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphaTest="blend" name="indicatorL2" pixmap="icons/remotehighlight.png" position="1660,335" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphaTest="blend" name="indicatorL3" pixmap="icons/remotehighlight.png" position="1660,335" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphaTest="blend" name="indicatorL4" pixmap="icons/remotehighlight.png" position="1660,335" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphaTest="blend" name="indicatorL5" pixmap="icons/remotehighlight.png" position="1660,335" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphaTest="blend" name="indicatorL6" pixmap="icons/remotehighlight.png" position="1660,335" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphaTest="blend" name="indicatorL7" pixmap="icons/remotehighlight.png" position="1660,335" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphaTest="blend" name="indicatorL8" pixmap="icons/remotehighlight.png" position="1660,335" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphaTest="blend" name="indicatorL9" pixmap="icons/remotehighlight.png" position="1660,335" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphaTest="blend" name="indicatorL10" pixmap="icons/remotehighlight.png" position="1660,335" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphaTest="blend" name="indicatorL11" pixmap="icons/remotehighlight.png" position="1660,335" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphaTest="blend" name="indicatorL12" pixmap="icons/remotehighlight.png" position="1660,335" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphaTest="blend" name="indicatorL13" pixmap="icons/remotehighlight.png" position="1660,335" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphaTest="blend" name="indicatorL14" pixmap="icons/remotehighlight.png" position="1660,335" offset="11,11" size="23,23" zPosition="11"/>
+		<widget alphaTest="blend" name="indicatorL15" pixmap="icons/remotehighlight.png" position="1660,335" offset="11,11" size="23,23" zPosition="11"/>
+	</screen>
+	<screen name="StartWizard" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="WizardTemplate"/>
+	</screen>
+	<screen name="ImageWizard" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="WizardTemplate"/>
+	</screen>
+	<screen name="DefaultWizard" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="WizardTemplate"/>
+	</screen>
+	<screen name="NetworkWizard" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="WizardTemplate"/>
+	</screen>
+	<screen name="DefaultSatLists" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="WizardTemplate"/>
+	</screen>
+	<screen name="DreamPackageWizard" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="WizardTemplate"/>
+	</screen>
+	<screen name="CleanupWizard" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="WizardTemplate"/>
+	</screen>
+	<screen name="VideoWizard" position="fill" title="Welcome..." flags="wfNoBorder" backgroundColor="mid">
+		<panel name="WizardTemplate"/>
+	</screen>
+	<screen name="LanguageWizard" position="fill" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1"/>
+		<widget name="text" position="540,140" size="1002,195" font="Regular;33" foregroundColor="white" backgroundColor="topmid" transparent="1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="540,384" size="1002,623" zPosition="1"/>
+		<widget name="config" padding="15,0" position="540,385" size="1002,624" font="Regular;33" valueFont="Regular;33" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2"/>
+		<widget source="languages" render="Listbox" position="540,385" size="1002,624" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" font="Regular;33" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="2">
+			<convert type="TemplatedMultiContent">{"template": [
+			MultiContentEntryPixmapAlphaBlend(pos = (15,20), size = (90,45), png = 2), # index 2 is the pixmap
+			MultiContentEntryText(pos = (150,20), size = (837,78), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the language name
+			],
+			"fonts": [gFont("Regular",33)],
+			"itemHeight": 78
+			}</convert>
+		</widget>
+		<panel name="New-Buttons"/>
+		<panel name="RemoteControlTemplate"/>
+	</screen>
+</skin>

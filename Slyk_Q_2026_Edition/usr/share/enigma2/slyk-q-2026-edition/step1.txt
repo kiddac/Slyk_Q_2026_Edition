@@ -1,0 +1,42 @@
+Implemented in C:\Git\Slyk_Q_2026_Edition
+Added
+Extension: SlykQ2026Edition
+Resolution selector:
+FHD 1920×1080
+WQHD 2560×1440
+Theme selector:
+Default
+Black
+Glass
+Image selector:
+OpenATV / OpenVIX
+OpenBH
+OpenBH appends q-obh4u.xml as the final include.
+
+Structure
+Original XML sources are preserved in: C:\Git\Slyk_Q_2026_Edition\Slyk_Q_2026_Edition\usr\share\enigma2\slyk-q-2026-edition\source\
+
+Graphics variants are under: C:\Git\Slyk_Q_2026_Edition\Slyk_Q_2026_Edition\usr\share\enigma2\slyk-q-2026-edition\assets\
+
+Each resolution has Default, Black, and Glass folders. All currently contain cloned FHD graphics ready for replacement.
+
+Theme colours are configured in: C:\Git\Slyk_Q_2026_Edition\Slyk_Q_2026_Edition\usr\share\enigma2\slyk-q-2026-edition\themes.json
+
+XML generation and scaling are handled by: C:\Git\Slyk_Q_2026_Edition\Slyk_Q_2026_Edition\usr\lib\enigma2\python\Plugins\Extensions\SlykQ2026Edition\SkinBuilder.py
+
+Behaviour
+Applying settings:
+
+Rebuilds XML from the untouched source files.
+Scales positions, dimensions, fonts, parameters, margins, and borders for WQHD.
+Applies theme colour overrides.
+Selects the appropriate graphics using symbolic links.
+Adds the OpenBH include when selected.
+Offers to restart Enigma2.
+Validation
+Python compilation passed.
+FHD and WQHD generation passed.
+Default, Black, and Glass configurations passed.
+OpenATV/OpenVIX and OpenBH include combinations passed.
+All generated non-empty XML files parsed successfully.
+Package version updated to 1.01.20261101.

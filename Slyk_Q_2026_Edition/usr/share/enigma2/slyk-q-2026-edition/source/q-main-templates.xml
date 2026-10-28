@@ -1,0 +1,101 @@
+<skin>
+	<screen name="background">
+		<ePixmap pixmap="q-backgrounds/q-bg.png" position="0,0" size="1920,1080" zPosition="-3"/>
+	</screen>
+	<screen name="leftnav">
+		<ePixmap pixmap="q-backgrounds/q-left-nav.png" position="23,0" size="40,1080" alphaTest="blend" zPosition="4"/>
+	</screen>
+	<screen name="rightnav">
+		<ePixmap pixmap="q-backgrounds/q-right-nav.png" position="482,0" size="40,1080" alphaTest="blend" zPosition="4"/>
+	</screen>
+	<screen name="tv">
+		<widget source="session.VideoPicture" render="Pig" position="39,125" size="486,285" backgroundColor="transparent" transparent="1" zPosition="-2"/>
+		<widget source="session.CurrentService" render="Label" position="54,353" size="437,32" font="Bold;24" foregroundColor="white" backgroundColor="transparent" borderWidth="2" borderColor="black" verticalAlignment="center" horizontalAlignment="center" wrap="noWrap" transparent="1" zPosition="3">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<eLabel position="54,140" size="436,245" backgroundColor="transparent" zPosition="2"/>
+		<eLabel position="55,140" size="7,245" backgroundColor="#eeffffff" zPosition="3"/>
+		<eLabel position="483,140" size="7,245" backgroundColor="#eeffffff" zPosition="3"/>
+	</screen>
+	<screen name="mini-tv">
+		<widget source="session.VideoPicture" render="Pig" position="1521,49" size="320,180" backgroundColor="transparent" transparent="1" zPosition="-2"/>
+		<eLabel position="1541,60" size="280,157" backgroundColor="transparent" zPosition="2"/>
+	</screen>
+	<screen name="logo">
+		<ePixmap pixmap="q-backgrounds/logo1.png" alphaTest="blend" position="92,54" size="144,78" zPosition="2"/>
+	</screen>
+	<screen name="time">
+		<widget source="global.CurrentTime" render="Label" position="340,80" size="143,40" font="Regular;33" foregroundColor="white" backgroundColor="topleft" verticalAlignment="center" horizontalAlignment="left" transparent="1" zPosition="2">
+			<convert type="Slyk18ClockToText">Slyk18Time</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="341,82" size="143,40" font="Regular;33" foregroundColor="black" backgroundColor="topleft" verticalAlignment="center" horizontalAlignment="left" transparent="1" zPosition="1">
+			<convert type="Slyk18ClockToText">Slyk18Time</convert>
+		</widget>
+	</screen>
+	<screen name="nav-gradient">
+		<ePixmap pixmap="q-backgrounds/1-panel-gradient.png" alphaTest="blend" position="90,1015" size="364,65" zPosition="10"/>
+	</screen>
+	<screen name="nav-gradient-2">
+		<ePixmap pixmap="q-backgrounds/2-panel-gradient.png" alphaTest="blend" position="540,1015" size="1002,65" zPosition="10"/>
+	</screen>
+	<screen name="q-title">
+		<widget source="Title" render="Label" position="102,400" size="342,100" verticalAlignment="top" horizontalAlignment="left" font="Regular;42" zPosition="2" transparent="1" foregroundColor="white" backgroundColor="midleft"/>
+		<widget source="Title" render="Label" position="104,402" size="342,100" verticalAlignment="top" horizontalAlignment="left" font="Regular;42" zPosition="1" transparent="1" foregroundColor="text-shadow" backgroundColor="midleft"/>
+	</screen>
+	<screen name="q-small-title">
+		<widget source="Title" render="Label" position="102,400" size="342,120" verticalAlignment="top" horizontalAlignment="left" font="Regular;33" zPosition="2" transparent="1" foregroundColor="white" backgroundColor="midleft"/>
+		<widget source="Title" render="Label" position="104,402" size="342,120" verticalAlignment="top" horizontalAlignment="left" font="Regular;33" zPosition="1" transparent="1" foregroundColor="text-shadow" backgroundColor="midleft"/>
+	</screen>
+	<screen name="template1">
+		<panel name="background"/>
+		<panel name="logo"/>
+		<panel name="time"/>
+		<panel name="tv"/>
+		<panel name="q-title"/>
+		<panel name="leftnav"/>
+		<panel name="rightnav"/>
+	</screen>
+	<screen name="console-template">
+		<panel name="background"/>
+		<panel name="logo"/>
+		<panel name="time"/>
+		<panel name="mini-tv"/>
+		<widget source="Title" render="Label" position="100,186" size="1720,45" font="Regular;33" foregroundColor="white" backgroundColor="mid" verticalAlignment="center" wrap="noWrap" transparent="1" zPosition="1"/>
+		<eLabel position="100,238" size="1720,730" backgroundColor="black" transparent="0" zPosition="-1"/>
+	</screen>
+	<screen name="description">
+		<widget name="description" position="540,140" size="1002,195" font="Regular;33" foregroundColor="white" backgroundColor="topmid" transparent="1"/>
+	</screen>
+	<screen name="introduction">
+		<widget source="introduction" render="Label" position="540,140" size="1002,195" font="Regular;33" foregroundColor="white" backgroundColor="topmid" transparent="1"/>
+	</screen>
+	<screen name="HelpWindow">
+		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="0,0" zPosition="10" size="1920,60" alphaTest="blend"/>
+	</screen>
+	<screen name="footnote">
+		<widget name="footnote" position="1575,931" size="308,78" font="Regular;21" foregroundColor="white" backgroundColor="botmid" horizontalAlignment="left" transparent="1" verticalAlignment="center" zPosition="4"/>
+	</screen>
+	<screen name="VKeyIcon">
+		<widget source="VKeyIcon" render="Pixmap" pixmap="buttons/key_text.png" position="1845,1030" zPosition="4" size="38,38" transparent="1" alphaTest="blend">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+	</screen>
+	<screen name="side-1-2-box">
+		<ePixmap pixmap="q-backgrounds/side-2-box.png" alphaTest="blend" position="1514,384" size="324,160" zPosition="1"/>
+	</screen>
+	<screen name="side-1-3-box">
+		<ePixmap pixmap="q-backgrounds/side-3-box.png" alphaTest="blend" position="1514,384" size="324,238" zPosition="1"/>
+	</screen>
+	<screen name="side-1-4-box">
+		<ePixmap pixmap="q-backgrounds/side-4-box.png" alphaTest="blend" position="1514,384" size="324,316" zPosition="1"/>
+	</screen>
+	<screen name="side-1-5-box">
+		<ePixmap pixmap="q-backgrounds/side-5-box.png" alphaTest="blend" position="1514,384" size="324,394" zPosition="1"/>
+	</screen>
+	<screen name="side-2-4-box">
+		<ePixmap pixmap="q-backgrounds/side-4-box.png" alphaTest="blend" position="1514,384" size="324,316" zPosition="1"/>
+	</screen>
+	<screen name="flare-panel-2">
+		<ePixmap pixmap="q-backgrounds/flare-panel-2.png" alphaTest="blend" position="540,126" size="1006,175" zPosition="1"/>
+	</screen>
+</skin>

@@ -1,0 +1,165 @@
+<skin>
+	<!--GitCommitInfo.py -->
+	<screen name="CommitInfo" title="OE Changes" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1"/>
+		<eLabel position="490,0" size="1430,1080" backgroundColor="black" transparent="0" zPosition="-1"/>
+		<widget name="AboutScrollLabel" position="540,62" size="1335,956" font="Console;24" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="3"/>
+		<panel name="New-Buttons"/>
+	</screen>
+	<!-- H9SDswap.py - not skinned -->
+	<!-- MultiBootSelector.py -->
+	<screen name="MultiBootSelector" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="template1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="540,384" size="1002,623" zPosition="1"/>
+		<widget name="config" position="540,385" size="1002,624" font="Regular;33" valueFont="Regular;33" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2"/>
+		<widget source="description" render="Label" position="540,140" size="1002,195" font="Regular;33" foregroundColor="white" backgroundColor="topmid" transparent="1"/>
+		<panel name="New-Buttons"/>
+	</screen>
+	<!-- SoftwareUpdate.py -->
+	<!-- ViewGitLog -->
+	<screen name="SoftwareUpdateChanges" title="OE Changes" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1"/>
+		<eLabel position="490,0" size="1430,1080" backgroundColor="black" transparent="0" zPosition="-1"/>
+		<widget name="text" position="540,62" size="1335,956" font="Console;24" foregroundColor="white" backgroundColor="black" scrollbarMode="showOnDemand" transparent="1" zPosition="3"/>
+		<panel name="New-Buttons"/>
+	</screen>
+	<screen name="VIXMenu" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid" title="Main Menu">
+		<panel name="template1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="540,384" size="1002,623" zPosition="1"/>
+		<widget source="menu" render="Listbox" position="540,140" size="1002,195" font="Regular;33" foregroundColor="white" backgroundColor="topmid" transparent="1" scrollbarMode="showNever" selection="0">
+			<convert type="TemplatedMultiContent">{"template": [
+				MultiContentEntryText(pos = (0,0),size = (1002,195),flags = RT_HALIGN_LEFT|RT_VALIGN_TOP,text = 2),# index 2 is the Description,
+				],
+				"fonts": [gFont("Regular",33)],
+				"itemHeight": 195
+				}</convert>
+		</widget>
+		<widget source="menu" render="Listbox" position="540,385" size="1002,624" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" font="Regular;33" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="2">
+			<convert type="TemplatedMultiContent">{"template": [
+			MultiContentEntryText(pos = (15,0), size = (970,78), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0, color = 0x00ffffff, color_sel = 0x00ffffff, backcolor_sel = 0x0000437c)
+			],
+			"fonts": [gFont("Regular",33)],
+			"itemHeight": 78
+				}</convert>
+		</widget>
+		<panel name="New-Buttons"/>
+	</screen>
+	<screen name="VIXBackupManager" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1"/>
+		<widget name="lab1" position="540,140" size="1002,195" font="Regular;33" foregroundColor="white" backgroundColor="topmid" transparent="1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="540,384" size="1002,623" zPosition="1"/>
+		<widget name="list" padding="15,20" position="540,385" size="1002,624" font="Regular;33" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2"/>
+		<panel name="New-Buttons"/>
+		<panel name="InfoButton-pos2"/>
+		<panel name="MenuButton"/>
+		<applet type="onLayoutFinish">self["list"].instance.setItemHeight(78)</applet>
+	</screen>
+	<screen name="XtraPluginsSelection" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="540,384" size="1002,623" zPosition="1"/>
+		<widget name="checkList" position="540,385" size="1002,624" font="Regular;33" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2"/>
+		<panel name="New-Buttons"/>
+	</screen>
+	<screen name="VIXBackupManagerMenu" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
+		<panel name="Setup-Default"/>
+		<panel name="HelpWindow"/>
+		<panel name="VKeyIcon"/>
+	</screen>
+	<screen name="VIXBackupManagerLogView" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid" title="Backup Log">
+		<panel name="template1"/>
+		<eLabel position="490,0" size="1430,1080" backgroundColor="black" transparent="0" zPosition="-1"/>
+		<widget name="list" position="540,62" size="1335,956" font="Console;18" foregroundColor="white" backgroundColor="black" scrollbarMode="showOnDemand" transparent="1" zPosition="3"/>
+		<panel name="New-Buttons"/>
+	</screen>
+	<screen name="VIXIPKInstaller" position="0,0" size="1920,1080" title="IPK Installer" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1"/>
+		<widget name="lab1" position="540,140" size="1002,195" font="Regular;33" foregroundColor="white" backgroundColor="topmid" transparent="1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="540,384" size="1002,623" zPosition="1"/>
+		<widget name="list" padding="15,20" position="540,385" size="1002,624" font="Regular;33" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2"/>
+		<panel name="New-Buttons"/>
+		<applet type="onLayoutFinish">self["list"].instance.setItemHeight(78)</applet>
+	</screen>
+	<screen name="VIXImageManager" position="0,0" size="1920,1080" title="Image Manager" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1"/>
+		<widget name="lab1" position="540,140" size="1002,195" font="Regular;33" foregroundColor="white" backgroundColor="topmid" transparent="1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="540,384" size="1002,623" zPosition="1"/>
+		<widget name="list" padding="15,20" position="540,385" size="1002,624" font="Regular;33" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2"/>
+		<panel name="New-Buttons"/>
+		<panel name="InfoButton-pos1"/>
+		<panel name="MenuButton"/>
+		<applet type="onLayoutFinish">self["list"].instance.setItemHeight(78)</applet>
+	</screen>
+	<screen name="VIXImageBackup" position="0,0" size="1920,1080" title="Image Manager" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1"/>
+		<widget name="lab1" position="540,140" size="1002,195" font="Regular;33" foregroundColor="white" backgroundColor="topmid" transparent="1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="540,384" size="1002,623" zPosition="1"/>
+		<widget name="list" padding="15,20" position="540,385" size="1002,624" font="Regular;33" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2"/>
+		<panel name="New-Buttons"/>
+		<applet type="onLayoutFinish">self["list"].instance.setItemHeight(78)</applet>
+	</screen>
+	<screen name="ImageManagerDownload" position="0,0" size="1920,1080" title="Image Manager" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1"/>
+		<widget name="lab1" position="540,140" size="1002,195" font="Regular;33" foregroundColor="white" backgroundColor="topmid" transparent="1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="540,384" size="1002,623" zPosition="1"/>
+		<widget name="list" padding="15,20" position="540,385" size="1002,624" font="Regular;33" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2"/>
+		<panel name="New-Buttons"/>
+		<applet type="onLayoutFinish">self["list"].instance.setItemHeight(78)</applet>
+	</screen>
+	<screen name="VIXSoftcamManager" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid" title="Softcam Setup">
+		<panel name="template1"/>
+		<ePixmap pixmap="q-backgrounds/flare-panel-978.png" alphaTest="blend" position="518,126" size="1006,175" zPosition="1"/>
+		<widget name="lab2" position="555,168" size="150,60" font="Regular;33" verticalAlignment="top" horizontalAlignment="left" foregroundColor="white" backgroundColor="mid" transparent="1" zPosition="2"/>
+		<widget name="activecam" position="705,168" size="774,120" font="Regular;33" foregroundColor="white" backgroundColor="topmid" verticalAlignment="top" horizontalAlignment="left" transparent="1" zPosition="2"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="518,384" size="978,623" zPosition="1"/>
+		<widget name="list" position="518,385" size="978,624" selectionPixmap="q-selectbars/q-menu-2-978.png" foregroundColor="white" backgroundColor="mid" foregroundColorSelected="white" backgroundColorSelected="select-darkblue-bg" itemHeight="78" font="Regular;30" transparent="1" enableWrapAround="1" zPosition="2" scrollbarMode="showNever"/>
+		<panel name="New-Buttons"/>
+		<panel name="MenuButton"/>
+		<applet type="onLayoutFinish">self["list"].instance.setItemHeight(78)</applet>
+	</screen>
+	<screen name="VIXStartCam" position="center,center" size="726, 225" title="Starting Softcam">
+		<widget name="connect" position="c-45, 15" size="90,90" zPosition="2" pixmaps="/usr/share/enigma2/slyk-q-2026-edition/spinner/wait1.png,/usr/share/enigma2/slyk-q-2026-edition/spinner/wait2.png,/usr/share/enigma2/slyk-q-2026-edition/spinner/wait3.png,/usr/share/enigma2/slyk-q-2026-edition/spinner/wait4.png,/usr/share/enigma2/slyk-q-2026-edition/spinner/wait5.png,/usr/share/enigma2/slyk-q-2026-edition/spinner/wait6.png,/usr/share/enigma2/slyk-q-2026-edition/spinner/wait7.png,/usr/share/enigma2/slyk-q-2026-edition/spinner/wait8.png,/usr/share/enigma2/slyk-q-2026-edition/spinner/wait9.png,/usr/share/enigma2/slyk-q-2026-edition/spinner/wait10.png,/usr/share/enigma2/slyk-q-2026-edition/spinner/wait11.png,/usr/share/enigma2/slyk-q-2026-edition/spinner/wait12.png" transparent="1" alphaTest="blend"/>
+		<widget name="lab1" position="15, 135" horizontalAlignment="center" size="690, 90" zPosition="1" font="Regular;35" verticalAlignment="top" transparent="1" foregroundColor="white" backgroundColor="messageboxbg"/>
+	</screen>
+	<screen name="VIXStopCam" position="center,center" size="726, 225" title="Starting Softcam">
+		<widget name="connect" position="c-45, 15" size="90,90" zPosition="2" pixmaps="/usr/share/enigma2/slyk-q-2026-edition/spinner/wait1.png,/usr/share/enigma2/slyk-q-2026-edition/spinner/wait2.png,/usr/share/enigma2/slyk-q-2026-edition/spinner/wait3.png,/usr/share/enigma2/slyk-q-2026-edition/spinner/wait4.png,/usr/share/enigma2/slyk-q-2026-edition/spinner/wait5.png,/usr/share/enigma2/slyk-q-2026-edition/spinner/wait6.png,/usr/share/enigma2/slyk-q-2026-edition/spinner/wait7.png,/usr/share/enigma2/slyk-q-2026-edition/spinner/wait8.png,/usr/share/enigma2/slyk-q-2026-edition/spinner/wait9.png,/usr/share/enigma2/slyk-q-2026-edition/spinner/wait10.png,/usr/share/enigma2/slyk-q-2026-edition/spinner/wait11.png,/usr/share/enigma2/slyk-q-2026-edition/spinner/wait12.png" transparent="1" alphaTest="blend"/>
+		<widget name="lab1" position="15, 135" horizontalAlignment="center" size="690, 90" zPosition="1" font="Regular;35" verticalAlignment="top" transparent="1" foregroundColor="white" backgroundColor="messageboxbg"/>
+	</screen>
+	<screen name="VIXSoftcamLog" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid" title="Backup Log">
+		<panel name="template1"/>
+		<eLabel position="490,0" size="1430,1080" backgroundColor="black" transparent="0" zPosition="-1"/>
+		<widget name="list" position="540,62" size="1335,956" font="Console;18" foregroundColor="white" backgroundColor="black" scrollbarMode="showOnDemand" transparent="1" zPosition="3"/>
+		<panel name="New-Buttons"/>
+	</screen>
+	<screen name="VIXSwap" position="0,0" size="1920,1080" title="Swap File Manager" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="Swap"/>
+	</screen>
+	<!-- openvix only - about - software update  -->
+	<screen name="SoftwareUpdateChoices" position="center,center" size="900,720" flags="wfNoBorder" backgroundColor="messageboxbg">
+		<widget name="list" position="0,0" size="900,468" itemHeight="78" font="Regular;33" foregroundColor="white" backgroundColor="messageboxbg" foregroundColorSelected="white" backgroundColorSelected="select-darkblue-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget name="text" position="0,500" size="900,156" font="Regular;33" foregroundColor="white" backgroundColor="messageboxbg" verticalAlignment="center" horizontalAlignment="center" transparent="1"/>
+		<applet type="onLayoutFinish">self["list"].instance.setItemHeight(78)</applet>
+	</screen>
+	<screen name="HelpMenuVIX" position="fill" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1"/>
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphaTest="blend" position="540,384" size="1002,623" zPosition="1"/>
+		<widget name="list" position="540,385" size="1002,697" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" font="Regular;33" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="2"/>
+		<widget name="long_key" position="540,140" size="1002,195" font="Regular;33" foregroundColor="white" backgroundColor="topmid" transparent="1"/>
+		<panel name="RemoteControlTemplate"/>
+		<panel name="nav-gradient-2"/>
+	</screen>
+	<screen name="VIXDevicesPanel" position="0,0" size="1920,1080" title="Mount Manager" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="HddMount"/>
+	</screen>
+	<screen name="VIXDevicePanelConf" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder" zPosition="4" title="Choose where to mount your devices to:">
+		<panel name="DevicePanelConf"/>
+	</screen>
+	<screen name="VIXChoiceBox" position="center,center" size="900,720" zPosition="5">
+		<widget name="list" position="0,0" size="900,600" font="Regular;33" foregroundColor="white" backgroundColor="messageboxbg" foregroundColorSelected="white" backgroundColorSelected="select-darkblue-bg" enableWrapAround="1" verticalAlignment="center" transparent="1" itemHeight="78"/>
+		<widget name="text" position="0,400" size="900,108" font="Regular;33"/>
+		<widget name="description" position="0,0" size="0,0" font="Regular;33"/>
+		<applet type="onLayoutFinish">self["list"].instance.setItemHeight(78)
+self.autoResize()
+</applet>
+	</screen>
+	
+</skin>

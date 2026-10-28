@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "themes": {
+    "Default": {
+      "assetTheme": "Default",
+      "colors": {}
+    },
+    "Black": {
+      "assetTheme": "Black",
+      "colors": {
+        "button-bg": "#00181818",
+        "select-darkblue-bg": "#00202020",
+        "select-lightblue-bg": "#00454545",
+        "skytitlebackground": "#00151515",
+        "messageboxbg": "#00151515",
+        "topleft": "#00101010",
+        "topmid": "#00181818",
+        "topright": "#00202020",
+        "midleft": "#000d0d0d",
+        "mid": "#00151515",
+        "midright": "#001d1d1d",
+        "botleft": "#000a0a0a",
+        "botmid": "#00121212",
+        "botright": "#001a1a1a",
+        "select-middle": "#00303030"
+      }
+    },
+    "Glass": {
+      "assetTheme": "Glass",
+      "colors": {
+        "button-bg": "#501a4273",
+        "select-darkblue-bg": "#500c3764",
+        "select-lightblue-bg": "#40006fce",
+        "skytitlebackground": "#500153a6",
+        "messageboxbg": "#500153a6",
+        "topleft": "#60014890",
+        "topmid": "#60015bb4",
+        "topright": "#600168cb",
+        "midleft": "#60024488",
+        "mid": "#600152a4",
+        "midright": "#600063c3",
+        "botleft": "#60023d7e",
+        "botmid": "#60014c9a",
+        "botright": "#60005fbb"
+      }
+    }
+  }
+}

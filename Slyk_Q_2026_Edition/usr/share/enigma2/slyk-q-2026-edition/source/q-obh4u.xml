@@ -1,0 +1,1079 @@
+<skin>
+    <!-- OBH4U -->
+  <screen name="obh4u" flags="wfNoBorder">
+  <panel name="menu-panel-obh" />
+  <panel name="button-bg" />
+  <panel name="MenuButton-pos2" />
+  <panel name="New-Buttons" />
+  <ePixmap pixmap="buttons/key_ok.png" position="1795,1030" size="38,38" alphatest="blend" />
+  <ePixmap pixmap="buttons/key_exit.png" position="1845,1030" size="38,38" alphatest="blend" />
+  </screen>
+  <screen name="obh4">
+    <ePixmap pixmap="q-backgrounds/q-bg.png" position="0,0" size="1920,1080" zPosition="-1" />
+    <ePixmap pixmap="buttons/key_ok.png" position="1795,1030" size="38,38" alphatest="blend" />
+    <ePixmap pixmap="buttons/key_exit.png" position="1845,1030" size="38,38" alphatest="blend" />
+    <panel name="logo" />
+    <panel name="time" />
+    <panel name="tv" />
+    <panel name="q-title" />
+    <panel name="leftnav" />
+    <panel name="rightnav" />
+  </screen>
+  <screen name="menu-panel-obh">
+    <ePixmap pixmap="q-toppicks/hero.jpg" position="0,0" size="1920,1080" zPosition="-1" />
+    <panel name="logo" />
+    <panel name="time" />
+    <panel name="tv" />
+    <panel name="q-title" />
+    <panel name="leftnav" />
+    <panel name="rightnav" />
+    <panel name="nav-gradient" />
+  </screen>
+  <screen name="obh" flags="wfNoBorder">
+    <ePixmap pixmap="q-toppicks/hero.jpg" position="0,0" size="1920,1080" zPosition="-1" />
+<panel name="nav-gradient-2"/>
+    <panel name="logo" />
+    <panel name="time" />
+    <panel name="tv" />
+    <panel name="q-title" />
+    <panel name="leftnav" />
+    <panel name="rightnav" />
+  </screen>
+  <screen name="config">
+<ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="518,384" size="978,623" zPosition="1"/>
+	<widget name="config" textOffset="15,0" position="518,385" size="978,624" font="Regular;33" secondfont="Regular;33" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2"/>
+    </screen>
+<!-- Panels end -->
+    <screen name="DeliteGreenPanel" position="0,0" size="1920,1080" title="OpenBh Green Panel" flags="wfNoBorder">
+    <panel name="obh4u" />
+  <ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="540,384" size="1002,701" zPosition="1" />
+  <widget source="list" render="Listbox" position="540,385" size="1002,624" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg"
+                selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" font="Regular;33" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="2">
+			<convert type="TemplatedMultiContent">
+                                {"template": [	
+                                             MultiContentEntryText(pos = (195,5), size = (970,78), flags = RT_HALIGN_LEFT, text = 0),
+											 MultiContentEntryText(pos = (195, 46), size = (915, 45), font=1, text = 1),
+											 MultiContentEntryPixmapAlphaTest(pos = (9, 8), size = (150, 60), png = 2, flags = BT_SCALE)
+        	 	        ],
+        	 	        "fonts": [gFont("Regular", 30),gFont("Regular", 20)],
+        	 	        "itemHeight": 78
+        	 	        }
+			</convert>
+    </widget>
+  </screen>
+  <screen name="DeliteAddons" position="0,0" size="1920,1080" title="Addons Panel" flags="wfNoBorder">
+    <panel name="obh" />
+  <ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="540,384" size="1002,701" zPosition="1" />
+  <widget source="list" render="Listbox" position="540,385" size="1002,705" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg"
+                selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" font="Regular;33" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="2">
+			<convert type="TemplatedMultiContent">
+                                {"template": [	
+                                             MultiContentEntryText(pos = (80,0), size = (970,78), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0, color = 0x00ffffff, color_sel = 0x00ffffff, backcolor_sel = 0x0000437c),
+											 MultiContentEntryPixmapAlphaTest(pos = (10, 12), size = (64, 64), png = 1),
+                                              ],
+				"fonts": [gFont("Regular",33)],
+				"itemHeight": 78
+			
+				}
+			</convert>
+</widget>
+    <panel name="divider3" />
+    <panel name="2panel-gradient" />
+  </screen>
+  <screen name="Nab_downArea" position="0,0" size="1920,1080" title="Addons Download Panel" flags="wfNoBorder">
+    <panel name="obh" />
+  <ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="540,384" size="1002,701" zPosition="1" />
+  <widget source="list" render="Listbox" position="540,385" size="1002,705" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg"
+                selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" font="Regular;33" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="2">
+			<convert type="TemplatedMultiContent">
+                                {"template": [	
+                                             MultiContentEntryText(pos = (80,0), size = (970,78), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0, color = 0x00ffffff, color_sel = 0x00ffffff, backcolor_sel = 0x0000437c),
+											 MultiContentEntryPixmapAlphaTest(pos = (10, 12), size = (64, 64), png = 1),
+                                              ],
+				"fonts": [gFont("Regular",33)],
+				"itemHeight": 78
+			
+				}
+			</convert>
+</widget>
+    <panel name="divider3" />
+    <panel name="2panel-gradient" />
+  </screen>
+  <screen name="Nab_downCat" position="0,0" size="1920,1080" title="Addons Download Panel" flags="wfNoBorder">
+    <panel name="obh" />
+  <ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="540,384" size="1002,701" zPosition="1" />
+  <widget source="list" render="Listbox" position="540,385" size="1002,705" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg"
+                backgroundPixmap="obh4u/ico_down.png" selectionPixmap="obh4u/q-menu-2-download.png" itemHeight="78" font="Regular;33" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="2">
+			<convert type="TemplatedMultiContent">
+                                {"template": [	
+                                             MultiContentEntryText(pos = (80,0), size = (970,78), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0, color = 0x00ffffff, color_sel = 0x00ffffff, backcolor_sel = 0x0000437c),
+											 MultiContentEntryPixmapAlphaTest(pos = (10, 12), size = (64, 64), png = 1),
+                                              ],
+				"fonts": [gFont("Regular",33)],
+				"itemHeight": 78
+			
+				}
+			</convert>
+</widget>
+    <panel name="2panel-gradient" />
+  </screen>
+  <screen name="Nab_ShowDownFile" position="0,0" size="1920,1080" title="Download Package Detail" flags="wfNoBorder">
+    <panel name="obh4u" />
+    <widget name="infotext" position="530,270" size="950,655" font="Regular;36" transparent="1" zPosition="5" />
+  </screen>
+  <screen name="Nab_ShowPreviewFile" position="0,0" size="1920,1080" title="Download Package Preview" flags="wfNoBorder">
+    <panel name="obh4u" />
+    <widget name="lab1" position="530,270" size="1328,753" zPosition="2" />
+    <widget name="lab2" position="526,262" size="1351,45" zPosition="3" font="Regular; 28" halign="center" valign="center" backgroundColor="blue" foregroundColor="white" />
+  </screen>
+  <screen name="Nab_downPanel" position="0,0" size="1920,1080" title="Manual Install Nab Packages" flags="wfNoBorder">
+  <panel name="obh" />
+  <ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="540,384" size="1002,701" zPosition="1" />
+  <widget source="list" render="Listbox" position="540,385" size="950,624" zPosition="1" selectionPixmap="q-selectbars/q-menu-2.png" backgroundPixmap="q-selectbars/blank.png" scrollbarMode="showNever" transparent="1">
+    <convert type="TemplatedMultiContent">
+                	{"template": [
+                	MultiContentEntryText(pos = (10,0), size = (950, 78), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0),
+                	],
+                	"fonts": [gFont("Regular", 30)],
+                	"itemHeight": 78
+                	}
+    	        	</convert>
+  </widget>
+</screen>
+  <screen name="Nab_downPanelIPK" position="0,0" size="1925,1080" title="Manual Install Ipk Packages " flags="wfNoBorder">
+    <panel name="obh" />
+    <ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="540,384" size="1002,701" zPosition="1" />
+    <widget source="list" render="Listbox" position="540,385" size="950,624" selectionPixmap="q-selectbars/q-menu-2.png" backgroundPixmap="q-selectbars/blank.png" zPosition="1" scrollbarMode="showNever" enableWrapAround="1" foregroundColor="white" backgroundColor="blue" transparent="1">
+    <convert type="TemplatedMultiContent">
+                	{"template": [
+                	MultiContentEntryText(pos = (10,0), size = (950, 78), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0),
+                	],
+                	"fonts": [gFont("Regular", 30)],
+                	"itemHeight": 78
+                	}
+    	        	</convert>
+  </widget>
+  </screen>
+  <screen name="Nab_uninstPanel" position="0,0" size="1920,1080" title="Uninstall Panel" flags="wfNoBorder">
+  <panel name="obh" />
+    <ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="540,384" size="1002,701" zPosition="1" />
+    <widget source="list" render="Listbox" position="540,385" size="950,624" selectionPixmap="q-selectbars/q-menu-2.png" backgroundPixmap="q-selectbars/blank.png" zPosition="1" scrollbarMode="showNever" enableWrapAround="1" foregroundColor="white" backgroundColor="blue" transparent="1">
+    <convert type="TemplatedMultiContent">
+                	{"template": [
+                	MultiContentEntryText(pos = (10,0), size = (950, 78), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0),
+                	],
+                	"fonts": [gFont("Regular", 30)],
+                	"itemHeight": 78
+                	}
+    	        	</convert>
+  </widget>
+</screen>
+  <screen name="DeliteBluePanel" position="0,0" size="1920,1080" title="OpenBh Blue Panel" flags="wfNoBorder">
+    <panel name="obh4u" />
+    <ePixmap position="885,222" zPosition="5" size="93,95" pixmap="obh4u/bp_deko.png" backgroundColor="transparent" alphatest="blend" transparent="1" />
+    <widget name="lab1" position="530,225" size="345,36" font="Regular;27" zPosition="2" backgroundColor="mid" transparent="1" foregroundColor="white" />
+    <widget name="list" position="530,269" size="340,52" font="Regular;26" zPosition="2" transparent="1" itemHeight="50" textOffset="5,10" />
+    <widget name="Ilab1" position="530,320" size="600,42" font="Regular;33" zPosition="2" backgroundColor="mid" transparent="1" foregroundColor="white" />
+    <widget name="Ilab2" position="530,365" size="600,42" font="Regular;33" zPosition="2" backgroundColor="mid" transparent="1" />
+    <widget name="Ilab3" position="530,410" size="600,42" font="Regular;33" zPosition="2" backgroundColor="mid" transparent="1" />
+    <widget name="Ilab4" position="530,455" size="600,42" font="Regular;33" zPosition="2" backgroundColor="mid" transparent="1" />
+    <widget name="Ecmtext" position="530,500" size="900,444" font="Regular;30" zPosition="2" backgroundColor="mid" transparent="1" foregroundColor="white" />
+  </screen>
+  <screen name="Nab_ConnectPop" position="713,210" size="494,145" title="Connection in progress" flags="wfNoBorder">
+    <widget name="connect" position="0,0" size="494,145" zPosition="-1" pixmaps="obh4u/connection_1.png,obh4u/connection_2.png,obh4u/connection_3.png,obh4u/connection_4.png,obh4u/connection_5.png" transparent="1" />
+     <widget name="lab1" position="5,10" halign="center" size="145,120" zPosition="1" font="Regular;26" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" />
+  </screen>
+  <screen name="Nab_DoStartCam" position="713,210" size="494,145" title="Wait while starting Cam" flags="wfNoBorder">
+    <widget name="connect" position="0,0" size="494,145" zPosition="-1" pixmaps="obh4u/startcam_1.png,obh4u/startcam_2.png,obh4u/startcam_3.png,obh4u/startcam_4.png" transparent="1" />
+	  <widget name="lab1" position="5,5" halign="center" size="360,135" zPosition="1" font="Regular;26" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" />
+  </screen>
+  <screen name="OMBManagerAbout" position="0,0" size="1920,1080" title="" flags="wfNoBorder">
+    <widget name="about" position="530,270" size="1315,720" font="Regular;30" backgroundColor="mid" transparent="1" />
+    <panel name="obh4u" />
+  </screen>
+  <screen name="OMBManagerInstall" position="0,0" size="1920,1080" title="" flags="wfNoBorder">
+    <widget source="list" render="Listbox" position="530,270" size="950,400" font="Regular;30" textOffset="5,3" itemHeight="40" enableWrapAround="1" backgroundColor="mid" transparent="1">
+      <convert type="StringList" />
+    </widget>
+    <panel name="obh4u" />
+  </screen>
+  <screen name="OMBManagerPreferences" position="0,0" size="1920,1080" title="Preferences" flags="wfNoBorder">
+    <panel name="config" />
+    <panel name="obh4u" />
+  </screen>
+  <screen name="OMBManagerList" position="0,0" size="1920,1080" title="openMultiboot Manager" flags="wfNoBorder">
+    <widget source="list" render="Listbox" position="530,270" size="950,400" font="Regular;30" textOffset="5,3" itemHeight="40" enableWrapAround="1" backgroundColor="mid" transparent="1">
+      <convert type="StringList" />
+    </widget>
+    <widget name="label1" position="530,710" size="810,40" font="Regular;34" foregroundColor="blue" backgroundColor="mid" transparent="1" />
+    <widget name="label2" position="530,770" size="810,100" font="Regular;32" halign="left" foregroundColor="blue" backgroundColor="mid" transparent="1" />
+    <panel name="obh4u" />
+  </screen>
+  <screen name="Nab_ShowFeedFile" position="0,0" size="1920,1080" title="Package Details" flags="wfNoBorder">
+    <panel name="obh4u" />
+    <widget name="infotext" position="530,270" zPosition="1" size="950,720" font="Regular;30" halign="left" backgroundColor="mid" transparent="1" />
+  </screen>
+  <screen name="Nab_downFeedCat" position="0,0" size="1920,1080" title="OpenBh Feeds Plugins" flags="wfNoBorder">
+    <panel name="obh4u" />
+<ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="540,384" size="1002,701" zPosition="1" />
+    <widget source="list" render="Listbox" enableWrapAround="1" selectionPixmap="q-selectbars/q-menu-2.png" backgroundPixmap="q-selectbars/blank.png" position="540,385" size="950,650" zPosition="1" 
+    scrollbarMode="showNever" transparent="1">
+      <convert type="TemplatedMultiContent">
+{"template": [
+MultiContentEntryText(pos = (0, 2), size = (800, 35), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0),
+],
+"fonts": [gFont("Regular", 28)],
+"itemHeight": 40
+}
+</convert>
+    </widget>
+  </screen>
+  <screen name="BhGreenPluginsSetup" position="0,0" size="1920,1080" title="Reorder Plugin List" flags="wfNoBorder">
+    <panel name="obh4u" />
+    <panel name="config" />
+  </screen>
+  <screen name="BhSetupGreen" position="0,0" size="1920,1080" title="OpenBh Green Panel Setup" flags="wfNoBorder">
+    <panel name="obh4u" />
+<ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="540,384" size="1002,701" zPosition="1" />
+    <widget source="list" render="Listbox" enableWrapAround="1" selectionPixmap="q-selectbars/q-menu-2.png" backgroundPixmap="q-selectbars/blank.png" position="540,385" size="1002,624" zPosition="1" 
+    scrollbarMode="showNever" transparent="1">
+			<convert type="TemplatedMultiContent">
+                                {"template": [	
+                                             MultiContentEntryText(pos = (80,0), size = (970,78), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0, color = 0x00ffffff, color_sel = 0x00ffffff, backcolor_sel = 0x0000437c),
+											 MultiContentEntryPixmapAlphaTest(pos = (10, 12), size = (64, 64), png = 1),
+                                              ],
+				"fonts": [gFont("Regular",33)],
+				"itemHeight": 78
+			
+				}
+</convert>
+    </widget>
+  </screen>
+  <screen name="DeliteInaLog" position="0,0" size="1920,1080" title="Inadyn Log" flags="wfNoBorder">
+    <panel name="obh4u" />
+    <widget name="infotext" position="540,384" size="950,685" font="Regular;28" transparent="1" backgroundColor="mid" />
+  </screen>
+    <screen name="NabEnsetInfo" position="0,0" size="1920,1080" title="Settings Info." flags="wfNoBorder">
+    <panel name="obh" />
+    <widget name="infotext" position="540,384" size="950,685" font="Regular;28" transparent="1" backgroundColor="mid" />
+  </screen>
+  <screen name="DeliteSetupFp" position="0,0" size="1920,1080" title="Fast Plugin Setup" flags="wfNoBorder">
+    <panel name="obh4u" />
+<ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="540,384" size="1002,701" zPosition="1" />
+    <widget source="list" render="Listbox" position="540,385" size="950,624" enableWrapAround="1" zPosition="2" scrollbarMode="showNever" transparent="1">
+      <convert type="TemplatedMultiContent">
+{"template": [
+MultiContentEntryText(pos = (130, 0), size = (680, 32), font=0, text = 0),
+MultiContentEntryText(pos = (130, 32), size = (680, 30), font=1, text = 1),
+MultiContentEntryPixmapAlphaTest(pos = (5, 10), size = (100, 40), png = 2),
+],
+"fonts": [gFont("Regular", 30),gFont("Regular", 24)],
+"itemHeight": 78
+}
+</convert>
+    </widget>
+  </screen>
+  <screen name="BhsysInfo" position="0,0" size="1920,1080" title="System Info" flags="wfNoBorder">
+    <panel name="obh4u" />
+    <widget name="lab1" position="530,270" size="950,700" font="Regular;30" backgroundColor="transpBlack" halign="left" transparent="1" />
+  </screen>
+  <screen name="Bp_UsbFormat" position="0,0" size="1920,1080" title="OpenBh Usb Format Wizard" flags="wfNoBorder">
+    <panel name="obh4u" />
+    <widget name="lab1" position="529,374" zPosition="1" size="950,700" font="Regular;30" halign="center" backgroundColor="mid" transparent="1" />
+  </screen>
+  <screen name="BhSpeedUp" position="0,0" size="1920,1080" title="OpenBh Speed up" flags="wfNoBorder">
+    <panel name="obh4u" />
+    <panel name="config" />
+    <widget name="lab1" position="530,860" zPosition="1" size="950,35" font="Regular;30" halign="center" foregroundColor="title" backgroundColor="mid" transparent="1" />
+  </screen>
+  <screen name="DeliteSetupDevicePanelConf" position="0,0" size="1920,1080" title="Devices Mountpoints Setup" flags="wfNoBorder">
+    <panel name="obh4u" />
+    <panel name="config" />
+    </screen>
+  <screen name="DeliteDevicesPanel" position="0,0" size="1920,1080" title="Devices Manager" flags="wfNoBorder">
+  <panel name="obh4u" />
+  <widget source="list" render="Listbox" position="530,470" size="950,557" scrollbarMode="showNever" backgroundColor="mid" selectionPixmap="obh4u/select950x128.png" backgroundPixmap="q-selectbars/blank.png" transparent="1">
+    <convert type="TemplatedMultiContent">
+{"template": [
+MultiContentEntryText(pos = (110, 8), size = (950, 40), font=0, text = 0),
+MultiContentEntryText(pos = (110, 48), size = (950, 70), font=1, flags = RT_VALIGN_TOP, text = 1),
+MultiContentEntryPixmapAlphaTest(pos = (10, 20), size = (80, 80), png = 2),
+],
+"fonts": [gFont("Regular", 32),gFont("Regular", 28)],
+"itemHeight": 128
+}
+</convert>
+  </widget>
+  <widget name="lab1" zPosition="2" position="530,685" size="950,60" font="Regular;30" halign="center" foregroundColor="white" backgroundColor="mid" transparent="1" />
+</screen>
+  <screen name="DeliteSettings" position="0,0" size="1920,1080" title="Settings Panel" flags="wfNoBorder">
+  <panel name="obh" />
+  <ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="540,384" size="1002,702" zPosition="1" />
+  <widget source="list" render="Listbox" position="540,385" size="1002,710" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg"
+                selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" font="Regular;33" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="2">
+			<convert type="TemplatedMultiContent">
+                                {"template": [	
+                                             MultiContentEntryText(pos = (80,0), size = (970,78), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0, color = 0x00ffffff, color_sel = 0x00ffffff, backcolor_sel = 0x0000437c),
+											 MultiContentEntryPixmapAlphaTest(pos = (10, 12), size = (64, 64), png = 1),
+                                              ],
+				"fonts": [gFont("Regular",33)],
+				"itemHeight": 78
+			
+				}
+			</convert>
+    </widget>
+</screen>
+  <screen name="Nab_Stats" position="0,0" size="1920,1080" title="Statistics" flags="wfNoBorder">
+    <panel name="obh4u" />
+    <widget name="infotext" position="540,384" zPosition="2" size="950,630" font="Regular;36" foregroundColor="white" backgroundColor="mid" transparent="1" />
+  </screen>
+  <screen name="BhRedPanel" position="0,0" size="1920,1080" title="OpenBH 4 Ultimate Universes Teleportation" flags="wfNoBorder" backgroundColor="mid">
+    <panel name="obh4u" />
+    <widget name="list" position="500,300" size="820,440" itemHeight="105" font="Regular;32" foregroundColor="white" backgroundColor="mid" enableWrapAround="1" scrollbarMode="showNever" transparent="1" />
+    <widget name="lab1" position="1320,297" size="400,40" font="Regular;26" halign="center" foregroundColor="white" backgroundColor="mid" transparent="1" />
+    <widget name="lab2" position="1321,340" size="400,550" font="Regular;26" halign="left" foregroundColor="white" backgroundColor="mid" transparent="1" />
+  </screen>
+  <screen name="BhNetBrowser" position="0,0" size="1920,1080" flags="wfNoBorder" title="Select Network Interface">
+    <panel name="obh4u" />
+    <widget source="list" render="Listbox" position="500,300" size="800,600" font="Regular;36" itemHeight="54" enableWrapAround="1" scrollbarMode="showNever" transparent="1">
+      <convert type="StringList" />
+    </widget>
+  </screen>
+  <screen name="DeliteSetupAutocam" position="0,0" size="1920,1080" title="Autocam Setup" flags="wfNoBorder">
+    <panel name="menu-panel-obh" />
+    <panel name="config" />
+</screen>
+  <screen name="DeliteAutocamMan" position="0,0" size="1920,1080" title="Autocam Manager" flags="wfNoBorder">
+    <panel name="menu-panel-obh" />
+    <widget name="defaultcam" position="500,210" size="810,60" font="Regular;30" halign="center" backgroundColor="mid" transparent="1" />
+    <widget source="list" render="Listbox" position="500,270" size="810,400" font="Regular;36" itemHeight="54" enableWrapAround="1" scrollbarMode="showNever" backgroundColor="mid" transparent="1">
+      <convert type="StringList" />
+    </widget>
+  </screen>
+  <screen name="DeliteVpnLog" position="0,0" size="1920,1080" title="OpenVpn Log" flags="wfNoBorder">
+    <panel name="menu-panel-obh" />
+    <widget name="infotext" position="500,300" size="820,680" font="Regular;28" halign="left" backgroundColor="mid" transparent="1" />
+  </screen>
+  <screen name="DeliteOpenvpn" position="0,0" size="1920,1080" title="OpenVpn Panel" flags="wfNoBorder">
+    <panel name="obh4u" />
+    <widget name="lab1" position="555,320" size="225,35" font="Regular;28" backgroundColor="mid" transparent="1" />
+    <widget name="lab1a" position="740,320" size="630,35" font="Regular;28" backgroundColor="mid" transparent="1" />
+    <widget name="lab2" position="555,425" size="270,35" font="Regular;28" backgroundColor="mid" transparent="1" />
+    <widget name="labactive" position="830,425" size="375,35" font="Regular;28" backgroundColor="mid" transparent="1" />
+    <widget name="lab3" position="555,500" size="270,35" font="Regular;28" backgroundColor="mid" transparent="1" />
+    <widget name="labstop" position="830,500" size="250,35" font="Regular;28" valign="center" halign="center" backgroundColor="red" />
+    <widget name="labrun" position="830,500" size="250,35" zPosition="1" font="Regular;28" valign="center" halign="center" backgroundColor="green" />
+  </screen>
+  <screen name="BlackPoleSwap" position="0,0" size="1920,1080" title="Swap File Manager" flags="wfNoBorder">
+    <panel name="obh4u" />
+    <widget name="lab1" position="500,300" size="810,35" font="Regular;30" backgroundColor="mid" valign="center" transparent="1" />
+  </screen>
+  <screen name="DeliteInaLog" position="0,0" size="1920,1080" title="Inadyn Log" flags="wfNoBorder">
+    <widget name="infotext" position="500,300" size="950,700" font="Regular;28" transparent="1" backgroundColor="mid" />
+    <panel name="menu-panel-obh" />
+  </screen>
+  <screen name="DeliteInaSetup" position="0,0" size="1920,1080" title="Inadyn Setup" flags="wfNoBorder">
+    <panel name="menu-panel-obh" />
+    <panel name="config" />
+    </screen>
+  <screen name="DeliteInadyn" position="0,0" size="1920,1080" title="Inadyn Manager" flags="wfNoBorder">
+    <panel name="obh4u" />
+    <widget name="linactive" position="500,300" zPosition="1" pixmap="icons/lock_off.png" size="35,35" alphatest="blend" />
+    <widget name="lactive" position="500,300" zPosition="2" pixmap="icons/lock_on.png" size="35,35" alphatest="blend" />
+    <widget name="lab1" position="560,300" size="515,35" font="Regular;28" valign="center" backgroundColor="mid" transparent="1" />
+    <widget name="lab2" position="500,363" size="600,35" font="Regular;28" valign="center" backgroundColor="mid" transparent="1" />
+    <widget name="labtime" position="1035,363" size="215,35" font="Regular;28" halign="center" valign="center" backgroundColor="blue" />
+    <widget name="lab3" position="500,436" size="225,35" font="Regular;28" valign="center" backgroundColor="mid" transparent="1" />
+    <widget name="labuser" position="760,436" size="490,35" font="Regular;28" halign="center" valign="center" backgroundColor="blue" />
+    <widget name="lab4" position="500,513" size="225,35" font="Regular;28" valign="center" backgroundColor="mid" transparent="1" />
+    <widget name="labpass" position="760,513" size="490,35" font="Regular;28" halign="center" valign="center" backgroundColor="blue" />
+    <widget name="lab5" position="500,588" size="225,35" font="Regular;28" valign="center" backgroundColor="mid" transparent="1" />
+    <widget name="labalias" position="760,588" size="490,35" font="Regular;26" halign="center" valign="center" backgroundColor="blue" />
+    <widget name="sinactive" position="500,663" zPosition="1" pixmap="icons/lock_off.png" size="35,35" alphatest="blend" />
+    <widget name="sactive" position="500,663" zPosition="2" pixmap="icons/lock_on.png" size="35,35" alphatest="blend" />
+    <widget name="lab6" position="560,663" size="150,35" font="Regular;28" valign="center" backgroundColor="mid" transparent="1" />
+    <widget name="labsys" position="760,663" size="490,35" font="Regular;26" valign="center" halign="center" backgroundColor="blue" />
+    <widget name="lab7" position="500,758" size="150,35" font="Regular;28" valign="center" backgroundColor="mid" transparent="1" />
+    <widget name="labstop" position="760,758" size="225,35" font="Regular;28" valign="center" halign="center" backgroundColor="red" />
+    <widget name="labrun" position="760,758" size="225,35" zPosition="1" font="Regular;28" valign="center" halign="center" backgroundColor="green" />
+  </screen>
+  <screen name="BhsysInfo2" position="center,200" size="1300,720" backgroundColor="black" title="SysInfo">
+    <widget name="smallmon" position="300,271" size="280,210" zPosition="1" backgroundColor="black" font="Regular;25" halign="center" />
+    <ePixmap pixmap="obh4u/meter_1.png" position="27,10" size="195,195" alphatest="on" />
+    <ePixmap pixmap="obh4u/meter_1.png" position="237,10" size="195,195" alphatest="on" />
+    <ePixmap pixmap="obh4u/meter_1.png" position="447,10" size="195,195" alphatest="on" />
+    <ePixmap pixmap="obh4u/meter_1.png" position="657,10" size="195,195" alphatest="on" />
+    <ePixmap pixmap="obh4u/meter_1.png" position="867,10" size="195,195" alphatest="on" />
+    <ePixmap pixmap="obh4u/meter_1.png" position="1077,10" size="195,195" alphatest="on" />
+    <ePixmap pixmap="obh4u/meter_1.png" position="657,257" size="195,195" alphatest="on" />
+    <ePixmap pixmap="obh4u/meter_1.png" position="867,257" size="195,195" alphatest="on" />
+    <ePixmap pixmap="obh4u/meter_2.png" position="1077,257" size="195,195" alphatest="on" />
+    <widget name="ramg" position="49,31" size="150,150" zPosition="1" borderColor="red" transparent="1" />
+    <widget name="swapg" position="259,31" size="150,150" zPosition="1" borderColor="red" transparent="1" />
+    <widget name="memtg" position="469,31" size="150,150" zPosition="1" borderColor="red" transparent="1" />
+    <widget name="flashg" position="679,31" size="150,150" zPosition="1" borderColor="red" transparent="1" />
+    <widget name="spacetg" position="889,31" size="150,150" zPosition="1" borderColor="red" transparent="1" />
+    <widget name="cffg" position="1099,31" size="150,150" zPosition="1" borderColor="red" transparent="1" />
+    <widget name="usbg" position="679,278" size="150,150" zPosition="1" borderColor="red" transparent="1" />
+    <widget name="hddg" position="889,278" size="150,150" zPosition="1" borderColor="red" transparent="1" />
+    <widget name="hddtempg" position="1099,278" size="150,150" zPosition="1" borderColor="red" transparent="1" />
+    <eLabel text="Ram" position="27,209" zPosition="1" size="195,36" font="Regular;28" halign="center" foregroundColor="white" backgroundColor="mid" transparent="1" />
+    <eLabel text="Swap" position="237,209" zPosition="1" size="195,36" font="Regular;28" halign="center" foregroundColor="white" backgroundColor="mid" transparent="1" />
+    <eLabel text="Total Mem" position="447,209" zPosition="1" size="195,36" font="Regular;28" halign="center" foregroundColor="white" backgroundColor="mid" transparent="1" />
+    <eLabel text="Flash" position="657,209" zPosition="1" size="195,36" font="Regular;28" halign="center" foregroundColor="white" backgroundColor="mid" transparent="1" />
+    <eLabel text="Total Space" position="867,209" zPosition="1" size="195,36" font="Regular;28" halign="center" foregroundColor="white" backgroundColor="mid" transparent="1" />
+    <eLabel text="CF" position="1077,209" zPosition="1" size="195,36" font="Regular;28" halign="center" foregroundColor="white" backgroundColor="mid" transparent="1" />
+    <eLabel text="USB" position="657,460" zPosition="1" size="195,36" font="Regular;28" halign="center" foregroundColor="white" backgroundColor="mid" transparent="1" />
+    <eLabel text="HDD Space" position="867,460" zPosition="1" size="195,36" font="Regular;28" halign="center" foregroundColor="white" backgroundColor="mid" transparent="1" />
+    <eLabel text="HDD Temp" position="1077,460" zPosition="1" size="195,36" font="Regular;28" halign="center" foregroundColor="white" backgroundColor="mid" transparent="1" />
+    <ePixmap pixmap="obh4u/moni.png" position="292,262" size="295,225" alphatest="on" />
+    <ePixmap pixmap="obh4u/monibutton.png" size="70,30" position="227,530" alphatest="on" />
+    <ePixmap pixmap="obh4u/monibutton.png" size="70,30" position="382,530" alphatest="on" />
+    <ePixmap pixmap="obh4u/monibutton.png" size="70,30" position="537,530" alphatest="on" />
+    <ePixmap pixmap="obh4u/monibutton.png" size="70,30" position="692,530" alphatest="on" />
+    <ePixmap pixmap="obh4u/monibutton.png" size="70,30" position="847,530" alphatest="on" />
+    <ePixmap pixmap="obh4u/monibutton.png" size="70,30" position="1002,530" alphatest="on" />
+    <eLabel text="Ssh" position="217,570" zPosition="1" size="90,36" font="Regular;28" halign="center" foregroundColor="white" backgroundColor="mid" transparent="1" />
+    <eLabel text="Telnet" position="352,570" zPosition="1" size="130,36" font="Regular;28" halign="center" foregroundColor="white" backgroundColor="mid" transparent="1" />
+    <eLabel text="Ftp" position="527,570" zPosition="1" size="90,36" font="Regular;28" halign="center" foregroundColor="white" backgroundColor="mid" transparent="1" />
+    <eLabel text="Vpn" position="682,570" zPosition="1" size="90,36" font="Regular;28" halign="center" foregroundColor="white" backgroundColor="mid" transparent="1" />
+    <eLabel text="Samba" position="817,570" zPosition="1" size="130,36" font="Regular;28" halign="center" foregroundColor="white" backgroundColor="mid" transparent="1" />
+    <eLabel text="Nfs" position="992,570" zPosition="1" size="90,36" font="Regular;28" halign="center" foregroundColor="white" backgroundColor="mid" transparent="1" />
+    <widget name="spy1" size="30,30" position="267,530" zPosition="1" pixmap="obh4u/monibutton_g.png" alphatest="on" />
+    <widget name="spy2" size="30,30" position="382,530" zPosition="1" pixmap="obh4u/monibutton_g.png" alphatest="on" />
+    <widget name="spy3" size="30,30" position="422,530" zPosition="1" pixmap="obh4u/monibutton_g.png" alphatest="on" />
+    <widget name="spy4" size="30,30" position="537,530" zPosition="1" pixmap="obh4u/monibutton_g.png" alphatest="on" />
+    <widget name="spy5" size="30,30" position="577,530" zPosition="1" pixmap="obh4u/monibutton_g.png" alphatest="on" />
+    <widget name="spy6" size="30,30" position="692,530" zPosition="1" pixmap="obh4u/monibutton_g.png" alphatest="on" />
+    <widget name="spy7" size="30,30" position="732,530" zPosition="1" pixmap="obh4u/monibutton_g.png" alphatest="on" />
+    <widget name="spy8" size="30,30" position="847,530" zPosition="1" pixmap="obh4u/monibutton_g.png" alphatest="on" />
+    <widget name="spy9" size="30,30" position="887,530" zPosition="1" pixmap="obh4u/monibutton_g.png" alphatest="on" />
+    <widget name="spy10" size="30,30" position="1002,530" zPosition="1" pixmap="obh4u/monibutton_g.png" alphatest="on" />
+    <widget name="spy11" size="30,30" position="1042,530" zPosition="1" pixmap="obh4u/monibutton_g.png" alphatest="on" />
+    <ePixmap pixmap="obh4u/epg_b.png" position="27,287" size="52,52" alphatest="blend" />
+    <ePixmap pixmap="obh4u/epg_b.png" position="27,347" size="52,52" alphatest="blend" />
+    <ePixmap pixmap="obh4u/epg_b.png" position="27,407" size="52,52" alphatest="blend" />
+    <eLabel text="1" position="45,299" zPosition="1" size="180,36" font="Regular;28" halign="left" backgroundColor="darkgrey" transparent="1" />
+    <eLabel text="2" position="45,359" zPosition="1" size="180,36" font="Regular;28" halign="left" backgroundColor="darkgrey" transparent="1" />
+    <eLabel text="3" position="45,419" zPosition="1" size="180,36" font="Regular;28" halign="left" backgroundColor="darkgrey" transparent="1" />
+    <eLabel text="Settings" position="90,297" zPosition="1" size="180,36" font="Regular;28" halign="left" foregroundColor="white" backgroundColor="mid" transparent="1" />
+    <eLabel text="Service Info" position="90,357" zPosition="1" size="180,36" font="Regular;28" halign="left" foregroundColor="white" backgroundColor="mid" transparent="1" />
+    <eLabel text="About" position="90,417" zPosition="1" size="180,36" font="Regular;28" halign="left" foregroundColor="white" backgroundColor="mid" transparent="1" />
+    <widget name="moni" size="0,0" position="0,0" zPosition="2" backgroundColor="un1d000000" />
+    <widget name="monipix" size="0,0" position="0,0" />
+    <widget name="moni2" size="1260,620" position="20,10" font="Regular;25" zPosition="3" foregroundColor="white" backgroundColor="un1d000000" />
+    <eLabel position="0,630" size="1300,3" zPosition="5" backgroundColor="un272727" />
+    <eLabel position="0,633" size="1300,87" zPosition="5" backgroundColor="un1d000000" />
+    <ePixmap pixmap="obh4u/red48x48.png" position="30,650" size="48,48" zPosition="6" alphatest="blend" />
+    <ePixmap pixmap="obh4u/green48x48.png" position="330,650" size="48,48" zPosition="6" alphatest="blend" />
+    <ePixmap pixmap="obh4u/yellow48x48.png" position="630,650" size="48,48" zPosition="6" alphatest="blend" />
+    <ePixmap pixmap="obh4u/blue48x48.png" position="930,650" size="48,48" zPosition="6" alphatest="blend" />
+    <eLabel text="Memory" position="90,640" size="240,70" zPosition="6" font="Regular;32" halign="left" valign="center" foregroundColor="white" backgroundColor="mid" transparent="1" />
+    <eLabel text="Space" position="390,640" size="240,70" zPosition="6" font="Regular;32" halign="left" valign="center" foregroundColor="white" backgroundColor="mid" transparent="1" />
+    <eLabel text="Cpu" position="690,640" size="240,70" zPosition="6" font="Regular;32" halign="left" valign="center" foregroundColor="white" backgroundColor="mid" transparent="1" />
+    <eLabel text="Process" position="990,640" size="240,70" zPosition="6" font="Regular;32" halign="left" valign="center" foregroundColor="white" backgroundColor="mid" transparent="1" />
+  </screen>
+ <screen name="DeliteScript" position="0,0" size="1920,1080" title="Script Panel" flags="wfNoBorder">
+  <panel name="obh4u" />
+  <widget source="list" render="Listbox" position="540,384" size="950,702" zPosition="1" selectionPixmap="obh4u/select950x54.png" backgroundPixmap="q-selectbars/blank.png" scrollbarMode="showNever" transparent="1">
+    <convert type="TemplatedMultiContent">
+{"template": [
+MultiContentEntryText(pos = (10, 2), size = (800, 54), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0),
+],
+"fonts": [gFont("Regular", 26)],
+"itemHeight": 54
+}
+  </convert>
+  </widget>
+</screen>
+<screen name="BhEpgPanel" position="0,0" size="1920,1080" title="OpenBlackhole EPG Panel" flags="wfNoBorder">
+  <panel name="menu-panel-obh" />
+<widget source="list" render="Listbox" position="495,395" size="686,719" textOffset="15,5" backgroundColor="blue" backgroundColorSelected="select-darkblue-bg" selectionPixmap="obh4u/select686x54.png" backgroundPixmap="q-selectbars/blank.png" alphatest="blend" itemHeight="54" font="Regular;36" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="2">
+  <convert type="StringList" />
+</widget>
+  <panel name="divider3" />
+  <panel name="2panel-gradient" />
+  <!-- Orologio Analogico - Analogic Clock -->
+</screen>
+  <screen name="OpenBhBackupManager" position="0,0" size="1920,1080" title="Backup Manager" flags="wfNoBorder">
+    <panel name="obh4u" />
+	<panel name="InfoButton-pos1"/> 
+<ePixmap pixmap="buttons/key_menu.png" position="1741,1030" size="38,38" alphatest="blend"/>
+ <widget name="lab1" position="500,270" size="810,35" font="Regular;30" backgroundColor="mid" valign="center" transparent="1" />
+  <ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="540,384" size="1002,702" zPosition="1" />
+  <widget name="list" position="540,385" size="1002,624" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg"
+                selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" font="Regular;33" textOffset="15,18" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="2"/>
+<applet type="onLayoutFinish">self["list"].instance.setItemHeight(78)</applet>
+  </screen>
+  <screen name="OpenBhImageManager" position="0,0" size="1920,1080" title="Image Manager" flags="wfNoBorder">
+    <panel name="obh4u" />
+	<panel name="InfoButton-pos1"/>
+<ePixmap pixmap="buttons/key_menu.png" position="1741,1030" size="38,38" alphatest="blend"/>
+    <widget name="lab1" position="500,270" size="810,35" font="Regular;30" backgroundColor="mid" valign="center" transparent="1" />
+<widget name="backupstatus" position="1518,950" size="372,510" font="Regular;27" foregroundColor="white" backgroundColor="mid" transparent="1"/>
+  <ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="540,384" size="1002,702" zPosition="1" />
+  <widget name="list" position="540,385" size="1002,624" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg"
+                selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" font="Regular;33" textOffset="15,18" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="2"/>
+<applet type="onLayoutFinish">self["list"].instance.setItemHeight(78)</applet>
+  </screen>
+    <screen name="ImageBackup" position="0,0" size="1920,1080" title="Image Downloads" flags="wfNoBorder">
+    <panel name="obh4u" />
+    <widget name="lab1" position="500,270" size="810,35" font="Regular;30" backgroundColor="mid" valign="center" transparent="1" />
+  <ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="540,384" size="1002,702" zPosition="1" />
+  <widget name="list" position="540,385" size="1002,624" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg"
+                selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" font="Regular;33" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="2"/>
+<applet type="onLayoutFinish">self["list"].instance.setItemHeight(78)</applet>
+  </screen>
+    <screen name="ImageManagerDownload" position="0,0" size="1920,1080" title="Image Downloads" flags="wfNoBorder">
+    <panel name="obh4u" />
+    <widget name="lab1" position="500,270" size="810,35" font="Regular;30" backgroundColor="mid" valign="center" transparent="1" />
+  <ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="540,384" size="1002,702" zPosition="1" />
+  <widget name="list" position="540,385" size="1002,624" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg"
+                selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" font="Regular;33" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="2"/>
+<applet type="onLayoutFinish">self["list"].instance.setItemHeight(78)</applet>
+  </screen>
+<screen name="TextBox" position="0,0" size="1920,1080" title="Help..." flags="wfNoBorder">
+    <panel name="obh4u" />
+  <widget name="text" position="540,385" size="1002,624" foregroundColor="white" backgroundColor="mid" font="Regular;33" transparent="1" enableWrapAround="1" zPosition="2"/>
+</screen>
+	<screen name="OpenBhBackupManagerMenu" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
+		<panel name="Setup-Default"/>
+		<panel name="HelpWindow"/>
+		<panel name="VKeyIcon"/>
+	</screen>
+<screen name="OpenBhBackupManagerLogView" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid" title="Backup Log">
+    <panel name="obh4u" />
+  <widget name="list" position="540,385" size="1002,624" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg"
+                selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" font="Regular;33" transparent="1" enableWrapAround="1" zPosition="2"/>
+  </screen>
+<screen name="XtraPluginsSelection" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid" title="XtraPlugins">
+    <panel name="obh4u" />
+<ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="540,384" size="1002,702" zPosition="1" />
+  <widget name="checkList" position="540,384" size="1002,624" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg"
+                selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" font="Regular;33" transparent="1" enableWrapAround="1" zPosition="2"/>
+  </screen>
+<screen name="menu_bhbackup" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid" title="Image and Backup Menu">
+  <panel name="template1" />
+<ePixmap pixmap="q-toppicks/hero.jpg" position="0,0" size="1920,1080" zPosition="-1" />
+  <ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="540,384" size="1002,701" zPosition="1" />
+  <widget source="menu" render="Listbox" position="540,385" size="1002,705" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" font="Regular;33" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="2">
+    <convert type="TemplatedMultiContent">
+                                {"template": [	
+                                             MultiContentEntryText(pos = (15,0), size = (970,78), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0, color = 0x00ffffff, color_sel = 0x00ffffff, backcolor_sel = 0x0000437c)
+                                              ],
+				"fonts": [gFont("Regular",33)],
+				"itemHeight": 78
+			
+				}
+                        </convert>
+  </widget>
+  <panel name="nav-gradient-2" />
+  <ePixmap pixmap="buttons/key_ok.png" position="1795,1030" size="38,38" alphatest="blend" />
+  <ePixmap pixmap="buttons/key_exit.png" position="1845,1030" size="38,38" alphatest="blend" />
+</screen>
+	<screen name="SecondInfoBar" flags="wfNoBorder" position="0,0" size="1920,1080" title="InfoBar" backgroundColor="transparent">
+	    <panel name="InfoBar" />
+		<ePixmap position="0,168" size="1920,30" pixmap="q-infobars/infobar-shadow-top.png" alphatest="blend" zPosition="-1" />
+		<eLabel position="0,0" size="1920,159" backgroundColor="blackglass" transparent="0" zPosition="-2" />
+		<ePixmap position="0,0" size="1920,168" pixmap="q-infobars/infobar-top-small.png" alphatest="blend" zPosition="-1" />
+		
+		<widget source="session.CurrentService" render="Label" font="Regular;30" position="45,81" size="630,78" halign="left" foregroundColor="white" backgroundColor="blackglass" noWrap="1" transparent="1" zPosition="1">
+		        <convert type="PliExtraInfo">TransponderInfo2line</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" font="Regular;30" position="1325,14" size="550,78" halign="right" foregroundColor="white" backgroundColor="blackglass" noWrap="1" transparent="1" zPosition="1">
+			<convert type="PliExtraInfo">CryptoBar</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" font="Regular;30" position="1325,48" size="550,78" halign="right" foregroundColor="white" backgroundColor="blackglass" noWrap="1" transparent="1" zPosition="1">
+			<convert type="PliExtraInfo">CryptoSpecial</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="1245,81" size="630,78" font="Regular;30" foregroundColor="white" backgroundColor="blackglass" transparent="1" halign="right">
+		        <convert type="CryptoInfo">VerboseInfo</convert>
+		</widget>
+
+		
+		<eLabel text="SNR:" position="860,48" size="66,30" font="Regular;30" foregroundColor="white" backgroundColor="blackglass" valign="center" halign="left" transparent="1"  />
+		<widget source="session.FrontendStatus" render="Label" position="925,48" size="105,30" font="Regular;30" foregroundColor="white" backgroundColor="blackglass" transparent="1" noWrap="1" valign="center" halign="left">
+			<convert type="FrontendInfo">SNR</convert>
+		</widget>
+		<eLabel text="AGC:" position="1010,48" size="66,30" font="Regular;30" foregroundColor="white" backgroundColor="blackglass" valign="center" halign="left" transparent="1"  />
+		<widget source="session.FrontendStatus" render="Label" position="1075,48" size="105,30" font="Regular;30" foregroundColor="white" backgroundColor="blackglass" transparent="1" noWrap="1" valign="center" halign="left">
+			<convert type="FrontendInfo">AGC</convert>
+		</widget>
+		
+	<!--	<eLabel text="Res:" position="835,14" size="66,42" font="Regular;30" foregroundColor="white" backgroundColor="blackglass" align="center" halign="left" transparent="1"  /> -->
+		<widget source="session.CurrentService" render="Label" position="580,12" size="276,42" font="Regular;30" foregroundColor="white" backgroundColor="blackglass" transparent="1" halign="center" valign="center">
+			<convert type="PliExtraInfo">ResolutionString</convert>
+		</widget>
+		
+		<widget source="session.CurrentService" render="Label" position="630,48" size="185,30" font="Regular;30" foregroundColor="white" backgroundColor="blackglass" transparent="1" halign="center" valign="top">
+			<convert type="PliExtraInfo">VideoCodec</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="630,81" size="185,30" font="Regular;30" foregroundColor="white" backgroundColor="blackglass" transparent="1" halign="center" valign="top">
+			<convert type="VAudioInfo">AudioCodec</convert>
+		</widget>
+		
+		<widget source="session.CurrentService" render="Label" position="45,48" size="150,33" font="Regular;30" foregroundColor="white" backgroundColor="blackglass" transparent="1" halign="left">
+			<convert type="VNetSpeedInfo">RC</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="245,48" size="150,33" font="Regular;30" foregroundColor="white" backgroundColor="blackglass" transparent="1" halign="left">
+			<convert type="VNetSpeedInfo">TM</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="610,116" size="225,36" font="Regular;30" halign="center" foregroundColor="white" backgroundColor="blackglass" transparent="1">
+			<convert type="BhStreamInfo">StreamType</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="45,14" size="850,36" font="Regular;30" halign="left" foregroundColor="white" backgroundColor="blackglass" transparent="1">
+			<convert type="BhStreamInfo">StreamUrl</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" position="860,47" size="283,38" alphatest="blend" pixmap="obh4u/iptv.png" zPosition="3" transparent="0">
+			<convert type="ServiceInfo">IsStream</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		
+<!--	<widget source="session.TunerInfo" render="FixedLabel" text="Tuner:" position="835,81" size="105,42" font="Regular;30" zPosition="5" foregroundColor="white" backgroundColor="blackglass" halign="left" transparent="1" noWrap="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ConditionalShowHide" />
+		</widget> -->
+		
+	<!--	<eLabel text="Tuner:" position="930,81" size="105,42" font="Regular;30" foregroundColor="white" backgroundColor="blackglass" transparent="0" zPosition="1" />  -->
+	
+                <!-- tuner 1 -->
+		<widget source="session.TunerInfo" render="Pixmap" position="863,20" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_a.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">1</convert>
+			
+		</widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="863,20" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_rec.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">1</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="863,20" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">0,0</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		
+		 <!-- tuner 2 -->
+		<widget source="session.TunerInfo" render="Pixmap" position="891,20" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_b.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">2</convert>
+			
+		</widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="891,20" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_rec.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">2</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="891,20" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">1,1</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		
+		 <!-- tuner 3 -->
+			<widget source="session.TunerInfo" render="Pixmap" position="919,20" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_c.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">4</convert>
+			
+		</widget>
+			<widget source="session.TunerInfo" render="Pixmap" position="919,20" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_rec.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">4</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="919,20" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">2,2</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		
+		 <!-- tuner 4 -->
+	
+	         <widget source="session.TunerInfo" render="Pixmap" position="947,20" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_d.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">8</convert>
+			
+		</widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="947,20" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_rec.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">8</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="947,20" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">3,3</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		
+		 <!-- tuner 5 -->
+		<widget source="session.TunerInfo" render="Pixmap" position="975,20" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_e.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">16</convert>
+			
+		</widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="975,20" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_rec.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">16</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="975,20" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">4,4</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		
+		 <!-- tuner 6 -->
+		<widget source="session.TunerInfo" render="Pixmap" position="1003,20" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_f.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">32</convert>
+			
+		</widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="1003,20" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_rec.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">32</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="1003,20" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">5,5</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		
+		 <!-- tuner 7 -->
+		<widget source="session.TunerInfo" render="Pixmap" position="1031,20" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_g.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">64</convert>
+			
+		</widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="1031,20" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_rec.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">64</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="1031,20" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">6,6</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		
+		 <!-- tuner 8 -->
+		<widget source="session.TunerInfo" render="Pixmap" position="1059,20" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_h.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">128</convert>
+
+		</widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="1059,20" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_rec.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">128</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="1059,20" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">7,7</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		
+		 <!-- tuner 9 -->
+		<widget source="session.TunerInfo" render="Pixmap" position="1087,20" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_i.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">256</convert>
+			
+		</widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="1087,20" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_rec.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">256</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="1087,20" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">8,8</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		
+		 <!-- tuner 10 -->
+		<widget source="session.TunerInfo" render="Pixmap" position="1115,20" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_j.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">512</convert>
+			
+		</widget>
+	         <widget source="session.TunerInfo" render="Pixmap" position="1115,20" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_rec.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">512</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="1115,20" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">9,9</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+	
+                <!-- tuner 11 -->
+		<widget source="session.TunerInfo" render="Pixmap" position="863,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_k.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">1024</convert>
+			
+		</widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="863,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_rec.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">1024</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="863,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">10,10</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		
+		 <!-- tuner 12 -->
+		<widget source="session.TunerInfo" render="Pixmap" position="891,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_l.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">2048</convert>
+			
+		</widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="891,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_rec.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">2048</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="891,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">11,11</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		
+		 <!-- tuner 13 -->
+		<widget source="session.TunerInfo" render="Pixmap" position="919,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_m.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">4096</convert>
+			
+		</widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="919,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_rec.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">4096</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="919,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">12,12</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		
+		 <!-- tuner 14 -->
+		 <widget source="session.TunerInfo" render="Pixmap" position="947,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_n.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">8192</convert>
+			
+		</widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="947,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_rec.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">8192</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="947,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">13,13</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		
+		 <!-- tuner 15 -->
+		<widget source="session.TunerInfo" render="Pixmap" position="975,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_o.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">16384</convert>
+			
+		</widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="975,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_rec.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">16384</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="975,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">14,14</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		
+		 <!-- tuner 16 -->
+		<widget source="session.TunerInfo" render="Pixmap" position="1003,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_p.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">32768</convert>
+			
+		</widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="1003,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_rec.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">32768</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="1003,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">15,15</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		
+		 <!-- tuner 17 -->
+		<widget source="session.TunerInfo" render="Pixmap" position="1031,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_q.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">65536</convert>
+			
+		</widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="1031,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_rec.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">65536</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="1031,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">16,16</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		
+		 <!-- tuner 18 -->
+		<widget source="session.TunerInfo" render="Pixmap" position="1059,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_r.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">131072</convert>
+			
+		</widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="1059,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_rec.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">131072</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="1059,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">17,17</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+			
+		 <!-- tuner 19 -->
+		<widget source="session.TunerInfo" render="Pixmap" position="1087,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_s.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">262144</convert>
+			
+		</widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="1087,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_rec.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">262144</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="1087,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">18,18</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		 <!-- tuner 20 -->
+		<widget source="session.TunerInfo" render="Pixmap" position="1115,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_t.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">524288</convert>
+			
+		</widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="1115,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_rec.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">524288</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="1115,88" size="24,24" alphatest="blend" pixmap="icons/icon_tuner_border.png" zPosition="4" transparent="1">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">19,19</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+	</screen>
+        <!--OBH Style-->
+<screen name="SlimChannelSelection" flags="wfNoBorder" position="0,0" size="1920,1080" backgroundColor="mid">
+  <panel name="background" />
+<panel name="Full-Buttons-T1" />
+<widget source="global.CurrentTime" render="Label" position="1483,79" size="143,40" font="Regular;33" foregroundColor="white" backgroundColor="topleft" valign="center" halign="left" transparent="1" zPosition="2">
+  <convert type="Slyk18ClockToText">Slyk18Time</convert>
+</widget>
+<ePixmap pixmap="q-backgrounds/logo2.png" alphatest="blend" position="1692,31" size="144,78" zPosition="2" />
+  <widget source="session.VideoPicture" render="Pig" position="1420,125" size="486,285" backgroundColor="transparent" transparent="1" zPosition="-2" />
+  <widget source="session.CurrentService" render="Label" position="1453,353" size="437,32" font="Bold;24" foregroundColor="white" backgroundColor="transparent" borderWidth="2" borderColor="black" valign="center" halign="center" noWrap="1" transparent="1" zPosition="3">
+    <convert type="ServiceName">Name</convert>
+  </widget>
+<ePixmap pixmap="q-backgrounds/q-right-nav.png" position="1885,0" size="40,1080" alphatest="blend" zPosition="4" />
+<ePixmap pixmap="q-backgrounds/q-left-nav.png" position="1410,0" size="40,1080" alphatest="blend" zPosition="4" />
+  <eLabel position="1450,149" size="436,245" backgroundColor="transparent" zPosition="2" />
+  <eLabel position="1445,149" size="7,245" backgroundColor="uneeffffff" zPosition="3" />
+  <eLabel position="1883,149" size="7,245" backgroundColor="uneeffffff" zPosition="3" />
+  <ePixmap pixmap="epg/TimeLineBG.png" position="0,313" size="1430,62" zPosition="1" alphatest="blend" />
+  <widget source="Title" render="Label" position="15,324" size="550,36" font="Bold;33" foregroundColor="white" backgroundColor="mid" borderWidth="0" transparent="1" itemHeight="36" valign="center" zPosition="2" />
+  <!-- <ePixmap pixmap="epg/epg-background.png" position="491,0" size="1430,1080" alphatest="blend" zPosition="-1" />  -->
+<widget name="list" position="10,380" size="1374,633" foregroundColor="white" foregroundColorSelected="white" foregroundColorEvent="bluetext" foregroundColorEventSelected="bluetext" foregroundColorMarked="white" foregroundColorMarkedSelected="guidecolor" foregroundColorServiceNotAvail="#aaaaaa" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" backgroundColorMarked="black" backgroundColorMarkedSelected="black" colorServiceRecorded="red" serviceItemHeight="54" serviceNameFont="Regular;33" serviceInfoFont="Bold;33" serviceNumberFont="Regular;33" progressbarHeight="9" progressbarBorderWidth="1" progressBarWidth="75" colorEventProgressbar="#44c1fb" colorEventProgressbarSelected="#44c1fb" colorEventProgressbarBorder="white" colorEventProgressbarBorderSelected="white" fieldMargins="12" nonplayableMargins="12" itemsDistances="12" transparent="1" scrollbarMode="showNever" />
+  <widget source="ServiceEvent" render="Label" position="518,73" size="909,48" halign="left" valign="top" foregroundColor="white" backgroundColor="topleft" noWrap="1" font="Bold;42" transparent="1">
+    <convert type="EventName">NowName</convert>
+  </widget>
+  <widget source="ServiceEvent" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=80,repeat=0,always=0,oneshot=0,startdelay=6000,wrap" position="518,140" size="909,153" halign="left" valign="top" foregroundColor="white" backgroundColor="topmid" font="Regular;33" transparent="1">
+    <convert type="EventName">FullDescription</convert>
+  </widget>
+  <ePixmap pixmap="q-backgrounds/v-divider.png" position="454,82" size="2,211" alphatest="blend" />
+  <widget source="Service" render="Picon" position="75,38" size="220,132" alphatest="blend">
+    <convert type="ServiceName">Reference</convert>
+  </widget>
+  <widget source="ServiceEvent" render="Label" position="75,180" size="336,39" halign="left" valign="top" foregroundColor="white" backgroundColor="topright" font="Regular;33" transparent="1">
+    <convert type="EventTime">Duration</convert>
+    <convert type="Slyk18ClockToText">Slyk18AsLength</convert>
+  </widget>
+  <widget source="ServiceEvent" render="Label" position="560,324" size="850,36" font="Bold;33" halign="right" foregroundColor="white" backgroundColor="mid" transparent="1">
+    <convert type="TransponderInfo"></convert>
+  </widget>
+  <!-- event start time -->
+  <widget source="ServiceEvent" render="Label" position="75,220" size="336,39" halign="left" valign="top" foregroundColor="white" backgroundColor="topright" font="Regular;33" transparent="1">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="Slyk18ClockToText">Slyk18StartedAt</convert>
+  </widget>
+  <!-- recording icon -->
+  <widget position="421,185" size="30,30" source="session.RecordState" render="Pixmap" pixmap="q-icons/record.png" alphatest="blend" zPosition="4">
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget pixmap="q-icons/dolby.png" position="312,185" size="45,38" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
+    <convert type="ServiceInfo">IsMultichannel</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget pixmap="q-icons/widescreen.png" position="275,185" size="45,30" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
+    <convert type="ServiceInfo">IsWidescreen</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget pixmap="q-icons/subtitles.png" position="363,185" size="30,30" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
+    <convert type="ServiceInfo">SubtitlesAvailable</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget pixmap="q-icons/4k.png" position="225,185" size="45,30" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
+    <convert type="ServiceInfo">Is4K</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget pixmap="q-icons/hd.png" position="225,185" size="45,30" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
+    <convert type="ServiceInfo">IsHD</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget pixmap="q-icons/sd.png" position="225,185" size="45,30" alphatest="blend" render="Pixmap" source="session.CurrentService" zPosition="4">
+    <convert type="ServiceInfo">IsSD</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <!-- next programme -->
+  <widget source="ServiceEvent" render="Label" position="1490,415" size="340,33" font="Bold;24" foregroundColor="white" backgroundColor="midright" noWrap="1" valign="top" halign="left" transparent="1">
+    <convert type="EventName">NextName</convert>
+  </widget>
+  <widget source="ServiceEvent" render="Label" position="1490,442" size="340,33" font="Bold;24" foregroundColor="white" backgroundColor="midright" valign="top" halign="left" noWrap="1" transparent="1">
+    <convert type="EventTime">NextStartTime</convert>
+    <convert type="Slyk18ClockToText">Slyk18StartedAt</convert>
+  </widget>
+  <widget source="ServiceEvent" render="Label" position="1490,475" size="340,243" font="Regular;24" foregroundColor="white" backgroundColor="midright" valign="top" transparent="1">
+    <convert type="EventName">NextDescription</convert>
+  </widget>
+  <!-- later programme -->
+  <widget source="ServiceEvent" render="Label" position="1490,733" size="340,33" font="Bold;24" foregroundColor="white" backgroundColor="botright" valign="top" halign="left" noWrap="1" transparent="1">
+    <convert type="EventName">ThirdName</convert>
+  </widget>
+  <widget source="ServiceEvent" render="Label" position="1490,757" size="340,33" font="Bold;24" foregroundColor="white" backgroundColor="botright" valign="top" halign="left" noWrap="1" transparent="1">
+    <convert type="EventTime">ThirdStartTime</convert>
+    <convert type="Slyk18ClockToText">Slyk18StartedAt</convert>
+  </widget>
+  <widget source="ServiceEvent" render="Label" position="1490,793" size="340,219" font="Regular;24" foregroundColor="white" backgroundColor="botright" valign="top" transparent="1" zPosition="4">
+    <convert type="EventName">ThirdDescription</convert>
+  </widget>
+<ePixmap pixmap="buttons/key_menu.png" position="1732,1030" size="38,38" alphatest="blend" />
+<ePixmap pixmap="buttons/key_exit.png" position="1808,1030" size="38,38" alphatest="blend" />
+<ePixmap pixmap="buttons/key_epg.png" position="1770,1030" size="38,38" alphatest="blend" />
+<ePixmap pixmap="buttons/key_info.png" position="1845,1030" size="38,38" alphatest="blend" />
+</screen>
+</skin>
+
+
