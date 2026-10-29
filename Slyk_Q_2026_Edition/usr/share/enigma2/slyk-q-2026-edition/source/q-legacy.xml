@@ -44,7 +44,7 @@
 		<widget source="IFtext" render="Label" position="540,865" size="180,45" verticalAlignment="center" zPosition="10" font="Regular;33" horizontalAlignment="left" foregroundColor="white" backgroundColor="botmid" transparent="1"/>
 		<widget source="IF" render="Label" position="818,865" size="563,45" zPosition="10" verticalAlignment="center" font="Regular;33" horizontalAlignment="left" foregroundColor="white" backgroundColor="botmid" transparent="1"/>
 		<widget source="Statustext" render="Label" position="540,904" size="173,45" verticalAlignment="center" zPosition="10" font="Regular;33" horizontalAlignment="left" foregroundColor="white" backgroundColor="botmid" transparent="1"/>
-		<widget name="statuspic" pixmaps="buttons/button_green.png,buttons/button_green_off.png" position="818,914" zPosition="10" size="23,24" transparent="1" alphaTest="blend"/>
+		<widget name="statuspic" pixmaps="buttons/led_green.webp,buttons/led_grey.webp" position="818,914" zPosition="10" size="23,24" transparent="1" alphaTest="blend"/>
 		<panel name="New-Buttons"/>
 	</screen>
 	<!-- Ipkg.py -->

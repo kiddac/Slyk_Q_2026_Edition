@@ -63,8 +63,8 @@
         <panel name="introduction"/>
     </screen>
     <screen name="VideoEnhancementPreview" position="center,e-255" size="840,255" title="VideoEnhancementPreview">
-        <ePixmap pixmap="buttons/red.png" position="0,0" size="210,60" alphaTest="blend"/>
-        <ePixmap pixmap="buttons/green.png" position="210,0" size="210,60" alphaTest="blend"/>
+        <ePixmap pixmap="buttons/red.webp" position="0,0" size="210,60" alphaTest="blend"/>
+        <ePixmap pixmap="buttons/green.webp" position="210,0" size="210,60" alphaTest="blend"/>
         <widget source="key_red" render="Label" position="0,0" zPosition="1" size="210,60" font="Regular;30" horizontalAlignment="center" verticalAlignment="center" backgroundColor="#9f1313" transparent="1"/>
         <widget source="key_green" render="Label" position="210,0" zPosition="1" size="210,60" font="Regular;30" horizontalAlignment="center" verticalAlignment="center" backgroundColor="#1f771f" transparent="1"/>
         <widget name="config" padding="15,0" position="8,75" size="825,120" font="Regular;33" valueFont="Regular;33" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" itemHeight="78" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2"/>

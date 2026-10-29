@@ -56,7 +56,7 @@
 		<widget name="menulist" padding="15,20" position="518,385" size="978,624" font="Regular;33" valueFont="Regular;33" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2-978.png" itemHeight="78" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2"/>
 		<ePixmap pixmap="q-backgrounds/side-2-box.png" alphaTest="blend" position="1515,384" size="324,160" zPosition="1"/>
 		<widget source="Statustext" render="Label" position="1568,385" size="269,78" font="Regular;33" foregroundColor="white" backgroundColor="midright" verticalAlignment="center" horizontalAlignment="left" transparent="1"/>
-		<widget name="statuspic" position="1530,413" size="23,24" pixmaps="buttons/button_green.png,buttons/button_red.png" alphaTest="blend" transparent="1" zPosition="10"/>
+		<widget name="statuspic" position="1530,413" size="23,24" pixmaps="buttons/led_green.webp,buttons/led_red.webp" alphaTest="blend" transparent="1" zPosition="10"/>
 		<panel name="New-Buttons"/>
 	</screen>
 	<!-- system - network - device setup - network test -->
@@ -384,7 +384,7 @@
 		<widget source="IFtext" render="Label" position="540,865" size="180,45" verticalAlignment="center" zPosition="10" font="Regular;33" horizontalAlignment="left" foregroundColor="white" backgroundColor="botmid" transparent="1"/>
 		<widget source="IF" render="Label" position="818,865" size="563,45" zPosition="10" verticalAlignment="center" font="Regular;33" horizontalAlignment="left" foregroundColor="white" backgroundColor="botmid" transparent="1"/>
 		<widget source="Statustext" render="Label" position="540,904" size="173,45" verticalAlignment="center" zPosition="10" font="Regular;33" horizontalAlignment="left" foregroundColor="white" backgroundColor="botmid" transparent="1"/>
-		<widget name="statuspic" pixmaps="buttons/button_green.png,buttons/button_green_off.png" position="818,914" zPosition="10" size="23,24" transparent="1" alphaTest="blend"/>
+		<widget name="statuspic" pixmaps="buttons/led_green.webp,buttons/led_grey.webp" position="818,914" zPosition="10" size="23,24" transparent="1" alphaTest="blend"/>
 		<panel name="New-Buttons"/>
 	</screen>
 </skin>
