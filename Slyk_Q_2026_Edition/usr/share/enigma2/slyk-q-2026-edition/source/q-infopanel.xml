@@ -150,8 +150,6 @@ self["sublist"].l.setFont(1, gFont("Regular", 24))</applet>
 	</screen>
 	
 	<!--
-
-	
 	<screen name="SoftwareUpdate" position="0,0" size="1280,720" title="Software Update" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="T_Title" />
 		<eLabel text="Software Update" position="5,535" size="1280,200" font="global_large_screen;100" noWrap="0" backgroundColor="text-background" transparent="1" foregroundColor="background-text" valign="bottom" zPosition="-50" />
@@ -172,10 +170,10 @@ self["sublist"].l.setFont(1, gFont("Regular", 24))</applet>
 				}
 			</convert>
 		</widget>
-		<widget name="traffic_off" position="1000,90" zPosition="1" size="36,97" pixmap="icons/aoff.png" alphatest="on" />
-		<widget name="traffic_red" position="1000,90" zPosition="1" size="36,97" pixmap="icons/ared.png" alphatest="on" />
-		<widget name="traffic_yellow" position="1000,90" zPosition="1" size="36,97" pixmap="icons/ayellow.png" alphatest="on" />
-		<widget name="traffic_green" position="1000,90" zPosition="1" size="36,97" pixmap="icons/agreen.png" alphatest="on" />
+		<widget name="traffic_off" position="1000,90" zPosition="1" size="36,97" pixmap="icons/aoff.webp" alphatest="on" />
+		<widget name="traffic_red" position="1000,90" zPosition="1" size="36,97" pixmap="icons/ared.webp" alphatest="on" />
+		<widget name="traffic_yellow" position="1000,90" zPosition="1" size="36,97" pixmap="icons/ayellow.wqebp" alphatest="on" />
+		<widget name="traffic_green" position="1000,90" zPosition="1" size="36,97" pixmap="icons/agreen.webp" alphatest="on" />
 		<widget name="feedstatus_off" position="1043,123" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="layer-b-foreground" backgroundColor="layer-b-background" transparent="1" />
 		<widget name="feedstatus_red" position="1043,91" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="layer-b-foreground" backgroundColor="layer-b-background" transparent="1" />
 		<widget name="feedstatus_yellow" position="1043,123" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="layer-b-foreground" backgroundColor="layer-b-background" transparent="1" />
