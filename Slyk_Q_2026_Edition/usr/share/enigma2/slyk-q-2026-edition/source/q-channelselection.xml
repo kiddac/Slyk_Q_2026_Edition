@@ -215,6 +215,6 @@
 	<screen name="RecordTimerQuestion" position="center,center" size="364,156" backgroundColor="mid" flags="wfNoBorder" zPosition="10">
 		<ePixmap pixmap="q-backgrounds/timerquestion.png" position="0,0" size="368,156" alphaTest="blend" zPosition="-1"/>
 		<widget name="text" position="0,0" size="0,0" font="Regular;33"/>
-		<widget name="list" position="0,0" size="364,156" font="Regular;33" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu.webp" itemHeight="78" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1"/>
+		<widget name="list" position="0,0" size="364,156" font="Regular;33" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu.png" itemHeight="78" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1"/>
 	</screen>
 </skin>
