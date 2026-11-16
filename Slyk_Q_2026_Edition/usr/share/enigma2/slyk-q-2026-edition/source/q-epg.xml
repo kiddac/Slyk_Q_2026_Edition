@@ -412,7 +412,7 @@ self["bouquetlist"].bouquetNamePadding = 15</applet>
 		<panel name="q-title"/>
 		<panel name="leftnav"/>
 		<panel name="rightnav"/>
-		<widget name="menu" padding="15,18" position="90,545" size="364,535" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu.png" itemHeight="78" font="Regular;33" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="2"/>
+		<widget name="menu" padding="15,18" position="90,545" size="364,535" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu.webp" itemHeight="78" font="Regular;33" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="2"/>
 		<panel name="nav-gradient"/>
 		<panel name="toppicks"/>
 	</screen>
@@ -420,6 +420,6 @@ self["bouquetlist"].bouquetNamePadding = 15</applet>
 	<screen name="OptionDialog" position="center,center" size="364,312" backgroundColor="mid" flags="wfNoBorder" zPosition="10">
 		<ePixmap pixmap="q-backgrounds/optiondialog.png" position="0,0" size="364,312" alphaTest="blend" zPosition="-1"/>
 		<widget name="text" position="0,0" size="0,0" font="Regular;33"/>
-		<widget name="list" position="0,0" size="364,312" font="Regular;33" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu.png" itemHeight="78" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1"/>
+		<widget name="list" position="0,0" size="364,312" font="Regular;33" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu.webp" itemHeight="78" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1"/>
 	</screen>
 </skin>
