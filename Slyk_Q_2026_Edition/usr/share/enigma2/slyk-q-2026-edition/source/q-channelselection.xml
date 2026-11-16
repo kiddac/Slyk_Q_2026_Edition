@@ -197,9 +197,9 @@
 	<!-- prev / next button -->
 	<screen name="HistoryZapSelector" position="0,0" size="522,1080" backgroundColor="transparent" flags="wfNoBorder">
 		<!-- <eLabel position="0,0" size="494,1080" backgroundColor="blackglass" transparent="0"  />    -->
-		<ePixmap pixmap="q-backgrounds/history-zap.webp" position="0,0" size="522,1080" alphaTest="blend" zPosition="-1"/>
+		<ePixmap pixmap="q-backgrounds/history-zap.png" position="0,0" size="522,1080" alphaTest="blend" zPosition="-1"/>
 		<widget source="Title" render="Label" position="0,0" size="485,240" font="Regular;42" foregroundColor="white" backgroundColor="blackglass" verticalAlignment="center" horizontalAlignment="center" transparent="1"/>
-		<widget source="menu" render="Listbox" position="30,242" size="425,765" foregroundColor="white" backgroundColor="blackglass" foregroundColorSelected="white" backgroundColorSelected="blackglass" selectionPixmap="q-selectbars/history-zap.webp" scrollbarMode="showNever" transparent="1">
+		<widget source="menu" render="Listbox" position="30,242" size="425,765" foregroundColor="white" backgroundColor="blackglass" foregroundColorSelected="white" backgroundColorSelected="blackglass" selectionPixmap="q-selectbars/history-zap.png" scrollbarMode="showNever" transparent="1">
 			<convert type="TemplatedMultiContent">{"template": [
 			MultiContentEntryText(pos = (15, 20), size = (230, 42), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 2, color = 0x00ffffff, color_sel = 0x00ffffff), # Servicename
 			MultiContentEntryText(pos = (15, 56), size = (230, 30), font = 2, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 3, color = 0x00ffffff, color_sel = 0x00ffffff), # Eventname
