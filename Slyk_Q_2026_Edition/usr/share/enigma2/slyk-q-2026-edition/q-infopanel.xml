@@ -104,10 +104,10 @@ self["sublist"].l.setFont(1, gFont("Regular", 24))</applet>
 		<ePixmap pixmap="q-backgrounds/side-2-box.png" alphaTest="blend" position="1515,384" size="324,160" zPosition="1"/>
 		<widget name="packagetext" position="1530,385" size="233,78" font="Regular;27" verticalAlignment="center" horizontalAlignment="left" foregroundColor="white" backgroundColor="mid" transparent="1" zPosition="2"/>
 		<widget name="packagenr" position="1763,385" size="75,78" font="Regular;27" verticalAlignment="center" horizontalAlignment="left" foregroundColor="white" backgroundColor="mid" transparent="1" zPosition="2"/>
-		<widget name="a_off" position="1530,491" size="23,24" pixmap="icons/led_grey.webp" alphaTest="blend" zPosition="1"/>
-		<widget name="a_red" position="1530,491" size="23,24" pixmap="icons/led_red.webp" alphaTest="blend" scale="scale" zPosition="1"/>
-		<widget name="a_yellow" position="1530,491" size="23,24" pixmap="icons/led_yellow.webp" alphaTest="blend" scale="scale" zPosition="1"/>
-		<widget name="a_green" position="1530,491" size="23,24" pixmap="icons/led_red.webp" alphaTest="blend" scale="scale" zPosition="1"/>
+		<widget name="a_off" position="1530,491" size="23,24" pixmap="icons/led_grey.png" alphaTest="blend" zPosition="1"/>
+		<widget name="a_red" position="1530,491" size="23,24" pixmap="icons/led_red.png" alphaTest="blend" scale="scale" zPosition="1"/>
+		<widget name="a_yellow" position="1530,491" size="23,24" pixmap="icons/led_yellow.png" alphaTest="blend" scale="scale" zPosition="1"/>
+		<widget name="a_green" position="1530,491" size="23,24" pixmap="icons/led_red.png" alphaTest="blend" scale="scale" zPosition="1"/>
 		<widget name="feedstatusRED" position="1568,463" size="269,78" font="Regular;27" verticalAlignment="center" horizontalAlignment="left" foregroundColor="white" backgroundColor="midright" transparent="1" zPosition="1"/>
 		<widget name="feedstatusYELLOW" position="1568,463" size="269,78" font="Regular;27" verticalAlignment="center" horizontalAlignment="left" foregroundColor="white" backgroundColor="midright" transparent="1" zPosition="1"/>
 		<widget name="feedstatusGREEN" position="1568,463" size="269,78" font="Regular;27" verticalAlignment="center" horizontalAlignment="left" foregroundColor="white" backgroundColor="midright" transparent="1" zPosition="1"/>
@@ -135,10 +135,10 @@ self["sublist"].l.setFont(1, gFont("Regular", 24))</applet>
 		<widget name="package_text" position="1530,385" size="233,78" font="Regular;27" verticalAlignment="center" horizontalAlignment="left" foregroundColor="white" backgroundColor="mid" transparent="1" zPosition="2"/>
 		<widget name="package_count" position="1763,385" size="75,78" font="Regular;27" verticalAlignment="center" horizontalAlignment="left" foregroundColor="white" backgroundColor="mid" transparent="1" zPosition="2"/>
 		
-		<widget name="traffic_off" position="1530,491" size="23,24" pixmap="icons/led_grey.webp" alphaTest="blend" zPosition="1"/>
-		<widget name="traffic_red" position="1530,491" size="23,24" pixmap="icons/led_red.webp" alphaTest="blend" zPosition="1"/>
-		<widget name="traffic_yellow" position="1530,491" size="23,24" pixmap="icons/led_yellow.webp" alphaTest="blend" zPosition="1"/>
-		<widget name="traffic_green" position="1530,491" size="23,24" pixmap="icons/led_green.webp" alphaTest="blend" zPosition="1"/>
+		<widget name="traffic_off" position="1530,491" size="23,24" pixmap="icons/led_grey.png" alphaTest="blend" zPosition="1"/>
+		<widget name="traffic_red" position="1530,491" size="23,24" pixmap="icons/led_red.png" alphaTest="blend" zPosition="1"/>
+		<widget name="traffic_yellow" position="1530,491" size="23,24" pixmap="icons/led_yellow.png" alphaTest="blend" zPosition="1"/>
+		<widget name="traffic_green" position="1530,491" size="23,24" pixmap="icons/led_green.png" alphaTest="blend" zPosition="1"/>
 		
 		<widget name="feedstatus_off" position="1568,463" size="269,78" font="Regular;27" verticalAlignment="center" horizontalAlignment="left" foregroundColor="white" backgroundColor="midright" transparent="1" zPosition="1"/>
 		<widget name="feedstatus_red" position="1568,463" size="269,78" font="Regular;27" verticalAlignment="center" horizontalAlignment="left" foregroundColor="white" backgroundColor="midright" transparent="1" zPosition="1"/>
@@ -172,10 +172,10 @@ self["sublist"].l.setFont(1, gFont("Regular", 24))</applet>
 				}
 			</convert>
 		</widget>
-		<widget name="traffic_off" position="1000,90" zPosition="1" size="36,97" pixmap="icons/aoff.webp" alphatest="on" />
-		<widget name="traffic_red" position="1000,90" zPosition="1" size="36,97" pixmap="icons/ared.webp" alphatest="on" />
-		<widget name="traffic_yellow" position="1000,90" zPosition="1" size="36,97" pixmap="icons/ayellow.webp" alphatest="on" />
-		<widget name="traffic_green" position="1000,90" zPosition="1" size="36,97" pixmap="icons/agreen.webp" alphatest="on" />
+		<widget name="traffic_off" position="1000,90" zPosition="1" size="36,97" pixmap="icons/aoff.png" alphatest="on" />
+		<widget name="traffic_red" position="1000,90" zPosition="1" size="36,97" pixmap="icons/ared.png" alphatest="on" />
+		<widget name="traffic_yellow" position="1000,90" zPosition="1" size="36,97" pixmap="icons/ayellow.png" alphatest="on" />
+		<widget name="traffic_green" position="1000,90" zPosition="1" size="36,97" pixmap="icons/agreen.png" alphatest="on" />
 		<widget name="feedstatus_off" position="1043,123" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="layer-b-foreground" backgroundColor="layer-b-background" transparent="1" />
 		<widget name="feedstatus_red" position="1043,91" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="layer-b-foreground" backgroundColor="layer-b-background" transparent="1" />
 		<widget name="feedstatus_yellow" position="1043,123" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="layer-b-foreground" backgroundColor="layer-b-background" transparent="1" />
