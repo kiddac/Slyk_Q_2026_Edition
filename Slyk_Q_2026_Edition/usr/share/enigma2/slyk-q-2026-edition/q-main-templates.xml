@@ -70,7 +70,7 @@
 		<widget source="introduction" render="Label" position="540,140" size="1002,195" font="Regular;33" foregroundColor="white" backgroundColor="topmid" transparent="1"/>
 	</screen>
 	<screen name="HelpWindow">
-		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="0,0" zPosition="10" size="1920,60" alphaTest="blend"/>
+		<widget name="HelpWindow" pixmap="vkey_icon.png" position="0,0" zPosition="10" size="1920,60" alphaTest="blend"/>
 	</screen>
 	<screen name="footnote">
 		<widget name="footnote" position="1575,931" size="308,78" font="Regular;21" foregroundColor="white" backgroundColor="botmid" horizontalAlignment="left" transparent="1" verticalAlignment="center" zPosition="4"/>
